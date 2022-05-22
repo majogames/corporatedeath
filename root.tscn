@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/carpet/carpet_material.tres" type="Material" id=1]
+[ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
+[ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/bedroom/door.glb" type="PackedScene" id=3]
+[ext_resource path="res://assets/bedroom/bed.glb" type="PackedScene" id=4]
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 4, 0, 8 )
@@ -16,6 +19,9 @@ extents = Vector3( 2, 0.001, 4 )
 
 [node name="Studio" type="Room" parent="RoomList"]
 
+[node name="bed" parent="RoomList/Studio" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1 )
+
 [node name="Carpet" type="MeshInstance" parent="RoomList/Studio"]
 material_override = ExtResource( 1 )
 mesh = SubResource( 1 )
@@ -25,3 +31,41 @@ material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="RoomList/Studio/Carpet/StaticBody"]
 shape = SubResource( 2 )
+
+[node name="walls" type="Spatial" parent="RoomList/Studio"]
+
+[node name="door" parent="RoomList/Studio/walls" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -4 )
+
+[node name="wall" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 4 )
+
+[node name="wall2" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 4 )
+
+[node name="wall8" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -2, 0, -4 )
+
+[node name="wall3" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, -2 )
+
+[node name="wall4" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, 1.19209e-07 )
+
+[node name="wall5" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, 2 )
+
+[node name="wall6" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, 4 )
+
+[node name="wall9" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 2, 0, 2 )
+
+[node name="wall10" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 2, 0, -2.38419e-07 )
+
+[node name="wall11" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 2, 0, -2 )
+
+[node name="wall12" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 2, 0, -4 )

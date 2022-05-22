@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/TexturesCom_Fabric_Carpet_1K_normal.jpg-44f765e45100bc2906b45a0a993a35a1.s3tc.stex"
-path.etc2="res://.import/TexturesCom_Fabric_Carpet_1K_normal.jpg-44f765e45100bc2906b45a0a993a35a1.etc2.stex"
+path.s3tc="res://.import/TexturesCom_Fabric_Carpet_1K_normal.jpg-1a8d2697c916a8ad73e50a258fa7d8e9.s3tc.stex"
+path.etc2="res://.import/TexturesCom_Fabric_Carpet_1K_normal.jpg-1a8d2697c916a8ad73e50a258fa7d8e9.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/carpet/TexturesCom_Fabric_Carpet_1K_normal.jpg"
-dest_files=[ "res://.import/TexturesCom_Fabric_Carpet_1K_normal.jpg-44f765e45100bc2906b45a0a993a35a1.s3tc.stex", "res://.import/TexturesCom_Fabric_Carpet_1K_normal.jpg-44f765e45100bc2906b45a0a993a35a1.etc2.stex" ]
+source_file="res://assets/bedroom/carpet/TexturesCom_Fabric_Carpet_1K_normal.jpg"
+dest_files=[ "res://.import/TexturesCom_Fabric_Carpet_1K_normal.jpg-1a8d2697c916a8ad73e50a258fa7d8e9.s3tc.stex", "res://.import/TexturesCom_Fabric_Carpet_1K_normal.jpg-1a8d2697c916a8ad73e50a258fa7d8e9.etc2.stex" ]
 
 [params]
 

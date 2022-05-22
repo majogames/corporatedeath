@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/door.glb-937561184150af19036837354fffaaab.scn"
+path="res://.import/bed.glb-cb88e08419d7b4df17fe3db722de4e80.scn"
 
 [deps]
 
-source_file="res://assets/Bedroom/door.glb"
-dest_files=[ "res://.import/door.glb-937561184150af19036837354fffaaab.scn" ]
+source_file="res://assets/bedroom/bed.glb"
+dest_files=[ "res://.import/bed.glb-cb88e08419d7b4df17fe3db722de4e80.scn" ]
 
 [params]
 
