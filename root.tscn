@@ -20,9 +20,10 @@ extents = Vector3( 2, 0.001, 4 )
 [node name="Studio" type="Room" parent="RoomList"]
 
 [node name="bed" parent="RoomList/Studio" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1 )
 
 [node name="Carpet" type="MeshInstance" parent="RoomList/Studio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02, 0 )
 material_override = ExtResource( 1 )
 mesh = SubResource( 1 )
 material/0 = null
@@ -46,11 +47,17 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 4
 [node name="wall8" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -2, 0, -4 )
 
+[node name="wall13" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -1.99688, 4.76837e-07, -1.98609 )
+
 [node name="wall3" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, -2 )
 
 [node name="wall4" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, 1.19209e-07 )
+
+[node name="wall7" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 0, 0, -4 )
 
 [node name="wall5" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, 2 )
