@@ -1,5 +1,27 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/Bedroom/wall.glb" type="PackedScene" id=1]
+[ext_resource path="res://assets/carpet/carpet_material.tres" type="Material" id=1]
 
-[node name="wall" instance=ExtResource( 1 )]
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 4, 0, 8 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 2, 0.001, 4 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="RoomManager" type="RoomManager" parent="."]
+
+[node name="RoomList" type="Spatial" parent="."]
+
+[node name="Studio" type="Room" parent="RoomList"]
+
+[node name="Carpet" type="MeshInstance" parent="RoomList/Studio"]
+material_override = ExtResource( 1 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="RoomList/Studio/Carpet"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RoomList/Studio/Carpet/StaticBody"]
+shape = SubResource( 2 )
