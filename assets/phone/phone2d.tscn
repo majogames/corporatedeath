@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/phone/lock_screen.png" type="Texture" id=1]
+
+[node name="CenterContainer" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -634.0
+margin_bottom = 244.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 390.0
+margin_bottom = 844.0
+rect_min_size = Vector2( 390, 844 )
+texture = ExtResource( 1 )
+expand = true
