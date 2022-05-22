@@ -11,8 +11,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 390.0
-margin_bottom = 844.0
 rect_min_size = Vector2( 390, 844 )
 texture = ExtResource( 1 )
 expand = true
