@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/phone/phone.glb" type="PackedScene" id=1]
 [ext_resource path="res://assets/phone/phone2d.tscn" type="PackedScene" id=2]
-[ext_resource path="res://lobby.hdr" type="Texture" id=3]
 
 [sub_resource type="SpatialMaterial" id=5]
 albedo_color = Color( 0.333333, 0.501961, 0.603922, 1 )
@@ -30,15 +29,8 @@ emission_texture = SubResource( 4 )
 refraction_enabled = true
 refraction_scale = 0.05
 refraction_texture_channel = 3
-uv1_scale = Vector3( -2.104, 1, 0 )
-uv1_offset = Vector3( 1.009, -0.125, 0 )
-
-[sub_resource type="PanoramaSky" id=6]
-panorama = ExtResource( 3 )
-
-[sub_resource type="Environment" id=7]
-background_mode = 2
-background_sky = SubResource( 6 )
+uv1_scale = Vector3( -2.043, 0.969, 0 )
+uv1_offset = Vector3( 1.003, 0.029, 0 )
 
 [node name="phone" instance=ExtResource( 1 )]
 
@@ -49,12 +41,9 @@ material/1 = SubResource( 1 )
 [node name="Viewport" type="Viewport" parent="." index="1"]
 size = Vector2( 390, 844 )
 transparent_bg = true
+usage = 1
 
 [node name="Control" parent="Viewport" index="0" instance=ExtResource( 2 )]
-
-[node name="Camera" type="Camera" parent="." index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.189232 )
-fov = 51.3
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="3"]
-environment = SubResource( 7 )
+margin_right = 0.0
+margin_bottom = 0.0
+current_page = 6

@@ -21,7 +21,6 @@ size_flags_vertical = 3
 script = ExtResource( 9 )
 
 [node name="Lockscreen" type="CenterContainer" parent="."]
-visible = false
 margin_right = 390.0
 margin_bottom = 844.0
 
@@ -93,6 +92,7 @@ texture = ExtResource( 5 )
 expand = true
 
 [node name="Bank" type="CenterContainer" parent="."]
+visible = false
 margin_right = 390.0
 margin_bottom = 844.0
 

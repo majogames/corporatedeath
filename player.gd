@@ -11,15 +11,19 @@ var direction = Vector3()
 var velocity = Vector3()
 var fall = Vector3()
 
+export (bool) var show_phone: bool = false setget _show_phone
+
 onready var head = $head
+onready var phone = $head/phone
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	phone.visible = show_phone
 
 func _input(event):
-	if event is InputEventMouseMotion:
+	if !show_phone and event is InputEventMouseMotion:
 		rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
 		head.rotate_x(deg2rad(-event.relative.y * mouse_sensitivity))
 		head.rotation.x = clamp(head.rotation.x, deg2rad(-90), deg2rad(90))
@@ -38,8 +42,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			self.show_phone = true
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			self.show_phone = false
 		
 	if Input.is_action_pressed("move_forward"):
 		direction -= transform.basis.z
@@ -57,3 +63,8 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
 	move_and_slide(fall, Vector3.UP)
+
+func _show_phone(show):
+	show_phone = show
+	if phone != null:
+		phone.visible = show_phone
