@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/bedroom/door.glb" type="PackedScene" id=3]
-[ext_resource path="res://assets/bedroom/bed.glb" type="PackedScene" id=4]
+[ext_resource path="res://assets/bedroom/bed.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/bedroom/shelf.glb" type="PackedScene" id=5]
 [ext_resource path="res://assets/bedroom/desk.glb" type="PackedScene" id=6]
 [ext_resource path="res://assets/bedroom/wardrobe.glb" type="PackedScene" id=7]
@@ -47,7 +47,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1.97299 )
 [node name="desk" parent="RoomList/Studio" instance=ExtResource( 6 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 4 )
 
-[node name="bed" parent="RoomList/Studio" instance=ExtResource( 4 )]
+[node name="bed2" parent="RoomList/Studio" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1 )
 
 [node name="Carpet" type="MeshInstance" parent="RoomList/Studio"]
