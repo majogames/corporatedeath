@@ -1,14 +1,16 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/bedroom/door.glb" type="PackedScene" id=3]
+[ext_resource path="res://default_env.tres" type="Environment" id=3]
 [ext_resource path="res://assets/bedroom/bed.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/bedroom/shelf.glb" type="PackedScene" id=5]
 [ext_resource path="res://assets/bedroom/desk.glb" type="PackedScene" id=6]
 [ext_resource path="res://assets/bedroom/wardrobe.glb" type="PackedScene" id=7]
 [ext_resource path="res://assets/bedroom/door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://low_poly_plants/Models/Tree Type0 01.tscn" type="PackedScene" id=10]
+[ext_resource path="res://low_poly_plants/Models/Tree Type0 06.tscn" type="PackedScene" id=11]
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 4, 0, 8 )
@@ -17,13 +19,19 @@ size = Vector3( 4, 0, 8 )
 extents = Vector3( 2, 0.001, 4 )
 
 [sub_resource type="PlaneMesh" id=3]
-size = Vector2( 2, 4 )
+size = Vector2( 20, 4 )
 
 [sub_resource type="BoxShape" id=4]
-extents = Vector3( 1, 0.01, 1 )
+extents = Vector3( 10, 0.01, 2 )
 
 [sub_resource type="PlaneMesh" id=5]
-size = Vector2( 28, 4 )
+size = Vector2( 32, 4 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 16, 0.01, 2 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 16, 0.01, 2 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -61,13 +69,24 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="RoomList/Studio/Carpet/StaticBody"]
 shape = SubResource( 2 )
 
+[node name="Ceiling" type="MeshInstance" parent="RoomList/Studio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.98, 0 )
+material_override = ExtResource( 1 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="RoomList/Studio/Ceiling"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RoomList/Studio/Ceiling/StaticBody"]
+shape = SubResource( 2 )
+
 [node name="walls" type="Spatial" parent="RoomList/Studio"]
 
 [node name="door2" parent="RoomList/Studio/walls" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -3 )
 
-[node name="door" parent="RoomList/Studio/walls" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -4 )
+[node name="door3" parent="RoomList/Studio/walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1, 0, -4 )
 
 [node name="wall" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 4 )
@@ -122,10 +141,16 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, 
 [node name="OmniLight" type="OmniLight" parent="RoomList/Studio"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7151, 0 )
 
+[node name="Tree Type0 01" parent="RoomList/Studio" instance=ExtResource( 10 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.614442, 0.934073, 3.32161 )
+
 [node name="Corridor" type="Room" parent="RoomList"]
 
+[node name="Tree Type0 06" parent="RoomList/Corridor" instance=ExtResource( 11 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.3, -1.16919, 0.0100053, -4.53902 )
+
 [node name="Floor" type="MeshInstance" parent="RoomList/Corridor"]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, -6.08856 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.08856 )
 mesh = SubResource( 3 )
 material/0 = null
 
@@ -134,34 +159,29 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="RoomList/Corridor/Floor/StaticBody"]
 shape = SubResource( 4 )
 
-[node name="other walls" type="Spatial" parent="RoomList/Corridor"]
+[node name="Ceiling" type="MeshInstance" parent="RoomList/Corridor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -6.08856 )
+mesh = SubResource( 3 )
+material/0 = null
 
-[node name="door11" parent="RoomList/Corridor/other walls" instance=ExtResource( 3 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, -8 )
+[node name="StaticBody" type="StaticBody" parent="RoomList/Corridor/Ceiling"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RoomList/Corridor/Ceiling/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="other walls" type="Spatial" parent="RoomList/Corridor"]
 
 [node name="wall22" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 2, 0, -8 )
 
-[node name="door3" parent="RoomList/Corridor/other walls" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4 )
-
 [node name="wall14" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -6, 0, -4 )
-
-[node name="door4" parent="RoomList/Corridor/other walls" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -4 )
 
 [node name="wall15" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 2, 0, -4 )
 
-[node name="door5" parent="RoomList/Corridor/other walls" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -4 )
-
 [node name="wall16" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 6, 0, -4 )
-
-[node name="door6" parent="RoomList/Corridor/other walls" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -4 )
 
 [node name="wall17" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -10, 0, -4 )
@@ -172,29 +192,44 @@ transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, -10, 0, -6 
 [node name="wall24" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, -10, 0, -8 )
 
-[node name="door7" parent="RoomList/Corridor/other walls" instance=ExtResource( 3 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3, 0, -8 )
-
 [node name="wall18" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 6, 0, -8 )
-
-[node name="door8" parent="RoomList/Corridor/other walls" instance=ExtResource( 3 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5, 0, -8 )
 
 [node name="wall19" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -2, 0, -8 )
 
-[node name="door9" parent="RoomList/Corridor/other walls" instance=ExtResource( 3 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 0, -8 )
-
 [node name="wall20" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -6, 0, -8 )
 
-[node name="door10" parent="RoomList/Corridor/other walls" instance=ExtResource( 3 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 0, -8 )
-
 [node name="wall21" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 10, 0, -8 )
+
+[node name="door4" parent="RoomList/Corridor/other walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 5, 0, -4 )
+
+[node name="door5" parent="RoomList/Corridor/other walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 9, 0, -4 )
+
+[node name="door6" parent="RoomList/Corridor/other walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -3, 0, -4 )
+
+[node name="door7" parent="RoomList/Corridor/other walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -7, 0, -4 )
+
+[node name="door8" parent="RoomList/Corridor/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 0, -8 )
+
+[node name="door9" parent="RoomList/Corridor/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5, 0, -8 )
+
+[node name="door10" parent="RoomList/Corridor/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, -8 )
+
+[node name="door11" parent="RoomList/Corridor/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3, 0, -8 )
+
+[node name="door12" parent="RoomList/Corridor/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 0, -8 )
 
 [node name="OmniLight" type="OmniLight" parent="RoomList/Corridor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, -5.96275 )
@@ -202,10 +237,195 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, -5.96275 )
 [node name="OmniLight2" type="OmniLight" parent="RoomList/Corridor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, -5.96275 )
 
+[node name="Corridor2" type="Room" parent="RoomList"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
+
+[node name="Floor" type="MeshInstance" parent="RoomList/Corridor2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.08856 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="RoomList/Corridor2/Floor"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RoomList/Corridor2/Floor/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Ceiling" type="MeshInstance" parent="RoomList/Corridor2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -6.08856 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="RoomList/Corridor2/Ceiling"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RoomList/Corridor2/Ceiling/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="other walls" type="Spatial" parent="RoomList/Corridor2"]
+
+[node name="wall22" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 2, 0, -8 )
+
+[node name="wall14" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -6, 0, -4 )
+
+[node name="wall15" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 2, 0, -4 )
+
+[node name="wall16" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 6, 0, -4 )
+
+[node name="wall17" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -10, 0, -4 )
+
+[node name="wall23" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, -10, 0, -6 )
+
+[node name="wall24" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, -10, 0, -8 )
+
+[node name="wall18" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 6, 0, -8 )
+
+[node name="wall19" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -2, 0, -8 )
+
+[node name="wall20" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -6, 0, -8 )
+
+[node name="wall21" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 10, 0, -8 )
+
+[node name="door4" parent="RoomList/Corridor2/other walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 5, 0, -4 )
+
+[node name="door5" parent="RoomList/Corridor2/other walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 9, 0, -4 )
+
+[node name="door6" parent="RoomList/Corridor2/other walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -3, 0, -4 )
+
+[node name="wall25" parent="RoomList/Corridor2/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -2, 0, -4 )
+
+[node name="door13" parent="RoomList/Corridor2/other walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1, 0, -4 )
+
+[node name="door7" parent="RoomList/Corridor2/other walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -7, 0, -4 )
+
+[node name="door8" parent="RoomList/Corridor2/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 0, -8 )
+
+[node name="door9" parent="RoomList/Corridor2/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5, 0, -8 )
+
+[node name="door10" parent="RoomList/Corridor2/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, -8 )
+
+[node name="door11" parent="RoomList/Corridor2/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3, 0, -8 )
+
+[node name="door12" parent="RoomList/Corridor2/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 0, -8 )
+
+[node name="OmniLight" type="OmniLight" parent="RoomList/Corridor2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, -5.96275 )
+
+[node name="OmniLight2" type="OmniLight" parent="RoomList/Corridor2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, -5.96275 )
+
+[node name="Corridor3" type="Room" parent="RoomList"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 10 )
+
+[node name="Floor" type="MeshInstance" parent="RoomList/Corridor3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.08856 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="RoomList/Corridor3/Floor"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RoomList/Corridor3/Floor/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Ceiling" type="MeshInstance" parent="RoomList/Corridor3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -6.08856 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="RoomList/Corridor3/Ceiling"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RoomList/Corridor3/Ceiling/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="other walls" type="Spatial" parent="RoomList/Corridor3"]
+
+[node name="wall22" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 2, 0, -8 )
+
+[node name="wall14" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -6, 0, -4 )
+
+[node name="wall24" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -4, 0, -4 )
+
+[node name="wall15" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 2, 0, -4 )
+
+[node name="wall16" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 6, 0, -4 )
+
+[node name="wall17" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -10, 0, -4 )
+
+[node name="wall23" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -8, 0, -4 )
+
+[node name="wall18" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 6, 0, -8 )
+
+[node name="wall19" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -2, 0, -8 )
+
+[node name="wall20" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -6, 0, -8 )
+
+[node name="wall27" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -4, 0, -8 )
+
+[node name="wall26" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -8, 0, -8 )
+
+[node name="wall21" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 10, 0, -8 )
+
+[node name="door4" parent="RoomList/Corridor3/other walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 5, 0, -4 )
+
+[node name="wall25" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -2, 0, -4 )
+
+[node name="door13" parent="RoomList/Corridor3/other walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1, 0, -4 )
+
+[node name="door10" parent="RoomList/Corridor3/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, -8 )
+
+[node name="door11" parent="RoomList/Corridor3/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3, 0, -8 )
+
+[node name="door12" parent="RoomList/Corridor3/other walls" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 0, -8 )
+
+[node name="OmniLight" type="OmniLight" parent="RoomList/Corridor3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, -5.96275 )
+
+[node name="OmniLight2" type="OmniLight" parent="RoomList/Corridor3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, -5.96275 )
+
 [node name="MainCorridor" type="Room" parent="RoomList"]
 
 [node name="Floor2" type="MeshInstance" parent="RoomList/MainCorridor"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12, 0, -2.08856 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12, 0, -0.0885601 )
 mesh = SubResource( 5 )
 skeleton = NodePath("../../Corridor")
 material/0 = null
@@ -213,37 +433,18 @@ material/0 = null
 [node name="StaticBody" type="StaticBody" parent="RoomList/MainCorridor/Floor2"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RoomList/MainCorridor/Floor2/StaticBody"]
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
-[node name="door12" parent="RoomList/MainCorridor" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.1167, 0, -7.03342 )
+[node name="Ceiling" type="MeshInstance" parent="RoomList/MainCorridor"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12, 3, -0.0885601 )
+mesh = SubResource( 5 )
+skeleton = NodePath("../../Corridor")
+material/0 = null
 
-[node name="wall31" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
-transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 14.1167, 0, -4.03342 )
+[node name="StaticBody" type="StaticBody" parent="RoomList/MainCorridor/Ceiling"]
 
-[node name="door13" parent="RoomList/MainCorridor" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.1167, 0, -3.03342 )
-
-[node name="wall32" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
-transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 14.1167, 0, -0.0334206 )
-
-[node name="door14" parent="RoomList/MainCorridor" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.1167, 0, -11.0334 )
-
-[node name="wall33" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
-transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 14.1167, 0, -8.03342 )
-
-[node name="door15" parent="RoomList/MainCorridor" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.1167, 0, -15.0334 )
-
-[node name="wall34" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
-transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 14.1167, 0, -12.0334 )
-
-[node name="door16" parent="RoomList/MainCorridor" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.1167, 0, 0.966579 )
-
-[node name="wall35" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
-transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 14.1167, 0, 3.96658 )
+[node name="CollisionShape" type="CollisionShape" parent="RoomList/MainCorridor/Ceiling/StaticBody"]
+shape = SubResource( 7 )
 
 [node name="wall29" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 12, 0, -16 )
@@ -286,3 +487,57 @@ transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 10, 0, 6 )
 
 [node name="wall43" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
 transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 10, 0, 4 )
+
+[node name="wall31" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
+transform = Transform( 1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, 14, 0, -4 )
+
+[node name="door13" parent="RoomList/MainCorridor" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0, -5 )
+
+[node name="wall32" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
+transform = Transform( 1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, 14, 0, 0 )
+
+[node name="door14" parent="RoomList/MainCorridor" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0, -1 )
+
+[node name="wall34" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
+transform = Transform( 1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, 14, 0, 8 )
+
+[node name="door18" parent="RoomList/MainCorridor" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0, 7 )
+
+[node name="wall46" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
+transform = Transform( 1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, 14, 0, 10 )
+
+[node name="door19" parent="RoomList/MainCorridor" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0, 9 )
+
+[node name="wall47" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
+transform = Transform( 1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, 14, 0, 14 )
+
+[node name="wall48" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 12, 0, 16 )
+
+[node name="wall49" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 10, 0, 16 )
+
+[node name="door20" parent="RoomList/MainCorridor" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0, 13 )
+
+[node name="wall35" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
+transform = Transform( 1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, 14, 0, -12 )
+
+[node name="wall44" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
+transform = Transform( 1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, 14, 0, -16 )
+
+[node name="door15" parent="RoomList/MainCorridor" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0, -13 )
+
+[node name="wall45" parent="RoomList/MainCorridor" instance=ExtResource( 2 )]
+transform = Transform( 1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, 14, 0, -8 )
+
+[node name="door16" parent="RoomList/MainCorridor" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0, -9 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 3 )
