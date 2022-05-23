@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/phone/banking_needs_to_be_redesigned_2.png" type="Texture" id=8]
 [ext_resource path="res://assets/phone/phone2d.gd" type="Script" id=9]
 
-[node name="CenterContainer" type="CenterContainer"]
+[node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -634.0
@@ -21,6 +21,7 @@ size_flags_vertical = 3
 script = ExtResource( 9 )
 
 [node name="Lockscreen" type="CenterContainer" parent="."]
+visible = false
 margin_right = 390.0
 margin_bottom = 844.0
 
@@ -92,7 +93,6 @@ texture = ExtResource( 5 )
 expand = true
 
 [node name="Bank" type="CenterContainer" parent="."]
-visible = false
 margin_right = 390.0
 margin_bottom = 844.0
 
