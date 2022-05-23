@@ -51,10 +51,10 @@ size = Vector2( 390, 844 )
 transparent_bg = true
 
 [node name="Control" parent="Viewport" index="0" instance=ExtResource( 2 )]
-visible = false
 
 [node name="Camera" type="Camera" parent="." index="2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.189232 )
+fov = 51.3
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="3"]
 environment = SubResource( 7 )
