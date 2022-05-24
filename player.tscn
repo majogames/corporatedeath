@@ -31,4 +31,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.737729, 0 )
 [node name="Camera" type="Camera" parent="head"]
 
 [node name="phone" parent="head" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.012729, -0.182 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15 )

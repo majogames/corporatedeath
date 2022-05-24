@@ -1,6 +1,6 @@
 extends KinematicBody
 
-var speed = 7
+var speed = 3
 var acceleration = 9.8
 var gravity = 9.8
 var jump = 3

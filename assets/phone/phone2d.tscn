@@ -5,24 +5,35 @@
 [ext_resource path="res://assets/phone/phone.png" type="Texture" id=3]
 [ext_resource path="res://assets/phone/maps.png" type="Texture" id=4]
 [ext_resource path="res://assets/phone/email.png" type="Texture" id=5]
-[ext_resource path="res://assets/phone/home_screen.png" type="Texture" id=6]
+[ext_resource path="res://assets/phone/home_screen.svg" type="Texture" id=6]
 [ext_resource path="res://assets/phone/banking_needs_to_be_redesigned_1.png" type="Texture" id=7]
 [ext_resource path="res://assets/phone/banking_needs_to_be_redesigned_2.png" type="Texture" id=8]
 [ext_resource path="res://assets/phone/phone2d.gd" type="Script" id=9]
 
-[node name="Control" type="Control"]
+[node name="Control" type="CenterContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -634.0
 margin_bottom = 244.0
-rect_min_size = Vector2( 390, 844 )
+rect_min_size = Vector2( 780, 1688 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 9 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 780.0
+margin_bottom = 1688.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 780, 1688 )
+color = Color( 0.333333, 0.501961, 0.603922, 0.631373 )
+
 [node name="Lockscreen" type="CenterContainer" parent="."]
-margin_right = 390.0
-margin_bottom = 844.0
+visible = false
+margin_left = 195.0
+margin_top = 422.0
+margin_right = 585.0
+margin_bottom = 1266.0
 
 [node name="TextureRect" type="TextureRect" parent="Lockscreen"]
 margin_right = 390.0
@@ -32,21 +43,22 @@ texture = ExtResource( 1 )
 expand = true
 
 [node name="Home" type="CenterContainer" parent="."]
-visible = false
-margin_right = 390.0
-margin_bottom = 844.0
+margin_right = 780.0
+margin_bottom = 1688.0
 
 [node name="TextureRect" type="TextureRect" parent="Home"]
-margin_right = 390.0
-margin_bottom = 844.0
-rect_min_size = Vector2( 390, 844 )
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 6 )
 expand = true
 
 [node name="Notes" type="CenterContainer" parent="."]
 visible = false
-margin_right = 390.0
-margin_bottom = 844.0
+margin_left = 195.0
+margin_top = 422.0
+margin_right = 585.0
+margin_bottom = 1266.0
 
 [node name="TextureRect" type="TextureRect" parent="Notes"]
 margin_right = 390.0
@@ -57,8 +69,10 @@ expand = true
 
 [node name="Calls" type="CenterContainer" parent="."]
 visible = false
-margin_right = 390.0
-margin_bottom = 844.0
+margin_left = 195.0
+margin_top = 422.0
+margin_right = 585.0
+margin_bottom = 1266.0
 
 [node name="TextureRect" type="TextureRect" parent="Calls"]
 margin_right = 390.0
@@ -69,8 +83,10 @@ expand = true
 
 [node name="Maps" type="CenterContainer" parent="."]
 visible = false
-margin_right = 390.0
-margin_bottom = 844.0
+margin_left = 195.0
+margin_top = 422.0
+margin_right = 585.0
+margin_bottom = 1266.0
 
 [node name="TextureRect" type="TextureRect" parent="Maps"]
 margin_right = 390.0
@@ -81,8 +97,10 @@ expand = true
 
 [node name="Mail" type="CenterContainer" parent="."]
 visible = false
-margin_right = 390.0
-margin_bottom = 844.0
+margin_left = 195.0
+margin_top = 422.0
+margin_right = 585.0
+margin_bottom = 1266.0
 
 [node name="TextureRect" type="TextureRect" parent="Mail"]
 margin_right = 390.0
@@ -93,8 +111,10 @@ expand = true
 
 [node name="Bank" type="CenterContainer" parent="."]
 visible = false
-margin_right = 390.0
-margin_bottom = 844.0
+margin_left = 195.0
+margin_top = 422.0
+margin_right = 585.0
+margin_bottom = 1266.0
 
 [node name="TextureRect1" type="TextureRect" parent="Bank"]
 margin_right = 390.0

@@ -21,8 +21,8 @@ albedo_texture = SubResource( 3 )
 metallic_specular = 0.0
 roughness = 0.31
 emission_enabled = true
-emission = Color( 0.1944, 0.29376, 0.36, 1 )
-emission_energy = 1.0
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 2.0
 emission_operator = 0
 emission_on_uv2 = false
 emission_texture = SubResource( 4 )
@@ -39,7 +39,7 @@ material/0 = SubResource( 5 )
 material/1 = SubResource( 1 )
 
 [node name="Viewport" type="Viewport" parent="." index="1"]
-size = Vector2( 390, 844 )
+size = Vector2( 780, 1688 )
 transparent_bg = true
 usage = 1
 
