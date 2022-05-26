@@ -52,6 +52,15 @@ action={
  ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="world"
+3d_physics/layer_2="player"
+3d_physics/layer_3="enemies"
+3d_physics/layer_4="interactive_objects"
+3d_physics/layer_5="pickable_objects"
+3d_physics/enable_object_picking=true
+
 [physics]
 
 common/enable_pause_aware_picking=true
