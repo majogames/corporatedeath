@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/elevator/elevator box.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/elevator/elevator.gd" type="Script" id=2]
@@ -54,6 +54,9 @@ tracks/3/keys = PoolRealArray( 0, 1, 1.545, 1.266, 0.55, 0, 2.98023e-08, 0, 1, 1
 
 [sub_resource type="BoxShape" id=7]
 extents = Vector3( 1.32287, 1.36571, 1.34996 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.447059, 0.447059, 0.447059, 1 )
 
 [node name="elevator corridor" instance=ExtResource( 3 )]
 transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0 )
@@ -130,3 +133,7 @@ script = ExtResource( 4 )
 [node name="CollisionShape" type="CollisionShape" parent="SensorActivated" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0427652, 0.783694, -0.158954 )
 shape = SubResource( 7 )
+
+[node name="elevator button" parent="." index="7"]
+transform = Transform( 0.315748, 0, 7.45058e-09, 0, 0.67608, 0, -1.49012e-08, 0, 0.138232, -1.20334, 1.379, 1.28954 )
+material/0 = SubResource( 8 )
