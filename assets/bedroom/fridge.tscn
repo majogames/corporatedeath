@@ -52,4 +52,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42507, 0.025533 )
 shape = SubResource( 3 )
 
 [node name="OmniLight" type="OmniLight" parent="." index="4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.210681, 0.733466, 0.135258 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.153634, 0.733466, 0.135258 )
+shadow_enabled = true
+omni_range = 0.93286

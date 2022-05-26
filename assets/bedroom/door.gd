@@ -7,4 +7,4 @@ func toggle_door():
 	if door_open == true:
 		$AnimationPlayer.play("DoorOpen")
 	else:
-		$AnimationPlayer.play("DoorClose")
+		$AnimationPlayer.play_backwards("DoorOpen")
