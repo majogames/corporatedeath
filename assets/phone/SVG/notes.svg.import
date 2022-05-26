@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/maps.png-8f762fbf80f61d301d7bdc8a9bfefe8b.stex"
+path="res://.import/notes.svg-ff480f898357370584547eefddbb7504.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phone/maps.png"
-dest_files=[ "res://.import/maps.png-8f762fbf80f61d301d7bdc8a9bfefe8b.stex" ]
+source_file="res://assets/phone/SVG/notes.svg"
+dest_files=[ "res://.import/notes.svg-ff480f898357370584547eefddbb7504.stex" ]
 
 [params]
 

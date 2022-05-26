@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/home_screen.svg-cc3d429fcfa0a57381005d0d2a16ab92.stex"
+path="res://.import/email.svg-3a759e99ddafb54fc8d43cd84ebc0dd9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phone/home_screen.svg"
-dest_files=[ "res://.import/home_screen.svg-cc3d429fcfa0a57381005d0d2a16ab92.stex" ]
+source_file="res://assets/phone/SVG/email.svg"
+dest_files=[ "res://.import/email.svg-3a759e99ddafb54fc8d43cd84ebc0dd9.stex" ]
 
 [params]
 

@@ -8,8 +8,15 @@ onready var control: Control
 signal unlock
 
 func _ready():
+	randomize()
 	control = get_parent()
-	#TODO randomize password
+	# randomize password
+	locksequence = [
+		randi() % 10,
+		randi() % 10,
+		randi() % 10,
+		]
+	print("phone password is ", locksequence)
 
 
 func input_number(number):
