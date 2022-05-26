@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/phone/lock_screen.png" type="Texture" id=1]
 [ext_resource path="res://assets/phone/notes.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/phone/banking_needs_to_be_redesigned_1.png" type="Texture" id=7]
 [ext_resource path="res://assets/phone/banking_needs_to_be_redesigned_2.png" type="Texture" id=8]
 [ext_resource path="res://assets/phone/phone2d.gd" type="Script" id=9]
+[ext_resource path="res://assets/phone/Lockscreen.gd" type="Script" id=10]
 
 [node name="Control" type="PanelContainer"]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -32,11 +33,11 @@ rect_min_size = Vector2( 780, 1688 )
 color = Color( 0.333333, 0.501961, 0.603922, 0.631373 )
 
 [node name="Lockscreen" type="CenterContainer" parent="."]
-visible = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
 margin_bottom = 1695.0
+script = ExtResource( 10 )
 
 [node name="TextureRect" type="TextureRect" parent="Lockscreen"]
 margin_right = 780.0
@@ -44,6 +45,76 @@ margin_bottom = 1688.0
 rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 1 )
 expand = true
+
+[node name="Button1" type="Button" parent="Lockscreen/TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 90.0
+margin_top = 606.0
+margin_right = 272.0
+margin_bottom = 792.0
+
+[node name="Button2" type="Button" parent="Lockscreen/TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 298.0
+margin_top = 606.0
+margin_right = 480.0
+margin_bottom = 792.0
+
+[node name="Button3" type="Button" parent="Lockscreen/TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 512.0
+margin_top = 604.0
+margin_right = 694.0
+margin_bottom = 790.0
+
+[node name="Button4" type="Button" parent="Lockscreen/TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 86.0
+margin_top = 816.0
+margin_right = 268.0
+margin_bottom = 1002.0
+
+[node name="Button5" type="Button" parent="Lockscreen/TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 302.0
+margin_top = 814.0
+margin_right = 484.0
+margin_bottom = 1000.0
+
+[node name="Button6" type="Button" parent="Lockscreen/TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 512.0
+margin_top = 816.0
+margin_right = 694.0
+margin_bottom = 1002.0
+
+[node name="Button7" type="Button" parent="Lockscreen/TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 86.0
+margin_top = 1028.0
+margin_right = 268.0
+margin_bottom = 1214.0
+
+[node name="Button8" type="Button" parent="Lockscreen/TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 294.0
+margin_top = 1024.0
+margin_right = 476.0
+margin_bottom = 1210.0
+
+[node name="Button9" type="Button" parent="Lockscreen/TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 512.0
+margin_top = 1028.0
+margin_right = 694.0
+margin_bottom = 1214.0
+
+[node name="Button0" type="Button" parent="Lockscreen/TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 300.0
+margin_top = 1238.0
+margin_right = 482.0
+margin_bottom = 1424.0
 
 [node name="Home" type="Control" parent="."]
 visible = false
@@ -108,6 +179,7 @@ margin_bottom = 1322.0
 rect_pivot_offset = Vector2( 139, 226 )
 
 [node name="Notes" type="Control" parent="."]
+visible = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
@@ -122,10 +194,10 @@ expand = true
 
 [node name="HomeButton" type="Button" parent="Notes"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 50.0
-margin_top = 140.0
-margin_right = 166.0
-margin_bottom = 266.0
+margin_left = 51.0
+margin_top = 141.0
+margin_right = 167.0
+margin_bottom = 267.0
 
 [node name="Calls" type="Control" parent="."]
 visible = false
@@ -219,6 +291,17 @@ margin_top = 140.0
 margin_right = 166.0
 margin_bottom = 266.0
 
+[connection signal="unlock" from="Lockscreen" to="." method="_on_Lockscreen_unlock"]
+[connection signal="pressed" from="Lockscreen/TextureRect/Button1" to="Lockscreen" method="input_number" binds= [ 1 ]]
+[connection signal="pressed" from="Lockscreen/TextureRect/Button2" to="Lockscreen" method="input_number" binds= [ 2 ]]
+[connection signal="pressed" from="Lockscreen/TextureRect/Button3" to="Lockscreen" method="input_number" binds= [ 3 ]]
+[connection signal="pressed" from="Lockscreen/TextureRect/Button4" to="Lockscreen" method="input_number" binds= [ 4 ]]
+[connection signal="pressed" from="Lockscreen/TextureRect/Button5" to="Lockscreen" method="input_number" binds= [ 5 ]]
+[connection signal="pressed" from="Lockscreen/TextureRect/Button6" to="Lockscreen" method="input_number" binds= [ 6 ]]
+[connection signal="pressed" from="Lockscreen/TextureRect/Button7" to="Lockscreen" method="input_number" binds= [ 7 ]]
+[connection signal="pressed" from="Lockscreen/TextureRect/Button8" to="Lockscreen" method="input_number" binds= [ 8 ]]
+[connection signal="pressed" from="Lockscreen/TextureRect/Button9" to="Lockscreen" method="input_number" binds= [ 9 ]]
+[connection signal="pressed" from="Lockscreen/TextureRect/Button0" to="Lockscreen" method="input_number" binds= [ 0 ]]
 [connection signal="pressed" from="Home/LaunchNotes" to="." method="_on_LaunchNotes_pressed"]
 [connection signal="pressed" from="Home/LaunchBank" to="." method="_on_LaunchBank_pressed"]
 [connection signal="pressed" from="Home/LaunchMaps" to="." method="_on_LaunchMaps_pressed"]

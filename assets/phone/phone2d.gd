@@ -62,3 +62,7 @@ func _on_LaunchEmail_pressed():
 
 func _on_HomeButton_pressed():
 	self.current_page = PhonePage.Home
+
+
+func _on_Lockscreen_unlock():
+	self.current_page = PhonePage.Home
