@@ -362,98 +362,101 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, -5.96275 )
 [node name="OmniLight2" type="OmniLight" parent="RoomList/Corridor2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, -5.96275 )
 
-[node name="Corridor3" type="Room" parent="RoomList" groups=["navmesh"]]
+[node name="ElevatorCorridor" type="Room" parent="RoomList" groups=["navmesh"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 10 )
 
-[node name="Floor" type="MeshInstance" parent="RoomList/Corridor3"]
+[node name="Floor" type="MeshInstance" parent="RoomList/ElevatorCorridor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.08856 )
 mesh = SubResource( 3 )
 material/0 = null
 
-[node name="StaticBody" type="StaticBody" parent="RoomList/Corridor3/Floor"]
+[node name="StaticBody" type="StaticBody" parent="RoomList/ElevatorCorridor/Floor"]
 
-[node name="CollisionShape" type="CollisionShape" parent="RoomList/Corridor3/Floor/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="RoomList/ElevatorCorridor/Floor/StaticBody"]
 shape = SubResource( 4 )
 
-[node name="Ceiling" type="MeshInstance" parent="RoomList/Corridor3"]
+[node name="Ceiling" type="MeshInstance" parent="RoomList/ElevatorCorridor"]
 transform = Transform( 1, 0, 0, 0, -1, -5.96046e-08, 0, 5.96046e-08, -1, 0.0712166, 3, -6.08856 )
 mesh = SubResource( 3 )
 material/0 = null
 
-[node name="StaticBody" type="StaticBody" parent="RoomList/Corridor3/Ceiling"]
+[node name="StaticBody" type="StaticBody" parent="RoomList/ElevatorCorridor/Ceiling"]
 
-[node name="CollisionShape" type="CollisionShape" parent="RoomList/Corridor3/Ceiling/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="RoomList/ElevatorCorridor/Ceiling/StaticBody"]
 shape = SubResource( 4 )
 
-[node name="other walls" type="Spatial" parent="RoomList/Corridor3"]
+[node name="other walls" type="Spatial" parent="RoomList/ElevatorCorridor"]
 
-[node name="wall22" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall22" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 2, 0, -8 )
 
-[node name="wall14" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall14" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -6, 0, -4 )
 
-[node name="wall24" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall24" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -4, 0, -4 )
 
-[node name="wall15" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall15" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 2, 0, -4 )
 
-[node name="wall16" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall16" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 6, 0, -4 )
 
-[node name="wall17" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall17" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -10, 0, -4 )
 
-[node name="wall23" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall23" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -8, 0, -4 )
 
-[node name="wall18" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall18" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 6, 0, -8 )
 
-[node name="wall19" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall19" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -2, 0, -8 )
 
-[node name="wall20" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall20" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -6, 0, -8 )
 
-[node name="wall27" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall27" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -4, 0, -8 )
 
-[node name="wall26" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall26" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -8, 0, -8 )
 
-[node name="wall21" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall21" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 10, 0, -8 )
 
-[node name="wall21" parent="RoomList/Corridor3/other walls/wall21" instance=ExtResource( 2 )]
+[node name="wall21" parent="RoomList/ElevatorCorridor/other walls/wall21" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 2, 0, -4 )
 
-[node name="door4" parent="RoomList/Corridor3/other walls" instance=ExtResource( 8 )]
+[node name="door4" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 5, 0, -4 )
 
-[node name="wall25" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
+[node name="wall25" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -2, 0, -4 )
 
-[node name="door13" parent="RoomList/Corridor3/other walls" instance=ExtResource( 8 )]
+[node name="door13" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1, 0, -4 )
 
-[node name="door10" parent="RoomList/Corridor3/other walls" instance=ExtResource( 8 )]
+[node name="door10" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 8 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, -8 )
 
-[node name="door11" parent="RoomList/Corridor3/other walls" instance=ExtResource( 8 )]
+[node name="door11" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 8 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3, 0, -8 )
 
-[node name="door12" parent="RoomList/Corridor3/other walls" instance=ExtResource( 8 )]
+[node name="door12" parent="RoomList/ElevatorCorridor/other walls" instance=ExtResource( 8 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 0, -8 )
 
-[node name="OmniLight" type="OmniLight" parent="RoomList/Corridor3"]
+[node name="OmniLight" type="OmniLight" parent="RoomList/ElevatorCorridor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, -5.96275 )
 
-[node name="OmniLight2" type="OmniLight" parent="RoomList/Corridor3"]
+[node name="OmniLight3" type="OmniLight" parent="RoomList/ElevatorCorridor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.22124, 3, -5.96275 )
+
+[node name="OmniLight2" type="OmniLight" parent="RoomList/ElevatorCorridor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, -5.96275 )
 
-[node name="elevator corridor" parent="RoomList/Corridor3" instance=ExtResource( 13 )]
+[node name="elevator corridor" parent="RoomList/ElevatorCorridor" instance=ExtResource( 13 )]
 transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 10, 0.01, -6 )
 
 [node name="MainCorridor" type="Room" parent="RoomList" groups=["navmesh"]]
