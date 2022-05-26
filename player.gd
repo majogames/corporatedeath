@@ -68,6 +68,7 @@ func _physics_process(delta):
 
 func _process(delta):
 	if reach.is_colliding() and Input.is_action_just_pressed("action"):
+		print(reach.get_collider().get_name())
 		reach.get_collider().action()
 
 func _show_phone(show):

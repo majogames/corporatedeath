@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/elevator/elevator box.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/elevator/elevator.gd" type="Script" id=2]
 [ext_resource path="res://assets/elevator/elevator corridor.glb" type="PackedScene" id=3]
+[ext_resource path="res://assets/elevator/SensorActivated.gd" type="Script" id=4]
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 1.73263, 0.0358, 1.74567 )
@@ -19,8 +21,43 @@ roughness = 0.5
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 0.2, 2.551, 1.1 )
 
+[sub_resource type="Animation" id=6]
+resource_name = "OpenExternal"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("elevator external doors/rightextleft")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0.55, 1.266, 1.558, 0, -0.707107, 0, 0.707107, 1, 1, 1, 1, 1, 1.496, 1.266, 1.558, 0, -0.707107, 0, 0.707107, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("elevator external doors/rightextright")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, -0.55, 1.266, 1.558, 0, -0.707107, 0, 0.707107, 1, 1, 1, 1, 1, -1.552, 1.266, 1.558, 0, -0.707107, 0, 0.707107, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("elevator external doors/leftextleft")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, 1.545, 1.266, -0.55, 0, 2.98023e-08, 0, 1, 1, 1, 1, 1, 1, 1.545, 1.266, -1.564, 0, 2.98023e-08, 0, 1, 1, 1, 1 )
+tracks/3/type = "transform"
+tracks/3/path = NodePath("elevator external doors/leftextright")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = PoolRealArray( 0, 1, 1.545, 1.266, 0.55, 0, 2.98023e-08, 0, 1, 1, 1, 1, 1, 1, 1.545, 1.266, 1.792, 0, 2.98023e-08, 0, 1, 1, 1, 1 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 1.32287, 1.36571, 1.34996 )
+
 [node name="elevator corridor" instance=ExtResource( 3 )]
 transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0 )
+script = ExtResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="." index="0"]
 transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0.0302982, 0 )
@@ -51,33 +88,45 @@ material/0 = SubResource( 2 )
 material/1 = SubResource( 3 )
 
 [node name="elevator box" parent="." index="2" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="elevator box2" parent="." index="3" instance=ExtResource( 1 )]
 transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, 0, 0, 0 )
 
 [node name="elevator external doors" type="Spatial" parent="." index="4"]
 
-[node name="door3" type="MeshInstance" parent="elevator external doors" index="0"]
+[node name="rightextleft" type="MeshInstance" parent="elevator external doors" index="0"]
 transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, 0.55, 1.266, 1.558 )
 mesh = SubResource( 1 )
 skeleton = NodePath("")
 material/0 = null
 
-[node name="door4" type="MeshInstance" parent="elevator external doors" index="1"]
+[node name="rightextright" type="MeshInstance" parent="elevator external doors" index="1"]
 transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, -0.55, 1.266, 1.558 )
 mesh = SubResource( 1 )
 skeleton = NodePath("")
 material/0 = null
 
-[node name="door5" type="MeshInstance" parent="elevator external doors" index="2"]
+[node name="leftextleft" type="MeshInstance" parent="elevator external doors" index="2"]
 transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 1.545, 1.266, -0.55 )
 mesh = SubResource( 1 )
 skeleton = NodePath("")
 material/0 = null
 
-[node name="door6" type="MeshInstance" parent="elevator external doors" index="3"]
+[node name="leftextright" type="MeshInstance" parent="elevator external doors" index="3"]
 transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 1.545, 1.266, 0.55 )
 mesh = SubResource( 1 )
 skeleton = NodePath("")
 material/0 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+anims/OpenExternal = SubResource( 6 )
+
+[node name="SensorActivated" type="Area" parent="." index="6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101454, 0.553809, 0.386644 )
+collision_layer = 8
+collision_mask = 2
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="SensorActivated" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0427652, 0.783694, -0.158954 )
+shape = SubResource( 7 )
