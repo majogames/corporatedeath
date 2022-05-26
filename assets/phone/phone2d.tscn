@@ -10,7 +10,8 @@
 [ext_resource path="res://assets/phone/banking_needs_to_be_redesigned_2.png" type="Texture" id=8]
 [ext_resource path="res://assets/phone/phone2d.gd" type="Script" id=9]
 
-[node name="Control" type="CenterContainer"]
+[node name="Control" type="PanelContainer"]
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -634.0
@@ -21,8 +22,10 @@ size_flags_vertical = 3
 script = ExtResource( 9 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 780.0
-margin_bottom = 1688.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 787.0
+margin_bottom = 1695.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 780, 1688 )
@@ -30,21 +33,25 @@ color = Color( 0.333333, 0.501961, 0.603922, 0.631373 )
 
 [node name="Lockscreen" type="CenterContainer" parent="."]
 visible = false
-margin_left = 195.0
-margin_top = 422.0
-margin_right = 585.0
-margin_bottom = 1266.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 787.0
+margin_bottom = 1695.0
 
 [node name="TextureRect" type="TextureRect" parent="Lockscreen"]
-margin_right = 390.0
-margin_bottom = 844.0
-rect_min_size = Vector2( 390, 844 )
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 1 )
 expand = true
 
-[node name="Home" type="CenterContainer" parent="."]
-margin_right = 780.0
-margin_bottom = 1688.0
+[node name="Home" type="Control" parent="."]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 787.0
+margin_bottom = 1695.0
+rect_pivot_offset = Vector2( -1793, 36 )
 
 [node name="TextureRect" type="TextureRect" parent="Home"]
 margin_right = 780.0
@@ -53,73 +60,147 @@ rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 6 )
 expand = true
 
-[node name="Notes" type="CenterContainer" parent="."]
-visible = false
-margin_left = 195.0
-margin_top = 422.0
-margin_right = 585.0
-margin_bottom = 1266.0
+[node name="LaunchNotes" type="Button" parent="Home"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 98.0
+margin_top = 274.0
+margin_right = 376.0
+margin_bottom = 548.0
+
+[node name="LaunchBank" type="Button" parent="Home"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 412.0
+margin_top = 280.0
+margin_right = 682.0
+margin_bottom = 550.0
+rect_pivot_offset = Vector2( 139, 226 )
+
+[node name="LaunchMaps" type="Button" parent="Home"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 96.0
+margin_top = 666.0
+margin_right = 374.0
+margin_bottom = 936.0
+rect_pivot_offset = Vector2( 139, 226 )
+
+[node name="LaunchInternet" type="Button" parent="Home"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 404.0
+margin_top = 664.0
+margin_right = 682.0
+margin_bottom = 934.0
+rect_pivot_offset = Vector2( 139, 226 )
+
+[node name="LaunchPhone" type="Button" parent="Home"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 98.0
+margin_top = 1052.0
+margin_right = 376.0
+margin_bottom = 1322.0
+rect_pivot_offset = Vector2( 139, 226 )
+
+[node name="LaunchEmail" type="Button" parent="Home"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 400.0
+margin_top = 1052.0
+margin_right = 678.0
+margin_bottom = 1322.0
+rect_pivot_offset = Vector2( 139, 226 )
+
+[node name="Notes" type="Control" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 787.0
+margin_bottom = 1695.0
 
 [node name="TextureRect" type="TextureRect" parent="Notes"]
-margin_right = 390.0
-margin_bottom = 844.0
-rect_min_size = Vector2( 390, 844 )
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 2 )
 expand = true
 
-[node name="Calls" type="CenterContainer" parent="."]
+[node name="HomeButton" type="Button" parent="Notes"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 50.0
+margin_top = 140.0
+margin_right = 166.0
+margin_bottom = 266.0
+
+[node name="Calls" type="Control" parent="."]
 visible = false
-margin_left = 195.0
-margin_top = 422.0
-margin_right = 585.0
-margin_bottom = 1266.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 787.0
+margin_bottom = 1695.0
 
 [node name="TextureRect" type="TextureRect" parent="Calls"]
 margin_right = 390.0
 margin_bottom = 844.0
-rect_min_size = Vector2( 390, 844 )
+rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 3 )
 expand = true
 
-[node name="Maps" type="CenterContainer" parent="."]
+[node name="HomeButton" type="Button" parent="Calls"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 50.0
+margin_top = 140.0
+margin_right = 166.0
+margin_bottom = 266.0
+
+[node name="Maps" type="Control" parent="."]
 visible = false
-margin_left = 195.0
-margin_top = 422.0
-margin_right = 585.0
-margin_bottom = 1266.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 787.0
+margin_bottom = 1695.0
 
 [node name="TextureRect" type="TextureRect" parent="Maps"]
 margin_right = 390.0
 margin_bottom = 844.0
-rect_min_size = Vector2( 390, 844 )
+rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 4 )
 expand = true
 
-[node name="Mail" type="CenterContainer" parent="."]
+[node name="HomeButton" type="Button" parent="Maps"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 50.0
+margin_top = 140.0
+margin_right = 166.0
+margin_bottom = 266.0
+
+[node name="Mail" type="Control" parent="."]
 visible = false
-margin_left = 195.0
-margin_top = 422.0
-margin_right = 585.0
-margin_bottom = 1266.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 787.0
+margin_bottom = 1695.0
 
 [node name="TextureRect" type="TextureRect" parent="Mail"]
 margin_right = 390.0
 margin_bottom = 844.0
-rect_min_size = Vector2( 390, 844 )
+rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 5 )
 expand = true
 
-[node name="Bank" type="CenterContainer" parent="."]
+[node name="HomeButton" type="Button" parent="Mail"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 50.0
+margin_top = 140.0
+margin_right = 166.0
+margin_bottom = 266.0
+
+[node name="Bank" type="Control" parent="."]
 visible = false
-margin_left = 195.0
-margin_top = 422.0
-margin_right = 585.0
-margin_bottom = 1266.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 787.0
+margin_bottom = 1695.0
 
 [node name="TextureRect1" type="TextureRect" parent="Bank"]
 margin_right = 390.0
 margin_bottom = 844.0
-rect_min_size = Vector2( 390, 844 )
+rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 8 )
 expand = true
 
@@ -127,6 +208,25 @@ expand = true
 visible = false
 margin_right = 390.0
 margin_bottom = 844.0
-rect_min_size = Vector2( 390, 844 )
+rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 7 )
 expand = true
+
+[node name="HomeButton" type="Button" parent="Bank"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 50.0
+margin_top = 140.0
+margin_right = 166.0
+margin_bottom = 266.0
+
+[connection signal="pressed" from="Home/LaunchNotes" to="." method="_on_LaunchNotes_pressed"]
+[connection signal="pressed" from="Home/LaunchBank" to="." method="_on_LaunchBank_pressed"]
+[connection signal="pressed" from="Home/LaunchMaps" to="." method="_on_LaunchMaps_pressed"]
+[connection signal="pressed" from="Home/LaunchInternet" to="." method="_on_LaunchInternet_pressed"]
+[connection signal="pressed" from="Home/LaunchPhone" to="." method="_on_LaunchPhone_pressed"]
+[connection signal="pressed" from="Home/LaunchEmail" to="." method="_on_LaunchEmail_pressed"]
+[connection signal="pressed" from="Notes/HomeButton" to="." method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="Calls/HomeButton" to="." method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="Maps/HomeButton" to="." method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="Mail/HomeButton" to="." method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="Bank/HomeButton" to="." method="_on_HomeButton_pressed"]

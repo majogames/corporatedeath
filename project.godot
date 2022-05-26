@@ -59,6 +59,7 @@ action={
 3d_physics/layer_3="enemies"
 3d_physics/layer_4="interactive_objects"
 3d_physics/layer_5="pickable_objects"
+3d_physics/layer_6="UI"
 3d_physics/enable_object_picking=true
 
 [physics]
