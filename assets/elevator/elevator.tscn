@@ -51,10 +51,10 @@ material/0 = SubResource( 2 )
 material/1 = SubResource( 3 )
 
 [node name="elevator box" parent="." index="2" instance=ExtResource( 1 )]
-transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="elevator box2" parent="." index="3" instance=ExtResource( 1 )]
-transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0 )
+transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, 0, 0, 0 )
 
 [node name="elevator external doors" type="Spatial" parent="." index="4"]
 

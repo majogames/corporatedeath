@@ -19,10 +19,11 @@ extents = Vector3( 1.16687, 1.42955, 0.0540848 )
 [node name="elevator box" instance=ExtResource( 1 )]
 
 [node name="elevator box" parent="." index="0"]
+transform = Transform( 0.707111, 0.00522664, 0.707083, -0.00291691, 0.999986, -0.0044747, -0.707096, 0.00110161, 0.707116, 0, 0, 0 )
 material/0 = SubResource( 1 )
 
 [node name="door" type="MeshInstance" parent="." index="1"]
-transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 1.54749, 1.26633, 0.895713 )
+transform = Transform( 1, -6.98492e-10, -2.98023e-08, 0, 1, 4.65661e-10, -2.98023e-08, 2.32831e-10, 1, 1.72761, 1.26633, -0.460876 )
 mesh = SubResource( 2 )
 skeleton = NodePath("")
 material/0 = null
@@ -34,7 +35,7 @@ transform = Transform( -5.96046e-08, 0, 0.999999, 0, 1, 0, -0.999999, 0, -5.9604
 shape = SubResource( 5 )
 
 [node name="door2" type="MeshInstance" parent="." index="2"]
-transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0.840383, 1.26633, 1.60282 )
+transform = Transform( 1, -6.98492e-10, -2.98023e-08, 0, 1, 4.65661e-10, -2.98023e-08, 2.32831e-10, 1, 1.72761, 1.26633, 0.539124 )
 mesh = SubResource( 2 )
 skeleton = NodePath("")
 material/0 = null
@@ -46,7 +47,7 @@ transform = Transform( -5.96046e-08, 0, 0.999999, 0, 1, 0, -0.999999, 0, -5.9604
 shape = SubResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="." index="3"]
-transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 2.12132, 0.0289609, 2.12132 )
+transform = Transform( 1, -6.98492e-10, -2.98023e-08, 0, 1, 4.65661e-10, -2.98023e-08, 2.32831e-10, 1, 3, 0.0289609, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
 transform = Transform( -5.96046e-08, 0, 0.999999, 0, 1, 0, -0.999999, 0, -5.96046e-08, -0.24466, -0.0643319, 1.4583e-08 )

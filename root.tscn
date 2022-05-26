@@ -48,7 +48,7 @@ agent/radius = 0.5
 [node name="Spatial" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.159207, 1.07761, 1.36094 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.159207, 1.04691, 1.36094 )
 
 [node name="RoomManager" type="RoomManager" parent="."]
 roomlist = NodePath("../RoomList")
@@ -68,7 +68,7 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 0
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 4 )
 
 [node name="bed2" parent="RoomList/Studio" instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.0801, 0, 0.0485324 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.0801, 0, 0.0788788 )
 
 [node name="Carpet" type="MeshInstance" parent="RoomList/Studio"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02, 0 )
@@ -137,7 +137,7 @@ transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 2, 0, -2 )
 transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 2, 0, -4 )
 
 [node name="wall14" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
-transform = Transform( 1.0007, 0, 1.74969e-07, 0, 0.474455, 0, -1.74969e-07, 0, 1.0007, -1.99688, 4.76837e-07, 0.0139101 )
+transform = Transform( 1, 0, 1.74846e-07, 0, 0.5, 0, -1.74846e-07, 0, 1, -1.99688, 4.76837e-07, 0.0442565 )
 
 [node name="shelves" type="Spatial" parent="RoomList/Studio"]
 
