@@ -135,5 +135,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0427652, 0.783694, -0.158954
 shape = SubResource( 7 )
 
 [node name="elevator button" parent="." index="7"]
-transform = Transform( 0.315748, 0, 7.45058e-09, 0, 0.67608, 0, -1.49012e-08, 0, 0.138232, -1.20334, 1.379, 1.28954 )
+transform = Transform( 0.315748, 0, 7.45058e-09, 0, 0.67608, 0, -1.49012e-08, 0, 0.138232, 0, 0, 0 )
 material/0 = SubResource( 8 )
