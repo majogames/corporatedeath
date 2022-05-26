@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://low_poly_plants/Models/Tree Type0 01.tscn" type="PackedScene" id=10]
 [ext_resource path="res://low_poly_plants/Models/Tree Type0 06.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/characters/fighter_kinematic.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/elevator/elevator.tscn" type="PackedScene" id=13]
 
 [sub_resource type="PlaneMesh" id=9]
 size = Vector2( 4, 8 )
@@ -359,7 +360,7 @@ material/0 = null
 shape = SubResource( 4 )
 
 [node name="Ceiling" type="MeshInstance" parent="RoomList/Corridor3"]
-transform = Transform( 1, 0, 0, 0, -1, -5.96046e-08, 0, 5.96046e-08, -1, 0, 3, -6.08856 )
+transform = Transform( 1, 0, 0, 0, -1, -5.96046e-08, 0, 5.96046e-08, -1, 0.0712166, 3, -6.08856 )
 mesh = SubResource( 3 )
 material/0 = null
 
@@ -408,6 +409,9 @@ transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, -8, 0, 
 
 [node name="wall21" parent="RoomList/Corridor3/other walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 10, 0, -8 )
+
+[node name="wall21" parent="RoomList/Corridor3/other walls/wall21" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 2, 0, -4 )
 
 [node name="door4" parent="RoomList/Corridor3/other walls" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 5, 0, -4 )
@@ -574,3 +578,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7884, 0, 3.64682 )
 
 [node name="4" type="Spatial" parent="Navigation/Path1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.38448, 0, 13.7517 )
+
+[node name="elevator corridor" parent="." instance=ExtResource( 13 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 34, 0.01, 4 )
