@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/banking_needs_to_be_redesigned_2.png-7a3fc33819f994944f1faddea986dcfd.stex"
+path="res://.import/lock_screen.svg-dc0b2ea6d0b757c27178bad5b458b3b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phone/banking_needs_to_be_redesigned_2.png"
-dest_files=[ "res://.import/banking_needs_to_be_redesigned_2.png-7a3fc33819f994944f1faddea986dcfd.stex" ]
+source_file="res://assets/phone/SVG/lock_screen.svg"
+dest_files=[ "res://.import/lock_screen.svg-dc0b2ea6d0b757c27178bad5b458b3b3.stex" ]
 
 [params]
 

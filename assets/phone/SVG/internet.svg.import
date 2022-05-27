@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/home_screen.png-71c21ed623cdfffe9becce756ad211be.stex"
+path="res://.import/internet.svg-286b66f93bc6c23c662611d233236846.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phone/home_screen.png"
-dest_files=[ "res://.import/home_screen.png-71c21ed623cdfffe9becce756ad211be.stex" ]
+source_file="res://assets/phone/SVG/internet.svg"
+dest_files=[ "res://.import/internet.svg-286b66f93bc6c23c662611d233236846.stex" ]
 
 [params]
 

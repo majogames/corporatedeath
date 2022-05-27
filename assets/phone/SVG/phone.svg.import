@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/banking_needs_to_be_redesigned_1.png-411c58c3fcf364d9e24380a46326888c.stex"
+path="res://.import/phone.svg-c5a5b107d182254cd47d84fee1dab795.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phone/banking_needs_to_be_redesigned_1.png"
-dest_files=[ "res://.import/banking_needs_to_be_redesigned_1.png-411c58c3fcf364d9e24380a46326888c.stex" ]
+source_file="res://assets/phone/SVG/phone.svg"
+dest_files=[ "res://.import/phone.svg-c5a5b107d182254cd47d84fee1dab795.stex" ]
 
 [params]
 
