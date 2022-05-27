@@ -1,11 +1,11 @@
 extends KinematicBody
 
-var speed = 3
+var speed = 5
 var acceleration = 9.8
 var gravity = 9.8
 var jump = 3
 
-var mouse_sensitivity = 0.05
+var mouse_sensitivity = 0.1
 
 var direction = Vector3()
 var velocity = Vector3()
@@ -18,6 +18,9 @@ export (bool) var show_phone: bool = false setget _show_phone
 onready var head = $head
 onready var phone = $head/phone
 onready var reach = $head/Camera/EyesRayCast
+
+var mat = SpatialMaterial.new()
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -67,9 +70,15 @@ func _physics_process(delta):
 	move_and_slide(fall, Vector3.UP)
 
 func _process(delta):
-	if reach.is_colliding() and Input.is_action_just_pressed("action"):
-		print(reach.get_collider().get_name())
-		reach.get_collider().action()
+	if reach.is_colliding():
+		#mat.albedo_color = Color(1, 0, 0)
+		#reach.get_collider().mesh.set_surface_material(0, mat)
+
+		if Input.is_action_just_pressed("action"):
+			print(reach.get_collider().get_name())
+			reach.get_collider().action()
+	#mat.albedo_color = Color(0, 0, 0)
+	#reach.get_collider().mesh.set_surface_material(0, mat)
 
 func _show_phone(show):
 	show_phone = show
