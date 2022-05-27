@@ -16,3 +16,8 @@ func toggle_door():
 		$AnimationPlayer.play_backwards("OpenExternal")
 		elevator.play_backwards("Open")
 		elevator2.play_backwards("Open")
+
+
+func home_on_Area_body_entered(body):
+	var dialog = Dialogic.start('Elevator')
+	add_child(dialog)
