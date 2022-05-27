@@ -69,17 +69,6 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector3.UP)
 	move_and_slide(fall, Vector3.UP)
 
-func _process(delta):
-	if reach.is_colliding():
-		#mat.albedo_color = Color(1, 0, 0)
-		#reach.get_collider().mesh.set_surface_material(0, mat)
-
-		if Input.is_action_just_pressed("action"):
-			print(reach.get_collider().get_name())
-			reach.get_collider().action()
-	#mat.albedo_color = Color(0, 0, 0)
-	#reach.get_collider().mesh.set_surface_material(0, mat)
-
 func _show_phone(show):
 	show_phone = show
 	if phone != null:
