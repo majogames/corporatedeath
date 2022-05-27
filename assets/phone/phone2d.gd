@@ -5,7 +5,7 @@ extends Control
 # var a = 2
 # var b = "text"
 
-enum PhonePage {Lockscreen=0, Home=1, Notes=2, Calls=3, Maps=4, Mail=5, Bank=6, MAX=7}
+enum PhonePage {Lockscreen=0, Home=1, Notes=2, Calls=3, Maps=4, Mail=5, Bank=6, Internet=7, MAX=8}
 export (PhonePage) var current_page = PhonePage.Lockscreen setget _set_page
 
 onready var lockscreen = $Lockscreen
@@ -15,11 +15,16 @@ onready var calls = $Calls
 onready var maps = $Maps
 onready var mail = $Mail
 onready var bank = $Bank
+onready var internet = $Internet
 var ready = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ready = true
+	if TaskList.dead:
+		self.current_page = PhonePage.Lockscreen
+	else:
+		self.current_page = PhonePage.Home
 
 func _set_page(newpage):
 	if newpage >= PhonePage.MAX:
@@ -34,6 +39,7 @@ func _set_page(newpage):
 	maps.visible = (newpage == PhonePage.Maps)
 	mail.visible = (newpage == PhonePage.Mail)
 	bank.visible = (newpage == PhonePage.Bank)
+	internet.visible = (newpage == PhonePage.Internet)
 
 
 func _on_LaunchNotes_pressed():
@@ -53,7 +59,7 @@ func _on_LaunchMaps_pressed():
 
 func _on_LaunchInternet_pressed():
 	$click.play()
-	self.current_page = PhonePage.MAX
+	self.current_page = PhonePage.Internet
 
 
 func _on_LaunchPhone_pressed():

@@ -1,18 +1,19 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://assets/phone/SVG/lock_screen.svg" type="Texture" id=1]
-[ext_resource path="res://assets/phone/SVG/phone.svg" type="Texture" id=2]
-[ext_resource path="res://assets/phone/SVG/notes.svg" type="Texture" id=3]
-[ext_resource path="res://assets/phone/SVG/maps.svg" type="Texture" id=4]
-[ext_resource path="res://assets/phone/SVG/banking.svg" type="Texture" id=5]
-[ext_resource path="res://assets/phone/SVG/home_screen.svg" type="Texture" id=6]
+[ext_resource path="res://assets/phone/PNG/Artboard 8 copy@2x.png" type="Texture" id=1]
+[ext_resource path="res://assets/phone/PNG/Artboard 7 copy 2@2x.png" type="Texture" id=2]
+[ext_resource path="res://assets/phone/PNG/Artboard 3 copy@2x.png" type="Texture" id=3]
+[ext_resource path="res://assets/phone/PNG/Artboard 5 copy@2x.png" type="Texture" id=4]
+[ext_resource path="res://assets/phone/PNG/Artboard 4 copy 3@2x.png" type="Texture" id=6]
 [ext_resource path="res://assets/music/click 2.mp3" type="AudioStream" id=7]
-[ext_resource path="res://assets/phone/SVG/email.svg" type="Texture" id=8]
+[ext_resource path="res://assets/phone/PNG/Artboard 2 copy@2x.png" type="Texture" id=8]
 [ext_resource path="res://assets/phone/phone2d.gd" type="Script" id=9]
 [ext_resource path="res://assets/phone/Lockscreen.gd" type="Script" id=10]
 [ext_resource path="res://assets/music/triad_square.mp3" type="AudioStream" id=11]
 [ext_resource path="res://assets/music/error.mp3" type="AudioStream" id=12]
 [ext_resource path="res://assets/music/click.mp3" type="AudioStream" id=13]
+[ext_resource path="res://assets/phone/PNG/Artboard 1 copy@2x.png" type="Texture" id=14]
+[ext_resource path="res://assets/phone/PNG/Artboard 6 copy@2x.png" type="Texture" id=15]
 
 [node name="Control" type="PanelContainer"]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -62,7 +63,7 @@ mix_target = 2
 margin_right = 780.0
 margin_bottom = 1688.0
 rect_min_size = Vector2( 780, 1688 )
-texture = ExtResource( 1 )
+texture = ExtResource( 14 )
 expand = true
 
 [node name="Button1" type="Button" parent="Lockscreen/TextureRect"]
@@ -147,7 +148,7 @@ rect_pivot_offset = Vector2( -1793, 36 )
 margin_right = 780.0
 margin_bottom = 1688.0
 rect_min_size = Vector2( 780, 1688 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 expand = true
 
 [node name="LaunchNotes" type="Button" parent="Home"]
@@ -271,7 +272,7 @@ margin_bottom = 1695.0
 margin_right = 390.0
 margin_bottom = 844.0
 rect_min_size = Vector2( 780, 1688 )
-texture = ExtResource( 8 )
+texture = ExtResource( 1 )
 expand = true
 
 [node name="HomeButton" type="Button" parent="Mail"]
@@ -289,20 +290,41 @@ margin_right = 787.0
 margin_bottom = 1695.0
 
 [node name="TextureRect1" type="TextureRect" parent="Bank"]
-margin_right = 390.0
-margin_bottom = 844.0
-rect_min_size = Vector2( 780, 1688 )
-texture = ExtResource( 5 )
-expand = true
-
-[node name="TextureRect2" type="TextureRect" parent="Bank"]
 visible = false
 margin_right = 390.0
 margin_bottom = 844.0
 rect_min_size = Vector2( 780, 1688 )
 expand = true
 
+[node name="TextureRect2" type="TextureRect" parent="Bank"]
+margin_right = 390.0
+margin_bottom = 844.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 6 )
+expand = true
+
 [node name="HomeButton" type="Button" parent="Bank"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 50.0
+margin_top = 140.0
+margin_right = 166.0
+margin_bottom = 266.0
+
+[node name="Internet" type="Control" parent="."]
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 787.0
+margin_bottom = 1695.0
+
+[node name="TextureRect" type="TextureRect" parent="Internet"]
+margin_right = 390.0
+margin_bottom = 844.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 15 )
+expand = true
+
+[node name="HomeButton" type="Button" parent="Internet"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 50.0
 margin_top = 140.0
@@ -331,3 +353,4 @@ margin_bottom = 266.0
 [connection signal="pressed" from="Maps/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Mail/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Bank/HomeButton" to="." method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="Internet/HomeButton" to="." method="_on_HomeButton_pressed"]

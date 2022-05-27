@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/banking.svg-4b3c021a0d8930c9653f88462b9f1cd4.stex"
+path="res://.import/Artboard 1 copy@2x.png-d1930c9ee16c5c1de3e600faf4b287e0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phone/SVG/banking.svg"
-dest_files=[ "res://.import/banking.svg-4b3c021a0d8930c9653f88462b9f1cd4.stex" ]
+source_file="res://assets/phone/PNG/Artboard 1 copy@2x.png"
+dest_files=[ "res://.import/Artboard 1 copy@2x.png-d1930c9ee16c5c1de3e600faf4b287e0.stex" ]
 
 [params]
 
