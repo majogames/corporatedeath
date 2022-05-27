@@ -37,32 +37,40 @@ func _set_page(newpage):
 
 
 func _on_LaunchNotes_pressed():
+	$click.play()
 	self.current_page = PhonePage.Notes
 
 
 func _on_LaunchBank_pressed():
+	$click.play()
 	self.current_page = PhonePage.Bank
 
 
 func _on_LaunchMaps_pressed():
+	$click.play()
 	self.current_page = PhonePage.Maps
 
 
 func _on_LaunchInternet_pressed():
+	$click.play()
 	self.current_page = PhonePage.MAX
 
 
 func _on_LaunchPhone_pressed():
+	$click.play()
 	self.current_page = PhonePage.Calls
 
 
 func _on_LaunchEmail_pressed():
+	$click.play()
 	self.current_page = PhonePage.Mail
 
 
 func _on_HomeButton_pressed():
+	$click.play()
 	self.current_page = PhonePage.Home
 
 
 func _on_Lockscreen_unlock():
+	$click.play()
 	self.current_page = PhonePage.Home

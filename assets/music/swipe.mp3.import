@@ -11,5 +11,5 @@ dest_files=[ "res://.import/swipe.mp3-15bc87b140aab1a2cc764c96dffdb6a1.mp3str" ]
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/4_chord_xylo.mp3-48a3e1841fbbc23f9e9648b1f3f16da6.mp
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
