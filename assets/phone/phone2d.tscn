@@ -1,12 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/phone/SVG/lock_screen.svg" type="Texture" id=1]
 [ext_resource path="res://assets/phone/SVG/phone.svg" type="Texture" id=2]
 [ext_resource path="res://assets/phone/SVG/notes.svg" type="Texture" id=3]
 [ext_resource path="res://assets/phone/SVG/maps.svg" type="Texture" id=4]
 [ext_resource path="res://assets/phone/SVG/banking.svg" type="Texture" id=5]
-[ext_resource path="res://assets/phone/home_screen.svg" type="Texture" id=6]
-[ext_resource path="res://assets/phone/banking_needs_to_be_redesigned_1.png" type="Texture" id=7]
+[ext_resource path="res://assets/phone/SVG/home_screen.svg" type="Texture" id=6]
 [ext_resource path="res://assets/phone/SVG/email.svg" type="Texture" id=8]
 [ext_resource path="res://assets/phone/phone2d.gd" type="Script" id=9]
 [ext_resource path="res://assets/phone/Lockscreen.gd" type="Script" id=10]
@@ -281,7 +280,6 @@ visible = false
 margin_right = 390.0
 margin_bottom = 844.0
 rect_min_size = Vector2( 780, 1688 )
-texture = ExtResource( 7 )
 expand = true
 
 [node name="HomeButton" type="Button" parent="Bank"]
