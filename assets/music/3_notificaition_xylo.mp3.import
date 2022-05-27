@@ -11,5 +11,5 @@ dest_files=[ "res://.import/3_notificaition_xylo.mp3-aff060d051acaf13a9418b46060
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

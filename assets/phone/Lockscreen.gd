@@ -26,6 +26,9 @@ func input_number(number):
 		if current_sequence_index >= locksequence.size():
 			current_sequence_index = 0
 			emit_signal("unlock")
-			
+			$unlock.play()
+			return
+		$click2.play()
 	else:
 		current_sequence_index = 0
+		$error.play()

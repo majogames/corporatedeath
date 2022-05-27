@@ -11,5 +11,5 @@ dest_files=[ "res://.import/tap_xylo.mp3-bf721a15472dcb853ca53cb82da89cbb.mp3str
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

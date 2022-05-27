@@ -11,5 +11,5 @@ dest_files=[ "res://.import/approval 2_square.mp3-25824bfed0a1a5a9eda7865a405c84
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

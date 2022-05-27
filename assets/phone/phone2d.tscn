@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/phone/SVG/lock_screen.svg" type="Texture" id=1]
 [ext_resource path="res://assets/phone/SVG/phone.svg" type="Texture" id=2]
@@ -6,9 +6,13 @@
 [ext_resource path="res://assets/phone/SVG/maps.svg" type="Texture" id=4]
 [ext_resource path="res://assets/phone/SVG/banking.svg" type="Texture" id=5]
 [ext_resource path="res://assets/phone/SVG/home_screen.svg" type="Texture" id=6]
+[ext_resource path="res://assets/music/click 2.mp3" type="AudioStream" id=7]
 [ext_resource path="res://assets/phone/SVG/email.svg" type="Texture" id=8]
 [ext_resource path="res://assets/phone/phone2d.gd" type="Script" id=9]
 [ext_resource path="res://assets/phone/Lockscreen.gd" type="Script" id=10]
+[ext_resource path="res://assets/music/triad_square.mp3" type="AudioStream" id=11]
+[ext_resource path="res://assets/music/error.mp3" type="AudioStream" id=12]
+[ext_resource path="res://assets/music/click.mp3" type="AudioStream" id=13]
 
 [node name="Control" type="PanelContainer"]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -20,6 +24,10 @@ rect_min_size = Vector2( 780, 1688 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 9 )
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+mix_target = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 7.0
@@ -37,6 +45,18 @@ margin_top = 7.0
 margin_right = 787.0
 margin_bottom = 1695.0
 script = ExtResource( 10 )
+
+[node name="click2" type="AudioStreamPlayer" parent="Lockscreen"]
+stream = ExtResource( 7 )
+mix_target = 2
+
+[node name="error" type="AudioStreamPlayer" parent="Lockscreen"]
+stream = ExtResource( 12 )
+mix_target = 2
+
+[node name="unlock" type="AudioStreamPlayer" parent="Lockscreen"]
+stream = ExtResource( 11 )
+mix_target = 2
 
 [node name="TextureRect" type="TextureRect" parent="Lockscreen"]
 margin_right = 780.0

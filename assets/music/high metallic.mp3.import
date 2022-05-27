@@ -11,5 +11,5 @@ dest_files=[ "res://.import/high metallic.mp3-bd436b0523731ffa3ea0b12be7e65f00.m
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

@@ -5,6 +5,8 @@ onready var shape: CollisionShape = $Area/CollisionShape
 onready var viewport: Viewport = $Viewport
 
 func _unhandled_input(event):
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		return
 	if event is InputEventMouseButton: #and event.button_index == BUTTON_LEFT and event.pressed:
 		var camera = get_viewport().get_camera()
 		var from = camera.project_ray_origin(event.position)
