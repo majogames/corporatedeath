@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/bedroom/fridge.glb" type="PackedScene" id=1]
 [ext_resource path="res://assets/bedroom/fridge door.glb" type="PackedScene" id=2]
+[ext_resource path="res://assets/food/red apple.glb" type="PackedScene" id=3]
+[ext_resource path="res://assets/food/metal_can.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/food/banana.glb" type="PackedScene" id=5]
+[ext_resource path="res://assets/bedroom/fridge_door.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -34,7 +38,21 @@ tracks/0/keys = {
 }
 
 [sub_resource type="BoxShape" id=3]
-extents = Vector3( 0.301853, 0.424064, 0.291628 )
+extents = Vector3( 0.301853, 0.424064, 0.026061 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 0.301853, 0.424064, 0.292736 )
+
+[sub_resource type="CapsuleShape" id=5]
+radius = 0.250816
+height = 1.44947
+
+[sub_resource type="CapsuleShape" id=6]
+radius = 0.250816
+height = 0.444745
+
+[sub_resource type="SphereShape" id=4]
+radius = 0.648839
 
 [node name="fridge" instance=ExtResource( 1 )]
 
@@ -45,13 +63,79 @@ anims/open = SubResource( 2 )
 [node name="fridge door" parent="." index="2" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.269271, 0, 0.29 )
 
+[node name="StaticBody" type="StaticBody" parent="fridge door" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.268574, 0, 0.00264114 )
+collision_layer = 9
+collision_mask = 3
+script = ExtResource( 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="fridge door/StaticBody" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42507, -0.00219908 )
+shape = SubResource( 3 )
+
 [node name="StaticBody" type="StaticBody" parent="." index="3"]
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42507, 0.025533 )
-shape = SubResource( 3 )
+shape = SubResource( 7 )
 
 [node name="OmniLight" type="OmniLight" parent="." index="4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.153634, 0.733466, 0.135258 )
 shadow_enabled = true
+shadow_bias = 0.01
 omni_range = 0.93286
+
+[node name="banana" parent="." index="5" instance=ExtResource( 5 )]
+transform = Transform( 0.0991365, 0, -0.0131132, 0, 0.1, 0, 0.0131132, 0, 0.0991365, 0.149026, 0.264917, -0.150886 )
+
+[node name="StaticBody" type="StaticBody" parent="banana" index="1"]
+collision_layer = 9
+collision_mask = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="banana/StaticBody" index="0"]
+transform = Transform( 0.680055, 0, -0.73316, 0, 0.999999, 0, 0.73316, 0, 0.680055, -0.044802, 0.0770471, 0.069705 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="banana/StaticBody" index="1"]
+transform = Transform( 0.0794457, -0.898793, -0.431105, 0.512173, 0.407826, -0.755877, 0.855195, -0.16075, 0.49274, 0.534428, 0.313826, -0.54288 )
+shape = SubResource( 6 )
+
+[node name="red apple" parent="." index="6" instance=ExtResource( 3 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0171579, 0.292053, -0.145493 )
+
+[node name="StaticBody" type="StaticBody" parent="red apple" index="1"]
+collision_layer = 9
+collision_mask = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="red apple/StaticBody" index="0"]
+shape = SubResource( 4 )
+
+[node name="metal_can11" parent="." index="7" instance=ExtResource( 4 )]
+transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, -0.196442, 0.0574632, 0.173033 )
+
+[node name="metal_can12" parent="." index="8" instance=ExtResource( 4 )]
+transform = Transform( -0.279946, 0, -0.960016, 0, 1, 0, 0.960016, 0, -0.279946, 0.0183118, 0.0574632, 0.148608 )
+
+[node name="metal_can13" parent="." index="9" instance=ExtResource( 4 )]
+transform = Transform( -0.727042, 0, -0.686593, 0, 1, 0, 0.686593, 0, -0.727042, 0.0680029, 0.0574632, 0.0202533 )
+
+[node name="metal_can14" parent="." index="10" instance=ExtResource( 4 )]
+transform = Transform( -0.271457, 0, -0.962451, 0, 1, 0, 0.962451, 0, -0.271457, -0.103723, 0.0574632, 0.0533278 )
+
+[node name="metal_can15" parent="." index="11" instance=ExtResource( 4 )]
+transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, -0.0866828, 0.0574632, 0.169161 )
+
+[node name="metal_can16" parent="." index="12" instance=ExtResource( 4 )]
+transform = Transform( 0.855201, 0, -0.518296, 0, 1, 0, 0.518296, 0, 0.855201, -0.14742, 0.0574632, 0.107706 )
+
+[node name="metal_can17" parent="." index="13" instance=ExtResource( 4 )]
+transform = Transform( 0.741098, 0, 0.671397, 0, 1, 0, -0.671397, 0, 0.741098, -0.178748, 0.0574632, 0.0384511 )
+
+[node name="metal_can18" parent="." index="14" instance=ExtResource( 4 )]
+transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, -0.144609, 0.24674, -0.130269 )
+
+[node name="metal_can19" parent="." index="15" instance=ExtResource( 4 )]
+transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, 0.107772, 0.0574632, 0.105136 )
+
+[node name="metal_can20" parent="." index="16" instance=ExtResource( 4 )]
+transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, -0.0242219, 0.0574632, 0.0542448 )

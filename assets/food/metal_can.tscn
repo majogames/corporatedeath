@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/food/metal_can.glb" type="PackedScene" id=1]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.0288293
+height = 0.105938
+
+[node name="metal_can" instance=ExtResource( 1 )]
+
+[node name="StaticBody" type="StaticBody" parent="can_Meshlp" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 7.10543e-15, 0, -7.10543e-15, 1, 0, 0.00141887, -1.69143e-10 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="can_Meshlp/StaticBody" index="0"]
+transform = Transform( 1, 0, 0, 0, -4.37113e-08, -1, 0, 1, -4.37113e-08, 0, -6.32969e-09, -0.0530973 )
+shape = SubResource( 1 )
