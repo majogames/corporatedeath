@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://assets/highlight.material.tres" type="Material" id=17]
 [ext_resource path="res://assets/bedroom/laptop.glb" type="PackedScene" id=18]
 [ext_resource path="res://assets/bedroom/chair.tscn" type="PackedScene" id=19]
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=20]
 
 [sub_resource type="BoxShape" id=16]
 extents = Vector3( 2.08339, 0.0529319, 0.497186 )
@@ -143,10 +144,12 @@ shape = SubResource( 11 )
 
 [node name="door2" parent="RoomList/Studio/walls" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -3 )
+enabled = true
 
 [node name="door3" parent="RoomList/Studio/walls" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1, 0, -4 )
 enabled = true
+homedoor = true
 
 [node name="wall" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 4 )
@@ -673,3 +676,6 @@ material/0 = ExtResource( 17 )
 
 [node name="chair" parent="." instance=ExtResource( 19 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.563548, -0.0189996, 2.47136 )
+
+[node name="Dialog" parent="." instance=ExtResource( 20 )]
+timeline = "timeline-1653689018.json"

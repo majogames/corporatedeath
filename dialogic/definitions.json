@@ -1,0 +1,25 @@
+{
+	"glossary": [
+
+	],
+	"variables": [
+		{
+			"id": "1653691258-146",
+			"name": "dead",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653691133-366",
+			"name": "Time of the day",
+			"type": 0,
+			"value": "Morning"
+		},
+		{
+			"id": "1653689926-787",
+			"name": "MorningTasks",
+			"type": 0,
+			"value": "false"
+		}
+	]
+}

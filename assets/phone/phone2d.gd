@@ -21,7 +21,7 @@ var ready = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ready = true
-	if TaskList.dead:
+	if Dialogic.get_variable('dead') == 'true':
 		self.current_page = PhonePage.Lockscreen
 	else:
 		self.current_page = PhonePage.Home
