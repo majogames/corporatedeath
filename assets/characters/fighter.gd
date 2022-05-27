@@ -31,6 +31,7 @@ func _ready():
 	goto(targets[0])
 	animation.get_animation("Idle").loop = true
 	animation.get_animation("walk in place").loop = true
+	animation.get_animation("typing").loop = true
 	animation_tree["parameters/state/current"] = 1
 
 func _process(delta):

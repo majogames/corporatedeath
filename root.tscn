@@ -81,7 +81,6 @@ surfaces/0 = {
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 1.54418 )
 
 [node name="RoomManager" type="RoomManager" parent="."]
-active = false
 roomlist = NodePath("../RoomList")
 
 [node name="RoomList" type="Spatial" parent="."]
