@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/email.svg-3a759e99ddafb54fc8d43cd84ebc0dd9.stex"
+path="res://.import/Artboard 4 copy 3@2x.png-df5ade16ed457f466b211a6e1f81705c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phone/SVG/email.svg"
-dest_files=[ "res://.import/email.svg-3a759e99ddafb54fc8d43cd84ebc0dd9.stex" ]
+source_file="res://assets/phone/PNG/Artboard 4 copy 3@2x.png"
+dest_files=[ "res://.import/Artboard 4 copy 3@2x.png-df5ade16ed457f466b211a6e1f81705c.stex" ]
 
 [params]
 

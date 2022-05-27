@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lock_screen.svg-dc0b2ea6d0b757c27178bad5b458b3b3.stex"
+path="res://.import/Artboard 3 copy@2x.png-2d9d929c937875a316dec18cc0e151dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phone/SVG/lock_screen.svg"
-dest_files=[ "res://.import/lock_screen.svg-dc0b2ea6d0b757c27178bad5b458b3b3.stex" ]
+source_file="res://assets/phone/PNG/Artboard 3 copy@2x.png"
+dest_files=[ "res://.import/Artboard 3 copy@2x.png-2d9d929c937875a316dec18cc0e151dd.stex" ]
 
 [params]
 

@@ -1,0 +1,6 @@
+*.x86_64
+*.exe
+*.pck
+*.tar*
+*.zip
+*.dmg
