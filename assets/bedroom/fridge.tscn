@@ -135,11 +135,12 @@ shape = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42507, 0.025533 )
 shape = SubResource( 7 )
 
-[node name="OmniLight" type="OmniLight" parent="." index="4"]
+[node name="FridgeLight" type="OmniLight" parent="." index="4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.153634, 0.733466, 0.135258 )
+light_energy = 2.0
 shadow_enabled = true
 shadow_bias = 0.01
-omni_range = 0.93286
+omni_range = 1.40433
 
 [node name="banana" parent="." index="5" instance=ExtResource( 5 )]
 transform = Transform( 0.0991365, 0, -0.0131132, 0, 0.1, 0, 0.0131132, 0, 0.0991365, 0.149026, 0.264917, -0.150886 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://assets/bedroom/microwave.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/highlight.material.tres" type="Material" id=17]
 [ext_resource path="res://assets/bedroom/laptop.glb" type="PackedScene" id=18]
+[ext_resource path="res://assets/bedroom/chair.tscn" type="PackedScene" id=19]
 
 [sub_resource type="BoxShape" id=16]
 extents = Vector3( 2.08339, 0.0529319, 0.497186 )
@@ -200,8 +201,14 @@ transform = Transform( -1, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -1, 1, 0.11
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, 1.1964 )
 
 [node name="OmniLight" type="OmniLight" parent="RoomList/Studio"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.289013, 2.7151, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.289013, 2.7151, 1.81699 )
 shadow_enabled = true
+omni_range = 3.68988
+
+[node name="OmniLight2" type="OmniLight" parent="RoomList/Studio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1711, 2.7151, -1.74894 )
+shadow_enabled = true
+omni_range = 3.99757
 
 [node name="Tree Type0 01" parent="RoomList/Studio" instance=ExtResource( 10 )]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.353983, 0.701955, 3.32161 )
@@ -662,3 +669,6 @@ shape = SubResource( 14 )
 visible = false
 mesh = SubResource( 15 )
 material/0 = ExtResource( 17 )
+
+[node name="chair" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.563548, -0.0189996, 2.47136 )
