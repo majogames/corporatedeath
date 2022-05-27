@@ -5,7 +5,7 @@
 [ext_resource path="res://default_env.tres" type="Environment" id=3]
 [ext_resource path="res://assets/bedroom/bed.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/bedroom/shelf.glb" type="PackedScene" id=5]
-[ext_resource path="res://assets/bedroom/desk.glb" type="PackedScene" id=6]
+[ext_resource path="res://assets/bedroom/desk.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/bedroom/wardrobe.glb" type="PackedScene" id=7]
 [ext_resource path="res://assets/bedroom/door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://player.tscn" type="PackedScene" id=9]
@@ -17,12 +17,10 @@
 [ext_resource path="res://assets/bedroom/table.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/bedroom/microwave.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/highlight.material.tres" type="Material" id=17]
+[ext_resource path="res://assets/bedroom/laptop.glb" type="PackedScene" id=18]
 
 [sub_resource type="BoxShape" id=16]
 extents = Vector3( 2.08339, 0.0529319, 0.497186 )
-
-[sub_resource type="BoxShape" id=17]
-extents = Vector3( 0.44256, 0.0529319, 1.07985 )
 
 [sub_resource type="PlaneMesh" id=9]
 size = Vector2( 4, 8 )
@@ -49,8 +47,8 @@ extents = Vector3( 16, 0.01, 2 )
 extents = Vector3( 16, 0.01, 2 )
 
 [sub_resource type="NavigationMesh" id=8]
-vertices = PoolVector3Array( 10.8734, 0.34, 5.7734, 13.2734, 0.34, 5.7734, 13.5734, 0.34, 5.1734, 13.2734, 0.34, 2.4734, 13.5734, 0.34, 5.1734, 15.9734, 0.34, 5.1734, 15.9734, 0.34, 2.7734, 13.2734, 0.34, 2.4734, 13.2734, 0.34, -15.2266, 10.8734, 0.34, -15.2266, 10.8734, 0.34, -7.4266, 13.2734, 0.34, -6.5266, 10.8734, 0.34, -7.4266, 8.1734, 0.34, -7.1266, 8.1734, 0.34, -4.7266, 10.8734, 0.34, -4.4266, 13.2734, 0.34, -6.5266, 10.8734, 0.34, -4.4266, 10.8734, 0.34, 5.7734, 13.2734, 0.34, 2.4734, 13.2734, 0.34, -6.5266, -9.2266, 0.34, -4.7266, -2.3266, 0.34, -4.7266, -2.0266, 0.34, -5.6266, -9.2266, 0.34, -7.1266, -9.2266, 0.34, -4.7266, -2.0266, 0.34, -5.6266, -0.526597, 0.34, -7.1266, 0.0734034, 0.34, -4.7266, 8.1734, 0.34, -4.7266, 8.1734, 0.34, -7.1266, -0.526597, 0.34, -7.1266, -0.526597, 0.34, -5.6266, -0.526597, 0.34, -7.1266, -2.0266, 0.34, -5.6266, -0.526597, 0.34, -5.6266, 0.673403, 0.34, -0.826598, -1.1266, 0.34, -0.526598, -0.826597, 0.34, 2.1734, 1.2734, 1.14, 3.0734, 1.0734, 1.14, 1.7734, 0.873403, 0.34, 0.473402, -0.976598, 0.94, 0.823402, 0.223403, 0.34, 2.6234, 1.2734, 1.14, 3.0734, 1.2734, 0.34, -3.2266, 0.673403, 0.34, -0.826598, 0.873403, 0.34, 0.473402, 1.0734, 1.14, 1.7734, 1.2734, 0.34, 1.4984, 33.6734, 0.34, 5.1734, 34.8734, 0.34, 3.9734, 33.3734, 0.34, 2.7734, 24.6734, 0.34, 2.7734, 24.6734, 0.34, 5.1734, 24.6734, 0.34, 2.7734, 15.9734, 0.34, 2.7734, 15.9734, 0.34, 5.1734, 24.6734, 0.34, 5.1734, 13.2734, 0.34, 5.7734, 10.8734, 0.34, 5.7734, 10.5734, 0.34, 12.9734, 13.2734, 0.34, 15.0734, 0.373403, 0.34, 12.9734, -9.2266, 0.34, 12.9734, -9.2266, 0.34, 15.0734, 1.8734, 0.34, 15.0734, 1.8734, 0.34, 15.0734, 13.2734, 0.34, 15.0734, 10.5734, 0.34, 12.9734, 0.373403, 0.34, 12.9734 )
-polygons = [ PoolIntArray( 1, 0, 2 ), PoolIntArray( 2, 0, 3 ), PoolIntArray( 5, 4, 6 ), PoolIntArray( 6, 4, 7 ), PoolIntArray( 9, 8, 10 ), PoolIntArray( 10, 8, 11 ), PoolIntArray( 16, 15, 12 ), PoolIntArray( 12, 15, 14 ), PoolIntArray( 12, 14, 13 ), PoolIntArray( 20, 19, 17 ), PoolIntArray( 17, 19, 18 ), PoolIntArray( 21, 23, 22 ), PoolIntArray( 25, 24, 26 ), PoolIntArray( 26, 24, 27 ), PoolIntArray( 32, 31, 28 ), PoolIntArray( 28, 31, 29 ), PoolIntArray( 29, 31, 30 ), PoolIntArray( 35, 34, 33 ), PoolIntArray( 39, 43, 40 ), PoolIntArray( 40, 43, 38 ), PoolIntArray( 40, 38, 42 ), PoolIntArray( 40, 42, 41 ), PoolIntArray( 41, 42, 37 ), PoolIntArray( 41, 37, 36 ), PoolIntArray( 44, 48, 49 ), PoolIntArray( 49, 48, 47 ), PoolIntArray( 49, 47, 46 ), PoolIntArray( 49, 46, 45 ), PoolIntArray( 51, 50, 52 ), PoolIntArray( 52, 50, 53 ), PoolIntArray( 53, 50, 54 ), PoolIntArray( 58, 57, 55 ), PoolIntArray( 55, 57, 56 ), PoolIntArray( 60, 59, 61 ), PoolIntArray( 61, 59, 62 ), PoolIntArray( 64, 63, 65 ), PoolIntArray( 65, 63, 66 ), PoolIntArray( 70, 69, 67 ), PoolIntArray( 67, 69, 68 ) ]
+vertices = PoolVector3Array( 10.8734, 0.34, 5.7734, 13.2734, 0.34, 5.7734, 13.5734, 0.34, 5.1734, 13.2734, 0.34, 2.4734, 13.5734, 0.34, 5.1734, 15.9734, 0.34, 5.1734, 15.9734, 0.34, 2.7734, 13.2734, 0.34, 2.4734, 13.2734, 0.34, -15.2266, 10.8734, 0.34, -15.2266, 10.8734, 0.34, -7.4266, 13.2734, 0.34, -6.5266, 10.8734, 0.34, -7.4266, 8.1734, 0.34, -7.1266, 8.1734, 0.34, -4.7266, 10.8734, 0.34, -4.4266, 13.2734, 0.34, -6.5266, 10.8734, 0.34, -4.4266, 10.8734, 0.34, 5.7734, 13.2734, 0.34, 2.4734, 13.2734, 0.34, -6.5266, -9.2266, 0.34, -4.7266, -2.3266, 0.34, -4.7266, -2.0266, 0.34, -5.6266, -9.2266, 0.34, -7.1266, -9.2266, 0.34, -4.7266, -2.0266, 0.34, -5.6266, -0.526597, 0.34, -7.1266, 0.0734034, 0.34, -4.7266, 8.1734, 0.34, -4.7266, 8.1734, 0.34, -7.1266, -0.526597, 0.34, -7.1266, -0.526597, 0.34, -5.6266, -0.526597, 0.34, -7.1266, -2.0266, 0.34, -5.6266, -0.526597, 0.34, -5.6266, 33.3734, 0.34, 5.1734, 34.8734, 0.34, 3.9734, 33.3734, 0.34, 2.7734, 24.6734, 0.34, 2.7734, 24.6734, 0.34, 5.1734, 24.6734, 0.34, 2.7734, 15.9734, 0.34, 2.7734, 15.9734, 0.34, 5.1734, 24.6734, 0.34, 5.1734, 13.2734, 0.34, 5.7734, 10.8734, 0.34, 5.7734, 10.5734, 0.34, 12.9734, 13.2734, 0.34, 15.0734, 0.373403, 0.34, 12.9734, -9.2266, 0.34, 12.9734, -9.2266, 0.34, 15.0734, 1.8734, 0.34, 15.0734, 1.8734, 0.34, 15.0734, 13.2734, 0.34, 15.0734, 10.5734, 0.34, 12.9734, 0.373403, 0.34, 12.9734 )
+polygons = [ PoolIntArray( 1, 0, 2 ), PoolIntArray( 2, 0, 3 ), PoolIntArray( 5, 4, 6 ), PoolIntArray( 6, 4, 7 ), PoolIntArray( 9, 8, 10 ), PoolIntArray( 10, 8, 11 ), PoolIntArray( 16, 15, 12 ), PoolIntArray( 12, 15, 14 ), PoolIntArray( 12, 14, 13 ), PoolIntArray( 20, 19, 17 ), PoolIntArray( 17, 19, 18 ), PoolIntArray( 21, 23, 22 ), PoolIntArray( 25, 24, 26 ), PoolIntArray( 26, 24, 27 ), PoolIntArray( 32, 31, 28 ), PoolIntArray( 28, 31, 29 ), PoolIntArray( 29, 31, 30 ), PoolIntArray( 35, 34, 33 ), PoolIntArray( 37, 36, 38 ), PoolIntArray( 38, 36, 40 ), PoolIntArray( 38, 40, 39 ), PoolIntArray( 44, 43, 41 ), PoolIntArray( 41, 43, 42 ), PoolIntArray( 46, 45, 47 ), PoolIntArray( 47, 45, 48 ), PoolIntArray( 50, 49, 51 ), PoolIntArray( 51, 49, 52 ), PoolIntArray( 56, 55, 53 ), PoolIntArray( 53, 55, 54 ) ]
 geometry/source_geometry_mode = 1
 geometry/source_group_name = "navmesh"
 agent/radius = 0.5
@@ -83,11 +81,19 @@ surfaces/0 = {
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 1.54418 )
 
 [node name="RoomManager" type="RoomManager" parent="."]
+active = false
 roomlist = NodePath("../RoomList")
 
 [node name="RoomList" type="Spatial" parent="."]
 
 [node name="Studio" type="Room" parent="RoomList" groups=["navmesh"]]
+points = PoolVector3Array( 2.1, 3, -4, -2.22463, 3, -4, 2.1266, 3, 4, 2.1266, -0.0163546, 4.1266, 1.91875, -0.059312, -4, 2.1266, -0.0163546, 4, -2.1, 3, 4, 2.1266, 3, -3.75353, 1.90841, -0.0593137, -4, -2, -0.0163546, 4.1266, -2.12518, -0.0599776, -4, 2.1266, -0.0163546, -2.09765 )
+
+[node name="desk" parent="RoomList/Studio" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 4 )
+
+[node name="laptop" parent="RoomList/Studio/desk" instance=ExtResource( 18 )]
+transform = Transform( -0.990729, 0, -0.135854, 0, 1, 0, 0.135854, 0, -0.990729, 0.270876, 0.695346, 0.700816 )
 
 [node name="microwave" parent="RoomList/Studio" instance=ExtResource( 16 )]
 transform = Transform( -0.268785, 0, 0.9632, 0, 1, 0, -0.9632, 0, -0.268785, -1.48415, 1.05127, -0.586879 )
@@ -107,19 +113,6 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 0
 [node name="CollisionShape" type="CollisionShape" parent="RoomList/Studio/wardrobe/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39461, 0.460593 )
 shape = SubResource( 16 )
-
-[node name="desk" parent="RoomList/Studio" instance=ExtResource( 6 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 4 )
-
-[node name="StaticBody" type="StaticBody" parent="RoomList/Studio/desk"]
-
-[node name="CollisionShape" type="CollisionShape" parent="RoomList/Studio/desk/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.850917, 0.623608 )
-shape = SubResource( 16 )
-
-[node name="CollisionShape2" type="CollisionShape" parent="RoomList/Studio/desk/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5141, 0.713141, 1.17131 )
-shape = SubResource( 17 )
 
 [node name="bed2" parent="RoomList/Studio" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.0801, 0, 0.0788788 )
@@ -212,12 +205,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.289013, 2.7151, 0 )
 shadow_enabled = true
 
 [node name="Tree Type0 01" parent="RoomList/Studio" instance=ExtResource( 10 )]
-transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.614442, 0.934073, 3.32161 )
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.353983, 0.701955, 3.32161 )
 
 [node name="table" parent="RoomList/Studio" instance=ExtResource( 15 )]
 transform = Transform( 1.21888, 0, 0, 0, 1.2, 0, 0, 0, 1.21888, -1.34781, -0.0190001, -0.595878 )
 
 [node name="Corridor" type="Room" parent="RoomList" groups=["navmesh"]]
+points = PoolVector3Array( -10.0317, 3, -8, -9.687, 3, -8.11577, -10.154, 3, -4, 10, 3, -8.08856, 10.0309, 3, -4, -10, -0.0600051, -8.12781, 10.031, -0.000389393, -4, 10, -0.0163546, -8.1, -10.1263, -0.0442695, -4 )
 
 [node name="Tree Type0 06" parent="RoomList/Corridor" instance=ExtResource( 11 )]
 transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.3, -1.16919, 0.0100053, -4.53902 )
