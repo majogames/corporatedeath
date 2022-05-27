@@ -1,4 +1,4 @@
-extends StaticBody
+extends Spatial
 
 
 var open: bool = false
