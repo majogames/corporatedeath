@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/disapproval.mp3-a5e06b7def90d82b41fefb55f660f476.mp3str"
+
+[deps]
+
+source_file="res://assets/music/disapproval.mp3"
+dest_files=[ "res://.import/disapproval.mp3-a5e06b7def90d82b41fefb55f660f476.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

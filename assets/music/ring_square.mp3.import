@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ring_square.mp3-1c7d87346c5c75cf09cdbdcc657795db.mp3str"
+
+[deps]
+
+source_file="res://assets/music/ring_square.mp3"
+dest_files=[ "res://.import/ring_square.mp3-1c7d87346c5c75cf09cdbdcc657795db.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

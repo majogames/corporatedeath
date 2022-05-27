@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/4_chord_xylo.mp3-48a3e1841fbbc23f9e9648b1f3f16da6.mp3str"
+
+[deps]
+
+source_file="res://assets/music/4_chord_xylo.mp3"
+dest_files=[ "res://.import/4_chord_xylo.mp3-48a3e1841fbbc23f9e9648b1f3f16da6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

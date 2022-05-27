@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/approval 2_square.mp3-25824bfed0a1a5a9eda7865a405c8461.mp3str"
+
+[deps]
+
+source_file="res://assets/music/approval 2_square.mp3"
+dest_files=[ "res://.import/approval 2_square.mp3-25824bfed0a1a5a9eda7865a405c8461.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

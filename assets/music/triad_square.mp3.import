@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/triad_square.mp3-2eb53444b08e893bac05925290586c59.mp3str"
+
+[deps]
+
+source_file="res://assets/music/triad_square.mp3"
+dest_files=[ "res://.import/triad_square.mp3-2eb53444b08e893bac05925290586c59.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
