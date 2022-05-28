@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/bedroom/pillar.glb" type="PackedScene" id=2]
@@ -21,11 +21,11 @@
 [ext_resource path="res://assets/food/red apple.glb" type="PackedScene" id=19]
 [ext_resource path="res://assets/food/metal_can.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/food/banana.glb" type="PackedScene" id=21]
-[ext_resource path="res://assets/office/cup.tscn" type="PackedScene" id=22]
 [ext_resource path="res://assets/office/table_office.tscn" type="PackedScene" id=23]
 [ext_resource path="res://assets/office/cup_holder.tscn" type="PackedScene" id=24]
 [ext_resource path="res://assets/office/long_table.tscn" type="PackedScene" id=25]
 [ext_resource path="res://assets/office/meeting_table.tscn" type="PackedScene" id=26]
+[ext_resource path="res://assets/office/cup.tscn" type="PackedScene" id=27]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 16.5, 16.5 )
@@ -338,6 +338,59 @@ height = 0.444745
 
 [sub_resource type="SphereShape" id=34]
 radius = 0.648839
+
+[sub_resource type="Animation" id=35]
+resource_name = "DoorClose"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Door")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 1.13371, 0, 0, 0, 0, 0, 1, 1.2167, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1.2167, 1, 1 )
+
+[sub_resource type="Animation" id=36]
+resource_name = "DoorOpen"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Door")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1.2167, 1, 1, 1, 1, 1.13389, 0, 0, 0, 0, 0, 1, 1.2167, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=37]
+flags_transparent = true
+albedo_color = Color( 1, 0, 0.772549, 0.235294 )
+roughness = 0.06
+emission_enabled = true
+emission = Color( 0.709804, 0, 0.384314, 1 )
+emission_energy = 0.35
+emission_operator = 0
+emission_on_uv2 = false
+refraction_enabled = true
+refraction_scale = 0.0
+refraction_texture_channel = 0
+
+[sub_resource type="Animation" id=38]
+resource_name = "DoorClose"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Door")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 1.13371, 0, 0, 0, 0, 0, 1, 1.2167, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1.2167, 1, 1 )
+
+[sub_resource type="Animation" id=39]
+resource_name = "DoorOpen"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Door")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1.2167, 1, 1, 1, 1, 1.13389, 0, 0, 0, 0, 0, 1, 1.2167, 1, 1 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -685,24 +738,24 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10, 0,
 [node name="wall35" parent="ManagerOffice" instance=ExtResource( 1 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 0, 2 )
 
-[node name="Wall016" type="MeshInstance" parent="ManagerOffice"]
+[node name="DoorFrame" type="MeshInstance" parent="ManagerOffice"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10, 0, 0 )
 mesh = SubResource( 3 )
 skeleton = NodePath("../door")
 material/0 = null
 
-[node name="DoorFrameStaticBody" type="StaticBody" parent="ManagerOffice/Wall016"]
+[node name="DoorFrameStaticBody" type="StaticBody" parent="ManagerOffice/DoorFrame"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="ManagerOffice/Wall016/DoorFrameStaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="ManagerOffice/DoorFrame/DoorFrameStaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.763891, 1.476, 0 )
 shape = SubResource( 16 )
 
-[node name="CollisionShape2" type="CollisionShape" parent="ManagerOffice/Wall016/DoorFrameStaticBody"]
+[node name="CollisionShape2" type="CollisionShape" parent="ManagerOffice/DoorFrame/DoorFrameStaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76382, 1.476, 0 )
 shape = SubResource( 16 )
 
-[node name="CollisionShape3" type="CollisionShape" parent="ManagerOffice/Wall016/DoorFrameStaticBody"]
+[node name="CollisionShape3" type="CollisionShape" parent="ManagerOffice/DoorFrame/DoorFrameStaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00374615, 2.59531, 0 )
 shape = SubResource( 17 )
 
@@ -818,10 +871,10 @@ transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, -
 [node name="table" parent="Kitchenette" instance=ExtResource( 23 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.597, 0, -3.40684 )
 
-[node name="cup" parent="Kitchenette" instance=ExtResource( 22 )]
+[node name="cup" parent="Kitchenette" instance=ExtResource( 27 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.578, 0.891, -3.448 )
 
-[node name="cup2" parent="Kitchenette" instance=ExtResource( 22 )]
+[node name="cup2" parent="Kitchenette" instance=ExtResource( 27 )]
 transform = Transform( 0.982467, 0, 0.186438, 0, 1, 0, -0.186438, 0, 0.982467, -15.409, 0.891, -3.22477 )
 
 [node name="cup_holder" parent="Kitchenette" instance=ExtResource( 24 )]
@@ -853,43 +906,6 @@ transform = Transform( 0.8, 1.50996e-07, 0, -1.20797e-07, 1, 0, 0, 0, -0.8, -1.5
 
 [node name="desk8" parent="DeskGroup" instance=ExtResource( 4 )]
 transform = Transform( -0.8, 1.32005e-14, -1.20797e-07, 0, 1, 6.99382e-08, 1.20797e-07, 8.74228e-08, -0.8, 1.62878, 0.05, 2.37433 )
-
-[node name="DeskGroup4" type="Spatial" parent="."]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.49778, 0, -1.47133 )
-visible = false
-
-[node name="halfwall12" parent="DeskGroup4" instance=ExtResource( 1 )]
-transform = Transform( 5.76205e-08, 0, -1, 0, 0.5, 0, 1, 0, 5.76205e-08, 0.0709257, 0, -2.50892 )
-
-[node name="halfwall6" parent="DeskGroup4" instance=ExtResource( 1 )]
-transform = Transform( 2.98023e-08, 0, 1, 0, 0.5, 0, -1, 0, 2.98023e-08, 0.0707779, 0, 2.47133 )
-
-[node name="desk5" parent="DeskGroup4" instance=ExtResource( 4 )]
-transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, -1.50222, 0.05, -2.41292 )
-
-[node name="desk6" parent="DeskGroup4" instance=ExtResource( 4 )]
-transform = Transform( -0.8, 0, 0, 0, 1, -1.20797e-07, 0, 1.50996e-07, 0.8, 1.62905, 0.0500107, -2.41292 )
-
-[node name="desk7" parent="DeskGroup4" instance=ExtResource( 4 )]
-transform = Transform( 0.8, 1.50996e-07, 0, -1.20797e-07, 1, 0, 0, 0, -0.8, -1.57722, 0.05, 2.37433 )
-
-[node name="desk8" parent="DeskGroup4" instance=ExtResource( 4 )]
-transform = Transform( -0.8, 1.32005e-14, -1.20797e-07, 0, 1, 6.99382e-08, 1.20797e-07, 8.74228e-08, -0.8, 1.62878, 0.05, 2.37433 )
-
-[node name="halfwall22" parent="DeskGroup4" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 0.5, 0, -1.74846e-07, 0, 1, -1.52867, 0, 2.50222 )
-
-[node name="halfwall23" parent="DeskGroup4" instance=ExtResource( 1 )]
-transform = Transform( -1, 0, -2.62268e-07, 0, 0.5, 0, 2.62268e-07, 0, -1, -0.528667, 0, 2.50222 )
-
-[node name="halfwall24" parent="DeskGroup4" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 3.49691e-07, 0, 0.5, 0, -3.49691e-07, 0, 1, 0.471333, 0, 2.50222 )
-
-[node name="halfwall20" parent="DeskGroup4" instance=ExtResource( 1 )]
-transform = Transform( 3.26833e-07, 0, -1, 0, 0.5, 0, 1, 0, 3.26833e-07, 2.47133, 0, -2.49778 )
-
-[node name="halfwall21" parent="DeskGroup4" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 0.5, 0, -1, 0, -4.37114e-08, 2.47133, 0, 2.50222 )
 
 [node name="DeskGroup3" type="Spatial" parent="."]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.49778, 0, 9.52867 )
@@ -936,5 +952,134 @@ transform = Transform( -0.8, 1.32005e-14, -1.20797e-07, 0, 1, 6.99382e-08, 1.207
 [node name="MeetingRoom" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1 )
 
+[node name="wall30" parent="MeetingRoom" instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, -1 )
+
+[node name="wall31" parent="MeetingRoom" instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, -2 )
+
+[node name="wall32" parent="MeetingRoom" instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, 0 )
+
+[node name="wall33" parent="MeetingRoom" instance=ExtResource( 1 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2, 0, 2 )
+
 [node name="meeting_table" parent="MeetingRoom" instance=ExtResource( 26 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, -0.513603 )
+transform = Transform( 0.866025, 0, 0.75, 0, 1, 0, -0.5, 0, 1.29904, 0.0837631, 0, -0.784269 )
+
+[node name="door2" type="Spatial" parent="MeetingRoom"]
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, -1, 0, 2 )
+script = ExtResource( 9 )
+enabled = true
+
+[node name="Door" type="MeshInstance" parent="MeetingRoom/door2"]
+transform = Transform( 1.2167, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+material/0 = SubResource( 13 )
+
+[node name="DoorStaticBody" type="StaticBody" parent="MeetingRoom/door2/Door"]
+transform = Transform( 0.821894, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MeetingRoom/door2/Door/DoorStaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10292, 0 )
+shape = SubResource( 14 )
+
+[node name="DoorInput" type="MeshInstance" parent="MeetingRoom/door2"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.114792, -0.703654, 1.28267, 0 )
+mesh = SubResource( 15 )
+material/0 = SubResource( 7 )
+script = ExtResource( 12 )
+
+[node name="StaticBody" type="StaticBody" parent="MeetingRoom/door2/DoorInput"]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="MeetingRoom/door2/DoorInput/StaticBody"]
+shape = SubResource( 8 )
+
+[node name="Highlight" type="MeshInstance" parent="MeetingRoom/door2/DoorInput"]
+visible = false
+mesh = SubResource( 9 )
+material/0 = ExtResource( 13 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MeetingRoom/door2"]
+anims/DoorClose = SubResource( 35 )
+anims/DoorOpen = SubResource( 36 )
+
+[node name="DoorFrame2" type="MeshInstance" parent="MeetingRoom"]
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, -1.43051e-06, 0, 2 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../../ManagerOffice/door")
+material/0 = null
+
+[node name="DoorFrameStaticBody" type="StaticBody" parent="MeetingRoom/DoorFrame2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MeetingRoom/DoorFrame2/DoorFrameStaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.763891, 1.476, 0 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="MeetingRoom/DoorFrame2/DoorFrameStaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76382, 1.476, 0 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="MeetingRoom/DoorFrame2/DoorFrameStaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00374615, 2.59531, 0 )
+shape = SubResource( 17 )
+
+[node name="door2" type="Spatial" parent="."]
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, -1.07477, 0, 2.40649 )
+script = ExtResource( 9 )
+enabled = true
+
+[node name="Door" type="MeshInstance" parent="door2"]
+transform = Transform( 1.2167, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+cast_shadow = 0
+mesh = SubResource( 12 )
+material/0 = SubResource( 37 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="door2"]
+anims/DoorClose = SubResource( 38 )
+anims/DoorOpen = SubResource( 39 )
+
+[node name="DoorFrame2" type="MeshInstance" parent="."]
+transform = Transform( -1.3, 0, -1.50996e-07, 0, 1, 0, 1.96295e-07, 0, -1, 0.00827312, 0, 2.40649 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../ManagerOffice/door")
+material/0 = null
+
+[node name="DoorFrameStaticBody" type="StaticBody" parent="DoorFrame2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="DoorFrame2/DoorFrameStaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.763891, 1.476, 0 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="DoorFrame2/DoorFrameStaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76382, 1.476, 0 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="DoorFrame2/DoorFrameStaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00374615, 2.59531, 0 )
+shape = SubResource( 17 )
+
+[node name="DoorFrame3" type="MeshInstance" parent="."]
+transform = Transform( 1.3, 0, 2.38419e-07, 0, 1, 0, -3.09944e-07, 0, 1, -2.19501, 0, 2.40649 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../ManagerOffice/door")
+material/0 = null
+
+[node name="DoorFrameStaticBody" type="StaticBody" parent="DoorFrame3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="DoorFrame3/DoorFrameStaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.763891, 1.476, 0 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="DoorFrame3/DoorFrameStaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76382, 1.476, 0 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="DoorFrame3/DoorFrameStaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00374615, 2.59531, 0 )
+shape = SubResource( 17 )
