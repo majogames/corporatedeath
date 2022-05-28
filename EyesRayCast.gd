@@ -2,10 +2,14 @@ extends RayCast
 
 onready var hold_pos = $"HeldObject"
 onready var is_held = false
+onready var player = $"../../.."
 
 onready var highlight
 
 func _physics_process(delta):
+	if !player.movement_enabled():
+		return
+	
 	if self.is_colliding():
 		var collider = self.get_collider()
 		var obj_col: Spatial = collider.get_parent() # not a cast
