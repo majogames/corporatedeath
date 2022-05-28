@@ -97,7 +97,7 @@ points = PoolVector3Array( 2.1, 3, -4, -2.22463, 3, -4, 2.1266, 3, 4, 2.1266, -0
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 4 )
 
 [node name="laptop" parent="RoomList/Studio/desk" instance=ExtResource( 18 )]
-transform = Transform( -0.990729, 0, -0.135854, 0, 1, 0, 0.135854, 0, -0.990729, 0.270876, 0.695346, 0.700816 )
+transform = Transform( -0.990729, 0, -0.135854, 0, 1, 0, 0.135854, 0, -0.990729, 0.261953, 0.668979, 0.635742 )
 
 [node name="microwave" parent="RoomList/Studio" instance=ExtResource( 16 )]
 transform = Transform( -0.268785, 0, 0.9632, 0, 1, 0, -0.9632, 0, -0.268785, -1.48415, 1.05127, -0.586879 )
@@ -687,7 +687,7 @@ mesh = SubResource( 15 )
 material/0 = ExtResource( 17 )
 
 [node name="chair" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.563548, -0.0189996, 2.47136 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.649323, -0.0189995, 2.71219 )
 
 [node name="Dialog" parent="." instance=ExtResource( 20 )]
 timeline = "timeline-1653689018.json"
