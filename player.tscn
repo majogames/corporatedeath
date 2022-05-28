@@ -6,7 +6,7 @@
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.3
-height = 0.88
+height = 1.5
 
 [sub_resource type="BoxShape" id=5]
 extents = Vector3( 0.3, 0.16, 0.3 )
@@ -71,6 +71,7 @@ material/0 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.737729, 0 )
 
 [node name="Camera" type="Camera" parent="head"]
+current = true
 
 [node name="EyesRayCast" type="RayCast" parent="head/Camera"]
 enabled = true
