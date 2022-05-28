@@ -786,5 +786,5 @@ transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, -
 [node name="metal_can20" parent="Kitchenette/fridge_office" instance=ExtResource( 20 )]
 transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, -0.0242219, 0.0574632, 0.0542448 )
 
-[node name="table_office" parent="Kitchenette" instance=ExtResource( 23 )]
-transform = Transform( 0.99773, 0, -0.0673362, 0, 1, 0, 0.0673362, 0, 0.99773, -15.3727, 0.112885, -3.49591 )
+[node name="table" parent="Kitchenette" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.597, 0, -3.40684 )
