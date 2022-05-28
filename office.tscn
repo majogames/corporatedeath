@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/bedroom/pillar.glb" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://assets/food/red apple.glb" type="PackedScene" id=19]
 [ext_resource path="res://assets/food/metal_can.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/food/banana.glb" type="PackedScene" id=21]
+[ext_resource path="res://assets/office/table_office.tscn" type="PackedScene" id=23]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 16.5, 16.5 )
@@ -776,17 +777,14 @@ transform = Transform( -0.271457, 0, -0.962451, 0, 1, 0, 0.962451, 0, -0.271457,
 [node name="metal_can15" parent="Kitchenette/fridge_office" instance=ExtResource( 20 )]
 transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, -0.0866828, 0.0574632, 0.169161 )
 
-[node name="metal_can16" parent="Kitchenette/fridge_office" instance=ExtResource( 20 )]
-transform = Transform( 0.855201, 0, -0.518296, 0, 1, 0, 0.518296, 0, 0.855201, -0.14742, 0.0574632, 0.107706 )
-
 [node name="metal_can17" parent="Kitchenette/fridge_office" instance=ExtResource( 20 )]
 transform = Transform( 0.741098, 0, 0.671397, 0, 1, 0, -0.671397, 0, 0.741098, -0.178748, 0.0574632, 0.0384511 )
 
 [node name="metal_can18" parent="Kitchenette/fridge_office" instance=ExtResource( 20 )]
 transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, -0.144609, 0.24674, -0.130269 )
 
-[node name="metal_can19" parent="Kitchenette/fridge_office" instance=ExtResource( 20 )]
-transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, 0.107772, 0.0574632, 0.105136 )
-
 [node name="metal_can20" parent="Kitchenette/fridge_office" instance=ExtResource( 20 )]
 transform = Transform( 0.962536, 0, 0.271155, 0, 1, 0, -0.271155, 0, 0.962536, -0.0242219, 0.0574632, 0.0542448 )
+
+[node name="table_office" parent="Kitchenette" instance=ExtResource( 23 )]
+transform = Transform( 0.99773, 0, -0.0673362, 0, 1, 0, 0.0673362, 0, 0.99773, -15.3727, 0.112885, -3.49591 )
