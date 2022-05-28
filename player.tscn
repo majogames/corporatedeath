@@ -69,7 +69,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.737729, 0 )
 [node name="Camera" type="Camera" parent="head"]
 
 [node name="EyesRayCast" type="RayCast" parent="head/Camera"]
-visible = false
 enabled = true
 cast_to = Vector3( 0, 0, -2 )
 collision_mask = 24
