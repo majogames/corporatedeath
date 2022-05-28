@@ -4,6 +4,7 @@
 [ext_resource path="res://assets/phone/PNG/Artboard 7 copy 2@2x.png" type="Texture" id=2]
 [ext_resource path="res://assets/phone/PNG/Artboard 3 copy@2x.png" type="Texture" id=3]
 [ext_resource path="res://assets/phone/PNG/Artboard 5 copy@2x.png" type="Texture" id=4]
+[ext_resource path="res://assets/music/1_xylo.mp3" type="AudioStream" id=5]
 [ext_resource path="res://assets/phone/PNG/Artboard 4 copy 3@2x.png" type="Texture" id=6]
 [ext_resource path="res://assets/music/click 2.mp3" type="AudioStream" id=7]
 [ext_resource path="res://assets/phone/PNG/Artboard 2 copy@2x.png" type="Texture" id=8]
@@ -11,7 +12,6 @@
 [ext_resource path="res://assets/phone/Lockscreen.gd" type="Script" id=10]
 [ext_resource path="res://assets/music/triad_square.mp3" type="AudioStream" id=11]
 [ext_resource path="res://assets/music/error.mp3" type="AudioStream" id=12]
-[ext_resource path="res://assets/music/click.mp3" type="AudioStream" id=13]
 [ext_resource path="res://assets/phone/PNG/Artboard 1 copy@2x.png" type="Texture" id=14]
 [ext_resource path="res://assets/phone/PNG/Artboard 6 copy@2x.png" type="Texture" id=15]
 
@@ -27,7 +27,7 @@ size_flags_vertical = 3
 script = ExtResource( 9 )
 
 [node name="click" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 13 )
+stream = ExtResource( 5 )
 mix_target = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]

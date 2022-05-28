@@ -4,14 +4,8 @@
 	],
 	"variables": [
 		{
-			"id": "1653691133-366",
-			"name": "Time of the day",
-			"type": 0,
-			"value": "Morning"
-		},
-		{
-			"id": "1653689926-787",
-			"name": "MorningTasks",
+			"id": "1653691258-146",
+			"name": "dead",
 			"type": 0,
 			"value": "false"
 		},
@@ -22,8 +16,32 @@
 			"value": "home"
 		},
 		{
-			"id": "1653691258-146",
-			"name": "dead",
+			"id": "1653771082-648",
+			"name": "morning_breakfast",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653771118-787",
+			"name": "morning_sortmail",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653689926-787",
+			"name": "MorningTasks",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653691133-366",
+			"name": "Time of the day",
+			"type": 0,
+			"value": "Morning"
+		},
+		{
+			"id": "1653771149-366",
+			"name": "dressed",
 			"type": 0,
 			"value": "false"
 		}

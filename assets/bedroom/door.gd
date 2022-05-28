@@ -21,8 +21,6 @@ func toggle_door():
 			dialog = Dialogic.start('Home door')
 			add_child(dialog)
 		if tasks_done != 'done':
-			#TODO remove this, this should be done by single tasks instead
-			Dialogic.set_variable("MorningTasks", 'done')
 			return
 	
 	door_open = !door_open

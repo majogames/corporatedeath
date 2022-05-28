@@ -6,7 +6,9 @@
 [node name="shower" instance=ExtResource( 1 )]
 
 [node name="shower" parent="." index="0"]
+cast_shadow = 0
 material/0 = ExtResource( 2 )
 
 [node name="shower plane" parent="." index="1"]
+cast_shadow = 0
 material/0 = ExtResource( 2 )
