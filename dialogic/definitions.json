@@ -20,6 +20,12 @@
 			"name": "MorningTasks",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1653729061-648",
+			"name": "location",
+			"type": 0,
+			"value": "home"
 		}
 	]
 }
