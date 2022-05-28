@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://assets/phone/phone.tscn" type="PackedScene" id=2]
@@ -44,6 +44,9 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
 }
 
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.3, 0.16, 0.3 )
+
 [node name="KinematicBody" type="KinematicBody" groups=["player"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0 )
 collision_layer = 2
@@ -66,6 +69,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.737729, 0 )
 [node name="Camera" type="Camera" parent="head"]
 
 [node name="EyesRayCast" type="RayCast" parent="head/Camera"]
+visible = false
 enabled = true
 cast_to = Vector3( 0, 0, -2 )
 collision_mask = 24
@@ -85,3 +89,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15 )
 
 [node name="Hand" type="Spatial" parent="head"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.377223, -0.122805, -0.590571 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.865325, 0 )
+shape = SubResource( 5 )
