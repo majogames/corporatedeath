@@ -4,12 +4,6 @@
 	],
 	"variables": [
 		{
-			"id": "1653691258-146",
-			"name": "dead",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653691133-366",
 			"name": "Time of the day",
 			"type": 0,
@@ -26,6 +20,12 @@
 			"name": "location",
 			"type": 0,
 			"value": "home"
+		},
+		{
+			"id": "1653691258-146",
+			"name": "dead",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }
