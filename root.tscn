@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/bedroom/shower.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/bedroom/book.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/characters/male tshirt/male tshirt.tscn" type="PackedScene" id=23]
+[ext_resource path="res://assets/characters/female tshirt/female tshirt.tscn" type="PackedScene" id=24]
 
 [sub_resource type="BoxShape" id=16]
 extents = Vector3( 2.08339, 0.0529319, 0.497186 )
@@ -680,6 +682,26 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7884, 0, 3.64682 )
 [node name="4" type="Spatial" parent="Navigation/Path1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.38448, 0, 13.7517 )
 
+[node name="female tshirt" parent="Navigation" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5524, 0.0101861, -4.25765 )
+skin_color = Color( 0.752941, 0.4, 0.2, 1 )
+tshirt_color = Color( 0.247059, 0.705882, 0.317647, 1 )
+trousers_color = Color( 0.133333, 0.184314, 0.305882, 1 )
+
+[node name="female tshirt2" parent="Navigation" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8402, 0.0100163, -3.90076 )
+skin_color = Color( 0.698039, 0.905882, 0.701961, 1 )
+tshirt_color = Color( 0.266667, 0.905882, 0.847059, 1 )
+trousers_color = Color( 0.85098, 0.85098, 0.85098, 1 )
+animation_state = 1
+
+[node name="female tshirt3" parent="Navigation" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5288, 0.0100844, -4.43488 )
+skin_color = Color( 0.905882, 0.698039, 0.698039, 1 )
+tshirt_color = Color( 0.266667, 0.682353, 0.905882, 1 )
+trousers_color = Color( 0.796078, 0.266667, 0.905882, 1 )
+animation_state = 2
+
 [node name="box" type="MeshInstance" parent="."]
 transform = Transform( -0.517707, 0, 0, 0, 0.703516, 0, 0, 0, -0.168148, -1.61596, 1.5835, 0.89978 )
 mesh = SubResource( 12 )
@@ -702,5 +724,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.649323, -0.0189995, 2.71219 
 
 [node name="Dialog" parent="." instance=ExtResource( 20 )]
 timeline = "timeline-1653689018.json"
+
+[node name="male tshirt" parent="." instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2916, 0.010007, -5.93325 )
+tshirt_color = Color( 0.266667, 0.905882, 0.443137, 1 )
+trousers_color = Color( 0.905882, 0.266667, 0.266667, 1 )
+
+[node name="male tshirt2" parent="." instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7605, 0.010007, -5.38934 )
+tshirt_color = Color( 0.317647, 0.266667, 0.905882, 1 )
+trousers_color = Color( 0.266667, 0.831373, 0.905882, 1 )
+animation_state = 1
+
+[node name="male tshirt3" parent="." instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9739, 0.010007, -6.48556 )
+tshirt_color = Color( 0.498039, 0.266667, 0.905882, 1 )
+trousers_color = Color( 0.905882, 0.580392, 0.266667, 1 )
+animation_state = 2
 
 [connection signal="body_entered" from="RoomList/ElevatorCorridor/elevator corridor/Area" to="RoomList/ElevatorCorridor/elevator corridor" method="home_on_Area_body_entered"]
