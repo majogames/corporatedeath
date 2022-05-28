@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/bedroom/pillar.glb" type="PackedScene" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://assets/office/table_office.tscn" type="PackedScene" id=23]
 [ext_resource path="res://assets/office/cup_holder.tscn" type="PackedScene" id=24]
 [ext_resource path="res://assets/office/long_table.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/office/meeting_table.tscn" type="PackedScene" id=26]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 16.5, 16.5 )
@@ -855,6 +856,7 @@ transform = Transform( -0.8, 1.32005e-14, -1.20797e-07, 0, 1, 6.99382e-08, 1.207
 
 [node name="DeskGroup4" type="Spatial" parent="."]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.49778, 0, -1.47133 )
+visible = false
 
 [node name="halfwall12" parent="DeskGroup4" instance=ExtResource( 1 )]
 transform = Transform( 5.76205e-08, 0, -1, 0, 0.5, 0, 1, 0, 5.76205e-08, 0.0709257, 0, -2.50892 )
@@ -933,3 +935,6 @@ transform = Transform( -0.8, 1.32005e-14, -1.20797e-07, 0, 1, 6.99382e-08, 1.207
 
 [node name="MeetingRoom" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1 )
+
+[node name="meeting_table" parent="MeetingRoom" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, -0.513603 )
