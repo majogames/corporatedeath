@@ -1,0 +1,56 @@
+{
+	"events": [
+		{
+			"condition": "==",
+			"definition": "1653691258-146",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "time to read a book!"
+		},
+		{
+			"character": "character-1653758632.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I believe that a well-known anecdote exists to the effect that a young writer, determined to make the commencement of his story forcible and original enough to catch and rivet the attention of the most blasé of editors, penned the following sentence:\n“ ‘Hell!’ said the Duchess.”\nStrangely enough, this tale of mine opens in much the same fashion. Only the lady who gave utterance to the exclamation was not a Duchess!\nIt was a day in early June. I had been transacting some business in Paris and was returning by the morning service to London where I was still sharing rooms with my old friend, the Belgian ex-detective, Hercule Poirot.\nThe Calais express was singularly empty—in fact, my own compartment held only one other traveler. I had made a somewhat hurried departure from the hotel and was busy assuring myself that I had duly collected all my traps when the train started. Up till then, I had hardly noticed my companion, but I was now violently recalled to the fact of her existence. Jumping up from her seat, she let down the window and stuck her head out, withdrawing it a moment later with the brief and forcible ejaculation “Hell!”\nNow I am old-fashioned. A woman, I consider, should be womanly. I have no patience with the modern neurotic girl who jazzes from morning to night, smokes like a chimney, and uses language which would make a Billingsgate fish woman blush!\nI looked up now, frowning slightly, into a pretty, impudent face, surmounted by a rakish little red hat. A thick cluster of black curls hid each ear. I judged that she was little more than seventeen, but her face was covered with powder, and her lips were quite impossibly scarlet…"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 2
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nice book!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "==",
+			"definition": "1653691258-146",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "no time to read a book"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653757009.json",
+		"name": "read book"
+	}
+}
