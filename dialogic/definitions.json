@@ -10,20 +10,8 @@
 			"value": "false"
 		},
 		{
-			"id": "1653815175-648",
-			"name": "game_just_loaded",
-			"type": 0,
-			"value": "true"
-		},
-		{
 			"id": "1653729061-648",
 			"name": "location",
-			"type": 0,
-			"value": "home"
-		},
-		{
-			"id": "1653817643-787",
-			"name": "previous_location",
 			"type": 0,
 			"value": "home"
 		},
@@ -34,20 +22,8 @@
 			"value": "false"
 		},
 		{
-			"id": "1653771082-648",
-			"name": "task_breakfast",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653771118-787",
 			"name": "task_sortmail",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653689926-787",
-			"name": "MorningTasks",
 			"type": 0,
 			"value": "false"
 		},
@@ -64,16 +40,16 @@
 			"value": "false"
 		},
 		{
-			"id": "1653827116-918",
-			"name": "task_work_checkin",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653691133-366",
 			"name": "Time of the day",
 			"type": 0,
 			"value": "Morning"
+		},
+		{
+			"id": "1653835848-970",
+			"name": "screen_saturation",
+			"type": 0,
+			"value": "0.5"
 		},
 		{
 			"id": "1653830872-483",
@@ -82,10 +58,34 @@
 			"value": "false"
 		},
 		{
-			"id": "1653835848-970",
-			"name": "screen_saturation",
+			"id": "1653827116-918",
+			"name": "task_work_checkin",
 			"type": 0,
-			"value": "0.5"
+			"value": "false"
+		},
+		{
+			"id": "1653817643-787",
+			"name": "previous_location",
+			"type": 0,
+			"value": "home"
+		},
+		{
+			"id": "1653815175-648",
+			"name": "game_just_loaded",
+			"type": 0,
+			"value": "true"
+		},
+		{
+			"id": "1653771082-648",
+			"name": "task_breakfast",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653689926-787",
+			"name": "MorningTasks",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }
