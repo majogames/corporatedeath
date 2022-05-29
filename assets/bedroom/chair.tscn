@@ -21,13 +21,15 @@ extents = Vector3( 0.248163, 0.434507, 0.270838 )
 
 [node name="chair" instance=ExtResource( 1 )]
 
-[node name="Highlight" type="MeshInstance" parent="office chair" index="0"]
+[node name="Highlight" type="MeshInstance" parent="." index="0"]
 visible = false
 material_override = ExtResource( 2 )
 mesh = SubResource( 1 )
-material/0 = null
+skeleton = NodePath("../office chair")
+material/0 = ExtResource( 2 )
 
-[node name="StaticBody" type="StaticBody" parent="." index="1"]
+[node name="StaticBody" type="StaticBody" parent="." index="2"]
+collision_mask = 3
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8445e-05, 0.427419, 0.0492216 )

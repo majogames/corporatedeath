@@ -7,8 +7,8 @@
 			"value": "Morning"
 		},
 		{
-			"condition": "",
-			"definition": "1653771082-648",
+			"condition": "==",
+			"definition": "1653847387-648",
 			"event_id": "dialogic_012",
 			"value": "true"
 		},
@@ -16,7 +16,7 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I have already eaten."
+			"text": "I already had breakfast"
 		},
 		{
 			"event_id": "dialogic_022",
@@ -29,16 +29,16 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Having breakfast"
+			"text": "Ah, I never have enough time for a proper breakfast. "
 		},
 		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": false,
-			"wait_seconds": 1,
-			"waiting_skippable": true
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Some leftover from yesterday. It’s good enough."
 		},
 		{
-			"definition": "1653771082-648",
+			"definition": "1653847387-648",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
@@ -46,12 +46,85 @@
 			"set_value": "true"
 		},
 		{
+			"emit_signal": "breakfast",
+			"event_id": "dialogic_040"
+		},
+		{
 			"change_timeline": "timeline-1653772411.json",
 			"event_id": "dialogic_020"
 		},
 		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1653729061-648",
+			"event_id": "dialogic_012",
+			"value": "office"
+		},
+		{
+			"condition": "",
+			"definition": "1653839270-905",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"condition": "!=",
+			"definition": "1653839279-192",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Quick lunch as always."
+		},
+		{
+			"definition": "1653839279-192",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"definition": "1653691133-366",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "Afternoon"
+		},
+		{
+			"emit_signal": "lunch",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My meeting starts in 5 minutes. I should hurry."
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		},
+		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.3
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No time for lunch now."
 		},
 		{
 			"event_id": "dialogic_013"
@@ -64,7 +137,7 @@
 		},
 		{
 			"condition": "",
-			"definition": "1653771082-648",
+			"definition": "1653847387-648",
 			"event_id": "dialogic_012",
 			"value": "false"
 		},
@@ -72,7 +145,7 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'm already in my pijama"
+			"text": "I've already eaten."
 		},
 		{
 			"event_id": "dialogic_022",
@@ -85,15 +158,23 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Let me put something more confortable"
+			"text": "Having Dinner"
 		},
 		{
-			"definition": "1653771082-648",
+			"definition": "1653847387-648",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "false"
+		},
+		{
+			"emit_signal": "dinner",
+			"event_id": "dialogic_040"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
 		},
 		{
 			"event_id": "dialogic_022",
@@ -106,6 +187,6 @@
 	"metadata": {
 		"dialogic-version": "1.4.1",
 		"file": "timeline-1653768669.json",
-		"name": "eat breakfast"
+		"name": "eat quick food"
 	}
 }

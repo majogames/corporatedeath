@@ -1,0 +1,31 @@
+{
+	"events": [
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Why the alarm clock didn't ring? \nIt's connected to my calendar and my sleeping tracking bed."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Let’s try to login to the system from my laptop."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmm, it’s still not working. I should check the bank app."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653842292.json",
+		"name": "wake up second day"
+	}
+}

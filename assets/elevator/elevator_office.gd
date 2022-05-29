@@ -24,3 +24,7 @@ func _on_Area_body_entered(body):
 		return
 	var dialog = Dialogic.start('Elevator')
 	add_child(dialog)
+
+
+func _on_Checkin_checkin():
+	toggle_door()

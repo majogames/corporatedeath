@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It’s important to keep my phone charged at all times."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653851866.json",
+		"name": "charge phone"
+	}
+}

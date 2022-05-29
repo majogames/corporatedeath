@@ -10,19 +10,13 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Yawn... Another day at BoringCorp started. Well, time to get up and get ready for work."
+			"text": "Yawn... another day at BoringCorp started. Well, time to get up and get ready for work."
 		},
 		{
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "What should I do first? Let’s check my todo list."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "  Press ESC to access the phone"
+			"text": "What should I do first? Let’s check my to-do list."
 		},
 		{
 			"definition": "1653815175-648",
@@ -31,6 +25,10 @@
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "false"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		},
 		{
 			"event_id": "dialogic_013"

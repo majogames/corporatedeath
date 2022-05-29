@@ -8,6 +8,7 @@
 albedo_color = Color( 0.333333, 0.501961, 0.603922, 1 )
 
 [sub_resource type="ViewportTexture" id=3]
+flags = 8
 viewport_path = NodePath("Viewport")
 
 [sub_resource type="ViewportTexture" id=4]

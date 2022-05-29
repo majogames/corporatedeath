@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://assets/phone/phone.tscn" type="PackedScene" id=2]
 [ext_resource path="res://EyesRayCast.gd" type="Script" id=3]
+[ext_resource path="res://assets/bucket_list/bucketlist2d.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.3
@@ -47,6 +48,18 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
 }
 
+[sub_resource type="PlaneMesh" id=6]
+size = Vector2( 0.166, 0.25 )
+
+[sub_resource type="ViewportTexture" id=8]
+flags = 8
+viewport_path = NodePath("head/BucketList/Viewport")
+
+[sub_resource type="SpatialMaterial" id=7]
+resource_local_to_scene = true
+albedo_color = Color( 1, 0.968627, 0.839216, 1 )
+albedo_texture = SubResource( 8 )
+
 [node name="KinematicBody" type="KinematicBody" groups=["player"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.747088, 0 )
 collision_layer = 2
@@ -90,6 +103,20 @@ anims/Rotate = SubResource( 3 )
 
 [node name="phone" parent="head" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15 )
+visible = false
+
+[node name="BucketList" type="MeshInstance" parent="head"]
+transform = Transform( 1, 0, 0, 0, 0.0532596, -0.998581, 0, 0.998581, 0.0532596, 0, 0.00127602, -0.186223 )
+visible = false
+mesh = SubResource( 6 )
+skeleton = NodePath("../phone")
+material/0 = SubResource( 7 )
+
+[node name="Viewport" type="Viewport" parent="head/BucketList"]
+size = Vector2( 1868, 2664 )
+render_target_v_flip = true
+
+[node name="Control" parent="head/BucketList/Viewport" instance=ExtResource( 5 )]
 
 [node name="Hand" type="Spatial" parent="head"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.377223, -0.122805, -0.590571 )

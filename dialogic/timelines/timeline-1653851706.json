@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe I’ll have time during my lunch break."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653851706.json",
+		"name": "read magazine"
+	}
+}

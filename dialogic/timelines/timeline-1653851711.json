@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I could listen to music on my way home even though I never do. So little time to do fun things."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653851711.json",
+		"name": "listen to music"
+	}
+}

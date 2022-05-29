@@ -1,0 +1,89 @@
+{
+	"events": [
+		{
+			"condition": "==",
+			"definition": "1653839250-785",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "!=",
+			"definition": "1653839238-339",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don't have time for a break now."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ah, I should work. I don’t want to have problems with my manager."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I could have a muffin but I don’t have time. A small coffee is good enough."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey Sandy, how is your day?"
+		},
+		{
+			"character": "character-1653836991.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It’s ok, and…"
+		},
+		{
+			"character": "character-1653836860.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Shouldn't you be both working instead of chatting?!"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well, let’s back to my desk."
+		},
+		{
+			"definition": "1653839250-785",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653836447.json",
+		"name": "take a break"
+	}
+}

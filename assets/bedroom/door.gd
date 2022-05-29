@@ -12,15 +12,15 @@ func toggle_door():
 		
 	if homedoor:
 		if is_instance_valid(dialog):
-			#dialog still running
+			print("dialog still running")
 			return
 		
 		var time_of_day = Dialogic.get_variable("Time of the day")
-		var tasks_done = Dialogic.get_variable("MorningTasks")
 		if time_of_day == 'Morning':
 			dialog = Dialogic.start('Home door')
 			add_child(dialog)
-		if tasks_done != 'done':
+		var tasks_done = Dialogic.get_variable("MorningTasks")
+		if tasks_done != 'true':
 			return
 	
 	door_open = !door_open

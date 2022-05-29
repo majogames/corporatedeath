@@ -7,10 +7,10 @@
 			"value": "home"
 		},
 		{
-			"character": "",
+			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "work from home"
+			"text": "I can't work from home today"
 		},
 		{
 			"event_id": "dialogic_022",
@@ -26,10 +26,153 @@
 			"value": "office"
 		},
 		{
-			"character": "",
+			"condition": "!=",
+			"definition": "1653830872-483",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "work from office"
+			"text": "I can create meetings from my phone"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "!=",
+			"definition": "1653839224-713",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So, what kind of pointless work am I supposed to do today."
+		},
+		{
+			"definition": "1653839224-713",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "!=",
+			"definition": "1653839238-339",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "One thing off the list. Hmm, but the daily profit isn’t in there…"
+		},
+		{
+			"definition": "1653839238-339",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"event_id": "dialogic_015",
+			"id": "anchor-1634488067",
+			"index": 0,
+			"name": "take a break 1"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe I can take a short break now.."
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "!=",
+			"definition": "1653839250-785",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "!=",
+			"definition": "1653839260-842",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What was the link for the meeting?"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 1,
+			"waiting_skippable": false
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "These are even worse than the normal meeting, so hard to pay attention."
+		},
+		{
+			"definition": "1653839260-842",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_022",

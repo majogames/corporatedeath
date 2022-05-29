@@ -13,6 +13,9 @@ func _physics_process(delta):
 	if self.is_colliding():
 		var collider = self.get_collider()
 		var obj_col: Spatial = collider.get_parent() # not a cast
+		if highlight != null and is_instance_valid(highlight):
+			highlight.visible = false
+			
 		highlight = obj_col.get_node_or_null("Highlight")
 		if highlight:
 			highlight.visible = true
@@ -54,5 +57,6 @@ func _physics_process(delta):
 			if highlight:
 				highlight.scale = Vector3(1,1,1)
 	else:
-		if highlight != null:
+		if highlight != null and is_instance_valid(highlight):
 			highlight.visible = false
+			highlight = null

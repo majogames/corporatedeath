@@ -11,4 +11,5 @@ func action():
 	add_child(dialog)
 
 func dialogic_signal(signal_name):
-	visible = false
+	yield(dialog, "timeline_end")
+	queue_free()

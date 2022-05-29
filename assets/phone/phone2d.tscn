@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/phone/PNG/Artboard 8 copy@2x.png" type="Texture" id=1]
-[ext_resource path="res://assets/phone/PNG/Artboard 7 copy 2@2x.png" type="Texture" id=2]
+[ext_resource path="res://assets/phone/PNG/phone.png" type="Texture" id=2]
 [ext_resource path="res://assets/phone/PNG/notes_2.png" type="Texture" id=3]
 [ext_resource path="res://assets/phone/PNG/Artboard 5 copy@2x.png" type="Texture" id=4]
 [ext_resource path="res://assets/music/1_xylo.mp3" type="AudioStream" id=5]
@@ -20,6 +20,16 @@
 [ext_resource path="res://assets/phone/PNG/Artboard 6 copy@2x.png" type="Texture" id=18]
 [ext_resource path="res://assets/phone/PNG/home_screen.png" type="Texture" id=19]
 [ext_resource path="res://assets/phone/Notes.gd" type="Script" id=20]
+[ext_resource path="res://assets/phone/PNG/schedule_meeting_1.png" type="Texture" id=21]
+[ext_resource path="res://assets/phone/PNG/schedule_meeting_2.png" type="Texture" id=22]
+[ext_resource path="res://assets/phone/Internet.gd" type="Script" id=23]
+[ext_resource path="res://assets/phone/Calls.gd" type="Script" id=24]
+[ext_resource path="res://assets/phone/PNG/sudoku_2.png" type="Texture" id=25]
+[ext_resource path="res://assets/phone/PNG/sudoku_1.png" type="Texture" id=26]
+[ext_resource path="res://assets/phone/PNG/calling.png" type="Texture" id=27]
+[ext_resource path="res://assets/phone/PNG/calling_CEO.png" type="Texture" id=28]
+[ext_resource path="res://assets/phone/PNG/phone_out_of_order.png" type="Texture" id=29]
+[ext_resource path="res://assets/phone/PNG/calling_manager.png" type="Texture" id=30]
 
 [node name="Control" type="PanelContainer"]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -206,6 +216,7 @@ margin_bottom = 1322.0
 rect_pivot_offset = Vector2( 139, 226 )
 
 [node name="Notes" type="Control" parent="."]
+visible = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
@@ -334,25 +345,148 @@ margin_right = 474.0
 margin_bottom = 1563.0
 
 [node name="Calls" type="Control" parent="."]
-visible = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
 margin_bottom = 1695.0
+script = ExtResource( 24 )
 
-[node name="TextureRect" type="TextureRect" parent="Calls"]
-margin_right = 390.0
-margin_bottom = 844.0
+[node name="out of order" type="TextureRect" parent="Calls"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 29 )
+expand = true
+
+[node name="CallManager" type="TextureRect" parent="Calls"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 30 )
+expand = true
+
+[node name="CallCEO" type="TextureRect" parent="Calls"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 28 )
+expand = true
+
+[node name="CallGeneric" type="TextureRect" parent="Calls"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 27 )
+expand = true
+
+[node name="ContactList" type="TextureRect" parent="Calls"]
+margin_right = 780.0
+margin_bottom = 1688.0
 rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 2 )
 expand = true
 
+[node name="CEO" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 36.0
+margin_top = 430.0
+margin_right = 750.0
+margin_bottom = 506.0
+
+[node name="CFO" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 34.0
+margin_top = 502.0
+margin_right = 748.0
+margin_bottom = 578.0
+
+[node name="CIO" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 34.0
+margin_top = 576.0
+margin_right = 748.0
+margin_bottom = 652.0
+
+[node name="CMO" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 32.0
+margin_top = 646.0
+margin_right = 746.0
+margin_bottom = 722.0
+
+[node name="COO" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 30.0
+margin_top = 716.0
+margin_right = 744.0
+margin_bottom = 792.0
+
+[node name="Dad" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 36.0
+margin_top = 790.0
+margin_right = 750.0
+margin_bottom = 866.0
+
+[node name="Dentist" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 34.0
+margin_top = 862.0
+margin_right = 748.0
+margin_bottom = 938.0
+
+[node name="Food delivery" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 34.0
+margin_top = 934.0
+margin_right = 748.0
+margin_bottom = 1010.0
+
+[node name="Manager" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 38.0
+margin_top = 1006.0
+margin_right = 752.0
+margin_bottom = 1082.0
+
+[node name="Mom" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 32.0
+margin_top = 1078.0
+margin_right = 746.0
+margin_bottom = 1154.0
+
+[node name="Receptionist" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 34.0
+margin_top = 1148.0
+margin_right = 748.0
+margin_bottom = 1224.0
+
+[node name="Repair guy" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 32.0
+margin_top = 1224.0
+margin_right = 746.0
+margin_bottom = 1300.0
+
+[node name="Work colleague" type="Button" parent="Calls/ContactList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 36.0
+margin_top = 1296.0
+margin_right = 750.0
+margin_bottom = 1372.0
+
 [node name="HomeButton" type="Button" parent="Calls"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 50.0
-margin_top = 140.0
-margin_right = 166.0
-margin_bottom = 266.0
+margin_left = 52.0
+margin_top = 180.0
+margin_right = 168.0
+margin_bottom = 306.0
 
 [node name="Maps" type="Control" parent="."]
 visible = false
@@ -430,12 +564,51 @@ margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
 margin_bottom = 1695.0
+script = ExtResource( 23 )
 
-[node name="TextureRect" type="TextureRect" parent="Internet"]
+[node name="Empty" type="TextureRect" parent="Internet"]
 margin_right = 390.0
 margin_bottom = 844.0
 rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 18 )
+expand = true
+
+[node name="Meeting" type="TextureRect" parent="Internet"]
+margin_right = 390.0
+margin_bottom = 844.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 21 )
+expand = true
+
+[node name="CreateMeeting" type="Button" parent="Internet/Meeting"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 38.0
+margin_top = 1062.0
+margin_right = 742.0
+margin_bottom = 1208.0
+
+[node name="MeetingSent" type="TextureRect" parent="Internet"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 22 )
+expand = true
+
+[node name="Sudoku" type="TextureRect" parent="Internet"]
+visible = false
+margin_right = 390.0
+margin_bottom = 844.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 26 )
+expand = true
+
+[node name="Sudoku2" type="TextureRect" parent="Internet"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 25 )
 expand = true
 
 [node name="HomeButton" type="Button" parent="Internet"]
@@ -464,8 +637,22 @@ margin_bottom = 266.0
 [connection signal="pressed" from="Home/TextureRect/LaunchEmail" to="." method="_on_LaunchEmail_pressed"]
 [connection signal="pressed" from="Notes/HomeButton" to="Notes" method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Notes/NextButton" to="Notes" method="_on_NextButton_pressed"]
+[connection signal="pressed" from="Calls/ContactList/CEO" to="Calls" method="_on_CEO_pressed"]
+[connection signal="pressed" from="Calls/ContactList/CFO" to="Calls" method="_on_CFO_pressed"]
+[connection signal="pressed" from="Calls/ContactList/CIO" to="Calls" method="_on_CIO_pressed"]
+[connection signal="pressed" from="Calls/ContactList/CMO" to="Calls" method="_on_CMO_pressed"]
+[connection signal="pressed" from="Calls/ContactList/COO" to="Calls" method="_on_COO_pressed"]
+[connection signal="pressed" from="Calls/ContactList/Dad" to="Calls" method="_on_Dad_pressed"]
+[connection signal="pressed" from="Calls/ContactList/Dentist" to="Calls" method="_on_Dentist_pressed"]
+[connection signal="pressed" from="Calls/ContactList/Food delivery" to="Calls" method="_on_Food_delivery_pressed"]
+[connection signal="pressed" from="Calls/ContactList/Manager" to="Calls" method="_on_Manager_pressed"]
+[connection signal="pressed" from="Calls/ContactList/Mom" to="Calls" method="_on_Mom_pressed"]
+[connection signal="pressed" from="Calls/ContactList/Receptionist" to="Calls" method="_on_Receptionist_pressed"]
+[connection signal="pressed" from="Calls/ContactList/Repair guy" to="Calls" method="_on_Repair_guy_pressed"]
+[connection signal="pressed" from="Calls/ContactList/Work colleague" to="Calls" method="_on_Work_colleague_pressed"]
 [connection signal="pressed" from="Calls/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Maps/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Mail/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Bank/HomeButton" to="." method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="Internet/Meeting/CreateMeeting" to="Internet" method="_on_CreateMeeting_pressed"]
 [connection signal="pressed" from="Internet/HomeButton" to="." method="_on_HomeButton_pressed"]
