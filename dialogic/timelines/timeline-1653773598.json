@@ -32,12 +32,6 @@
 			"text": "I wish I got other letters besides all the bills. At least one postcard!"
 		},
 		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": false,
-			"wait_seconds": 1,
-			"waiting_skippable": true
-		},
-		{
 			"definition": "1653771118-787",
 			"event_id": "dialogic_014",
 			"operation": "=",
@@ -55,7 +49,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.3
 		},
 		{
 			"event_id": "dialogic_013"

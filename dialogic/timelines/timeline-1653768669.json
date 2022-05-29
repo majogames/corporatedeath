@@ -16,13 +16,7 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ah, I never have enough time for a proper breakfast. "
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Some leftover from yesterday. It’s good enough."
+			"text": "I already had breakfast"
 		},
 		{
 			"event_id": "dialogic_022",
@@ -35,13 +29,13 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Having breakfast"
+			"text": "Ah, I never have enough time for a proper breakfast. "
 		},
 		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": false,
-			"wait_seconds": 1,
-			"waiting_skippable": true
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Some leftover from yesterday. It’s good enough."
 		},
 		{
 			"definition": "1653771082-648",
@@ -50,6 +44,10 @@
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "true"
+		},
+		{
+			"emit_signal": "food_done",
+			"event_id": "dialogic_040"
 		},
 		{
 			"change_timeline": "timeline-1653772411.json",
@@ -78,7 +76,7 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'm already in my pyjama."
+			"text": "I've already eaten."
 		},
 		{
 			"event_id": "dialogic_022",
@@ -91,7 +89,7 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Let me put on something more confortable."
+			"text": "Having Dinner"
 		},
 		{
 			"definition": "1653771082-648",
@@ -100,6 +98,14 @@
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "false"
+		},
+		{
+			"emit_signal": "food_done",
+			"event_id": "dialogic_040"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
 		},
 		{
 			"event_id": "dialogic_022",

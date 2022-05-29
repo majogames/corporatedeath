@@ -19,22 +19,18 @@
 			"value": "true"
 		},
 		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "I should hurry otherwise I won’t make it on time."
-		},
-		{
-			"definition": "1653689926-787",
+			"definition": "1653845366-366",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
 			"set_random": false,
-			"set_value": "done"
+			"set_value": "true"
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I should hurry otherwise I won’t make it on time."
 		},
 		{
 			"event_id": "dialogic_013"

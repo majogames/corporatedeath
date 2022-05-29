@@ -34,12 +34,6 @@
 			"value": "false"
 		},
 		{
-			"id": "1653826025-146",
-			"name": "task_go_to_home",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653691133-366",
 			"name": "Time of the day",
 			"type": 0,
@@ -82,7 +76,151 @@
 			"value": "false"
 		},
 		{
-			"id": "1653689926-787",
+			"id": "1653826025-146",
+			"name": "task_go_to_home",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839224-713",
+			"name": "task_computer_work",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839238-339",
+			"name": "task_fill_excel_sheet",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839250-785",
+			"name": "task_take_break",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839260-842",
+			"name": "task_join_virtual_meeting",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839270-905",
+			"name": "task_get_forms",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839279-192",
+			"name": "task_lunch",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839286-574",
+			"name": "task_join_physical_meeting",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839301-250",
+			"name": "task_call_manager",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839307-416",
+			"name": "task_more_excel_sheet",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839318-953",
+			"name": "task_work_new_forms",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839326-600",
+			"name": "task_take_break_2",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839334-265",
+			"name": "task_clean_desk",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839342-501",
+			"name": "task_clock_out_work",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839371-233",
+			"name": "task_vacuum",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839378-133",
+			"name": "task_pay_transport",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839386-451",
+			"name": "task_pay_insurance",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839394-934",
+			"name": "task_dinner",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839400-935",
+			"name": "task_clean_spam",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839404-833",
+			"name": "task_reply_dentist",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839411-323",
+			"name": "task_create_next_day_todo",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839423-113",
+			"name": "task_clean_kitchen",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839437-258",
+			"name": "task_take_quick_shower",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839443-849",
+			"name": "task_sleep",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653845366-366",
 			"name": "MorningTasks",
 			"type": 0,
 			"value": "false"
