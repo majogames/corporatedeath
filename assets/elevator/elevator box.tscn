@@ -40,7 +40,7 @@ transform = Transform( 0.707111, 0.00522664, 0.707083, -0.00291691, 0.999986, -0
 material/0 = SubResource( 1 )
 
 [node name="internalleft" type="MeshInstance" parent="." index="1"]
-transform = Transform( 1, -3.49246e-10, -2.03287e-20, 3.49246e-10, 1, 1.16415e-10, -2.03287e-20, -1.16415e-10, 1, 1.728, 1.266, -1.572 )
+transform = Transform( 1, -3.49246e-10, -2.03287e-20, 3.49246e-10, 1, 1.16415e-10, -2.03287e-20, -1.16415e-10, 1, 1.72761, 1.26633, -0.460876 )
 mesh = SubResource( 2 )
 skeleton = NodePath("")
 material/0 = null
@@ -52,7 +52,7 @@ transform = Transform( -5.96046e-08, 0, 0.999999, 0, 1, 0, -0.999999, 0, -5.9604
 shape = SubResource( 5 )
 
 [node name="internalright" type="MeshInstance" parent="." index="2"]
-transform = Transform( 1, -3.49246e-10, -2.03287e-20, 3.49246e-10, 1, 1.16415e-10, -2.03287e-20, -1.16415e-10, 1, 1.728, 1.266, 1.655 )
+transform = Transform( 1, -3.49246e-10, -2.03287e-20, 3.49246e-10, 1, 1.16415e-10, -2.03287e-20, -1.16415e-10, 1, 1.72761, 1.26633, 0.539124 )
 mesh = SubResource( 2 )
 skeleton = NodePath("")
 material/0 = null
@@ -92,9 +92,11 @@ anims/Open = SubResource( 6 )
 [node name="OmniLight2" type="OmniLight" parent="." index="5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.83406, 2.47119, 0.408847 )
 light_color = Color( 1, 0.968627, 0.870588, 1 )
-omni_range = 3.0
+shadow_enabled = true
+omni_range = 4.0
 
 [node name="OmniLight3" type="OmniLight" parent="." index="6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.83406, 2.47119, -0.452788 )
 light_color = Color( 1, 0.968627, 0.870588, 1 )
-omni_range = 3.0
+shadow_enabled = true
+omni_range = 4.0

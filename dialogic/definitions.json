@@ -80,6 +80,12 @@
 			"name": "task_create_meeting",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1653835848-970",
+			"name": "screen_saturation",
+			"type": 0,
+			"value": "0.5"
 		}
 	]
 }

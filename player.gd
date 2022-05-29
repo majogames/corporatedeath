@@ -25,6 +25,7 @@ var mat = SpatialMaterial.new()
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	phone.visible = show_phone
+	self.set_saturation()
 	
 func movement_enabled():
 	if show_phone:
@@ -80,3 +81,9 @@ func _show_phone(show):
 	show_phone = show
 	if phone != null:
 		phone.visible = show_phone
+
+func set_saturation():
+	var screen_saturation = Dialogic.get_variable('screen_saturation', 1.0)
+	var environment: WorldEnvironment = $"/root".find_node('WorldEnvironment', true, false)
+	environment.environment.adjustment_enabled = true
+	environment.environment.adjustment_saturation = float(screen_saturation)

@@ -54,5 +54,5 @@ func _physics_process(delta):
 			if highlight:
 				highlight.scale = Vector3(1,1,1)
 	else:
-		if highlight != null:
+		if highlight != null and is_instance_valid(highlight):
 			highlight.visible = false

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 1, 1, 0.854902, 1 )
+
+[sub_resource type="PlaneMesh" id=3]
+material = SubResource( 2 )
+size = Vector2( 0.417, 0.251 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( 0.946997, 0, 0.321241, 0, 1, 0, -0.321241, 0, 0.946997, 0.0532269, 0.00516766, -0.0323935 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( 0.838185, 0, 0.545386, 0, 1, 0, -0.545386, 0, 0.838185, -0.0120163, 0.0121515, -0.0802459 )
+mesh = SubResource( 3 )
+material/0 = null

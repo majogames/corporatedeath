@@ -7,5 +7,8 @@ func action():
 		#dialog still running
 		return
 	dialog = Dialogic.start('eat breakfast')
+	dialog.connect('dialogic_signal', self, 'dialogic_signal')
 	add_child(dialog)
 
+func dialogic_signal(signal_name):
+	queue_free()
