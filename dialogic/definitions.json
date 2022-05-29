@@ -4,30 +4,6 @@
 	],
 	"variables": [
 		{
-			"id": "1653691258-146",
-			"name": "dead",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653771082-648",
-			"name": "morning_breakfast",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653771118-787",
-			"name": "morning_sortmail",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653689926-787",
-			"name": "MorningTasks",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653771149-366",
 			"name": "dressed",
 			"type": 0,
@@ -56,6 +32,30 @@
 			"name": "previous_location",
 			"type": 0,
 			"value": "home"
+		},
+		{
+			"id": "1653691258-146",
+			"name": "dead",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653771082-648",
+			"name": "task_breakfast",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653771118-787",
+			"name": "task_sortmail",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653689926-787",
+			"name": "MorningTasks",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }
