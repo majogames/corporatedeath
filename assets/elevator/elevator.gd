@@ -30,6 +30,5 @@ func home_on_Area_body_entered(body):
 		ignore_first_event = false
 		return
 		
-	print('E ', ready, ' ', ignore_first_event)
 	var dialog = Dialogic.start('Elevator')
 	add_child(dialog)
