@@ -18,7 +18,7 @@ onready var mesh = get_node(mesh_path)
 onready var animation: AnimationPlayer = $AnimationPlayer
 onready var animation_tree: AnimationTree = $AnimationTree
 
-enum Anim {Idle, Walking, Typing}
+enum Anim {Idle, Walking, Typing, MeetingCross, MeetingSpread, IdlePhone, SitSad, WalkingPhone}
 export(Anim) var animation_state = Anim.Idle setget set_animation_state
 
 func _init():
