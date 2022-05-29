@@ -65,6 +65,7 @@ func set_page(newpage):
 	update_notes()
 	
 func update_notes():
+	print("diocane")
 	if page == 1:
 		$Ticks/Tick1.visible = _test_var('task_breakfast')
 		$Ticks/Tick2.visible = _test_var('task_sortmail')
