@@ -64,3 +64,12 @@ func action():
 	if is_greg:
 		var dialog = Dialogic.start('forms from greg')
 		add_child(dialog)
+		yield(dialog, "timeline_end")
+		if Dialogic.get_variable('task_get_forms') == 'true':
+			var forms: Spatial = find_node('Forms')
+			if forms != null:
+				var playerdesk_forms: Spatial = $'/root'.find_node('PlayerDeskForms', true, false)
+				var playerdesk_form_collision: CollisionShape = playerdesk_forms.find_node('CollisionShape')
+				forms.visible = false
+				playerdesk_forms.visible = true
+				playerdesk_form_collision.disabled = false
