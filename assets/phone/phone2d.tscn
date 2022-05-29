@@ -144,6 +144,7 @@ margin_right = 482.0
 margin_bottom = 1424.0
 
 [node name="Home" type="Control" parent="."]
+visible = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
@@ -205,65 +206,11 @@ margin_bottom = 1322.0
 rect_pivot_offset = Vector2( 139, 226 )
 
 [node name="Notes" type="Control" parent="."]
-visible = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
 margin_bottom = 1695.0
 script = ExtResource( 20 )
-
-[node name="HomeButton" type="Button" parent="Notes"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 51.0
-margin_top = 141.0
-margin_right = 167.0
-margin_bottom = 267.0
-
-[node name="Notes1" type="TextureRect" parent="Notes"]
-margin_right = 780.0
-margin_bottom = 1688.0
-rect_min_size = Vector2( 780, 1688 )
-texture = ExtResource( 8 )
-expand = true
-
-[node name="Notes2" type="TextureRect" parent="Notes"]
-visible = false
-margin_right = 780.0
-margin_bottom = 1688.0
-rect_min_size = Vector2( 780, 1688 )
-texture = ExtResource( 3 )
-expand = true
-
-[node name="Notes3" type="TextureRect" parent="Notes"]
-visible = false
-margin_right = 780.0
-margin_bottom = 1688.0
-rect_min_size = Vector2( 780, 1688 )
-texture = ExtResource( 15 )
-expand = true
-
-[node name="Notes4" type="TextureRect" parent="Notes"]
-visible = false
-margin_right = 780.0
-margin_bottom = 1688.0
-rect_min_size = Vector2( 780, 1688 )
-texture = ExtResource( 6 )
-expand = true
-
-[node name="Notes empty" type="TextureRect" parent="Notes"]
-visible = false
-margin_right = 780.0
-margin_bottom = 1688.0
-rect_min_size = Vector2( 780, 1688 )
-texture = ExtResource( 14 )
-expand = true
-
-[node name="NextButton" type="Button" parent="Notes"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 313.0
-margin_top = 1407.0
-margin_right = 474.0
-margin_bottom = 1563.0
 
 [node name="Ticks" type="Control" parent="Notes"]
 margin_right = 40.0
@@ -332,6 +279,59 @@ margin_top = 1255.0
 margin_right = 120.0
 margin_bottom = 1312.0
 texture = ExtResource( 17 )
+
+[node name="Notes1" type="TextureRect" parent="Notes"]
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 8 )
+expand = true
+
+[node name="Notes2" type="TextureRect" parent="Notes"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Notes3" type="TextureRect" parent="Notes"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 15 )
+expand = true
+
+[node name="Notes4" type="TextureRect" parent="Notes"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Notes empty" type="TextureRect" parent="Notes"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 14 )
+expand = true
+
+[node name="HomeButton" type="Button" parent="Notes"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 57.0
+margin_top = 187.0
+margin_right = 167.0
+margin_bottom = 305.0
+
+[node name="NextButton" type="Button" parent="Notes"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 313.0
+margin_top = 1407.0
+margin_right = 474.0
+margin_bottom = 1563.0
 
 [node name="Calls" type="Control" parent="."]
 visible = false
@@ -462,7 +462,8 @@ margin_bottom = 266.0
 [connection signal="pressed" from="Home/TextureRect/LaunchInternet" to="." method="_on_LaunchInternet_pressed"]
 [connection signal="pressed" from="Home/TextureRect/LaunchPhone" to="." method="_on_LaunchPhone_pressed"]
 [connection signal="pressed" from="Home/TextureRect/LaunchEmail" to="." method="_on_LaunchEmail_pressed"]
-[connection signal="pressed" from="Notes/HomeButton" to="." method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="Notes/HomeButton" to="Notes" method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="Notes/NextButton" to="Notes" method="_on_NextButton_pressed"]
 [connection signal="pressed" from="Calls/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Maps/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Mail/HomeButton" to="." method="_on_HomeButton_pressed"]

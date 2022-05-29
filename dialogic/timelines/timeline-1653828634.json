@@ -1,0 +1,47 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1653729061-648",
+			"event_id": "dialogic_012",
+			"value": "home"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "work from home"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1653729061-648",
+			"event_id": "dialogic_012",
+			"value": "office"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "work from office"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653828634.json",
+		"name": "laptop work"
+	}
+}
