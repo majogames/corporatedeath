@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Why does it always look so grey and dull? Even the people. I would give anything for a bit of color in my life."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653835084.json",
+		"name": "hallway"
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello Mr. Smith, I am having a problem with my database. It doesn’t load our daily profit anymore. Ah, I see. Thank you very much for your time. Goodbye."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I can’t lose my job. I should call my CEO and apologize that I’ll be late."
+		},
+		{
+			"character": "character-1653837747.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You are calling from a dead person's phone number. This phone number will be automatically deleted within 24 hours after the submitted time of death."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653836904.json",
+		"name": "calling"
+	}
+}

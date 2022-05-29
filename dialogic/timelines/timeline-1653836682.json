@@ -1,0 +1,21 @@
+{
+	"events": [
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My meeting starts in 5 minutes. I should hurry."
+		},
+		{
+			"character": "character-1653836860.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "... blah blah blah profits blah incentives blah increase blah blah blah more work blah blah..."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653836682.json",
+		"name": "attend meeting"
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"character": "character-1653838145.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This bank account belongs to a dead person. "
+		},
+		{
+			"character": "character-1653838145.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It will be automatically deleted within 24 hours after the submitted time of death. Please, withdraw all your money, or else it will go into the system."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh, I better get all my money."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653838137.json",
+		"name": "ATM"
+	}
+}

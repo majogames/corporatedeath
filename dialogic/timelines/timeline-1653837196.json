@@ -1,0 +1,129 @@
+{
+	"events": [
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Finally back home, uff. Let’s see what I need to do."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I try to vacuum every week. Sometimes I don’t manage because of work. Remember that one time when my manager called me at 22:00?! I was just about to go to bed. I always go to bed at 22:00."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Public transport used to be reimbursed by the company. I wish they didn’t cancel that."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ψ400 for health insurance but I am never sick! I would lose my job if I were. Being 5 minutes late is already a huge problem."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The certainty of having the same dinner every day, ahhhhh..."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmmm, what did I just agree to? It said something about that the death is only the beginning??, hmmm, that’s weird, I probably misread… I am sure it was just a dumb marketing headline…"
+		},
+		{
+			"character": "character-1653837330.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Let’s delete spam first."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hope he can take me on Saturday. I can’t miss work."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I wonder why we have to make to-do lists every day. Who is it for? I doubt my manager reads all the to-do lists. Just our office is around 300 people. "
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Spick-and-span. I should refill my fridge. I wish I could go to the market but it’s always closed before I get home from work."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmm, am I forgetting something before I go to bed?"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Finally, this was a long day and tomorrow will be the same. Sometimes I wish for a change."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I can’t pay my bills? This always works. I don’t want to get a fine."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe I could try asking my neighbor if he got my mail by accident."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello Tom, did you receive my mail by accident perhaps?"
+		},
+		{
+			"character": "character-1653838083.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Good afternoon, do we know each other? I don’t have time for this. Please, leave me alone."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I should get some money before my bank card stops working."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Just a simple quick dinner. This was a stressful day. I don’t have the energy for anything else."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmm, am I forgetting something before I finish this stressful day?"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This was a very distressing and worrisome day. Let’s hope it was just a bug in the system."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653837196.json",
+		"name": "at home"
+	}
+}

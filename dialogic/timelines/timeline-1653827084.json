@@ -18,7 +18,121 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Time to work"
+			"text": "Here we are again, work, uh. Hey Jenny, how are you? "
+		},
+		{
+			"character": "character-1653835169.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I am good, thanks for asking."
+		},
+		{
+			"character": "character-1653836195.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "To clock in, please, unlock your phone next to the NFC tag."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What do I have to do today?"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe I’ll have time during my lunch break."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I could listen to music on my way home even though I never do. So little time to do fun things."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Virtual meetings are even worse than the normal meeting, so hard to pay attention."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh, so much new work to do."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmm, am I forgetting something before I go for lunch?"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Quick lunch as always."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I should fill them in by hand I guess? Where is my pen? I rarely write by hand."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Why do we have to clean our desks every day? Once I left a cup on my desk and I got suspended for a day without pay. Oh, it always takes so much time."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmm, am I forgetting something before I go home?"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Another day is done. Same as all the previous days – dull and boring.\nBy Jenny! "
+		},
+		{
+			"character": "character-1653835169.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Goodbye and see you tomorrow!"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Good morning Jenny!"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmm... Jenny always says hi, I guess she is busy."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This never happens. Probably just a bug in the system. "
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey Jenny, I can’t clock in, could you clock me in manually, please? "
+		},
+		{
+			"character": "character-1653835169.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Excuse me? I don’t know you. Please, leave the premises or else I’ll call the security guard. "
 		},
 		{
 			"change_timeline": "timeline-1653825812.json",

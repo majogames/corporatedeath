@@ -16,7 +16,13 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I have already eaten."
+			"text": "Ah, I never have enough time for a proper breakfast. "
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Some leftover from yesterday. It’s good enough."
 		},
 		{
 			"event_id": "dialogic_022",
@@ -72,7 +78,7 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'm already in my pijama"
+			"text": "I'm already in my pyjama."
 		},
 		{
 			"event_id": "dialogic_022",
@@ -85,7 +91,7 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Let me put something more confortable"
+			"text": "Let me put on something more confortable."
 		},
 		{
 			"definition": "1653771082-648",
