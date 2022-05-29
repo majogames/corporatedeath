@@ -50,6 +50,12 @@
 			"name": "location",
 			"type": 0,
 			"value": "home"
+		},
+		{
+			"id": "1653817643-787",
+			"name": "previous_location",
+			"type": 0,
+			"value": "home"
 		}
 	]
 }

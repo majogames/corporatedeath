@@ -9,6 +9,7 @@ onready var elevator_entrance: Spatial = $"RoomList/ElevatorCorridor/elevator co
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var previous_location = Dialogic.get_variable('location')
+	Dialogic.set_variable('previous_location', previous_location)
 	print('HOME previous location ', previous_location)
 	if previous_location != 'home':
 		player.transform = elevator_entrance.find_node('PlayerEnter', false).global_transform
