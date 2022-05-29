@@ -17,6 +17,8 @@ func dialogic_signal(signal_name: String):
 	$MeshInstance/ScreenDONE.visible = false
 	$MeshInstance/ScreenERROR.visible = false
 	match signal_name:
+		"RESET":
+			$MeshInstance/Screen.visible = true
 		"WORKING":
 			$MeshInstance/Screen.visible = true
 		"GOOD":
