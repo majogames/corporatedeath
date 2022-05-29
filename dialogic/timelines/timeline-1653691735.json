@@ -17,6 +17,20 @@
 			"value": "office"
 		},
 		{
+			"definition": "1653817643-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "different"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Going to work..."
+		},
+		{
 			"change_scene": "res://office.tscn",
 			"event_id": "dialogic_041"
 		},
@@ -26,6 +40,20 @@
 			"definition": "1653729061-648",
 			"event_id": "dialogic_011",
 			"value": "home"
+		},
+		{
+			"definition": "1653817643-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "different"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Going home..."
 		},
 		{
 			"change_scene": "res://home.tscn",
