@@ -44,6 +44,14 @@
 			"set_value": "true"
 		},
 		{
+			"definition": "1653691133-366",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "MorningWork"
+		},
+		{
 			"emit_signal": "GOOD",
 			"event_id": "dialogic_040"
 		},
@@ -83,6 +91,14 @@
 		{
 			"event_id": "dialogic_022",
 			"transition_duration": 0.3
+		},
+		{
+			"definition": "1653691133-366",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "Afternoon"
 		}
 	],
 	"metadata": {

@@ -1,16 +1,64 @@
 {
 	"events": [
 		{
+			"condition": "!=",
+			"definition": "1653839279-192",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1653839286-574",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "My meeting starts in 5 minutes. I should hurry."
+			"text": "Just in time! Everybody is already here."
 		},
 		{
 			"character": "character-1653836860.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "... blah blah blah profits blah incentives blah increase blah blah blah more work blah blah..."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Not sure if I prefer virtual meetings or physical meetings any more..."
+		},
+		{
+			"definition": "1653839286-574",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
 		}
 	],
 	"metadata": {

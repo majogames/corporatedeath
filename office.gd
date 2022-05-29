@@ -9,3 +9,8 @@ func _ready():
 	Dialogic.set_variable('location', 'office')
 	
 	$Player/head/phone/Viewport/Control/Notes.update_notes()
+
+
+func _on_MeetingArea_body_entered(body):
+	var dialog = Dialogic.start('attend meeting')
+	add_child(dialog)

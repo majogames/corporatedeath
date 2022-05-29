@@ -46,7 +46,7 @@
 			"set_value": "true"
 		},
 		{
-			"emit_signal": "food_done",
+			"emit_signal": "breakfast",
 			"event_id": "dialogic_040"
 		},
 		{
@@ -97,8 +97,18 @@
 			"set_value": "Afternoon"
 		},
 		{
-			"emit_signal": "food_done",
+			"emit_signal": "lunch",
 			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My meeting starts in 5 minutes. I should hurry."
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
 		},
 		{
 			"event_id": "dialogic_022",
@@ -159,7 +169,7 @@
 			"set_value": "false"
 		},
 		{
-			"emit_signal": "food_done",
+			"emit_signal": "dinner",
 			"event_id": "dialogic_040"
 		},
 		{
@@ -177,6 +187,6 @@
 	"metadata": {
 		"dialogic-version": "1.4.1",
 		"file": "timeline-1653768669.json",
-		"name": "eat breakfast"
+		"name": "eat quick food"
 	}
 }
