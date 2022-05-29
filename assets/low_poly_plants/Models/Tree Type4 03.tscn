@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/low_poly_plants/Textures/Colorsheet Tree Mine.tres" type="Material" id=1]
+[ext_resource path="res://assets/low_poly_plants/Models/Tree Type4 03.dae" type="PackedScene" id=2]
+
+[node name="Tree Type4 03" instance=ExtResource( 2 )]
+
+[node name="Tree_Type4_03_mesh" parent="." index="0"]
+material/0 = ExtResource( 1 )
