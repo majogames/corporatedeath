@@ -1,6 +1,16 @@
 {
 	"events": [
 		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "update_notes",
+				"target_node_path": "/root/Spatial/Spatial2/Player/head/phone/Viewport/Control/Notes"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"condition": "",
 			"definition": "1653771082-648",
 			"event_id": "dialogic_012",
