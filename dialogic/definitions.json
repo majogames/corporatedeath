@@ -10,12 +10,6 @@
 			"value": "false"
 		},
 		{
-			"id": "1653691133-366",
-			"name": "Time of the day",
-			"type": 0,
-			"value": "Morning"
-		},
-		{
 			"id": "1653815175-648",
 			"name": "game_just_loaded",
 			"type": 0,
@@ -66,6 +60,18 @@
 		{
 			"id": "1653826025-146",
 			"name": "task_go_to_home",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653691133-366",
+			"name": "Time of the day",
+			"type": 0,
+			"value": "Morning"
+		},
+		{
+			"id": "1653827116-918",
+			"name": "task_work_checkin",
 			"type": 0,
 			"value": "false"
 		}
