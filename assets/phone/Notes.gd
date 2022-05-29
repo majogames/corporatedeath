@@ -53,17 +53,14 @@ func _ready():
 	update_notes()
 
 func set_page(newpage):
-	if page == 1:
-		page1.visible = true
-	elif page == 2:
-		page1.visible = true
-	elif page == 3:
-		page1.visible = true
-	elif page == 4:
-		page1.visible = true
-	else:
+	if newpage < 1 or newpage > 4:
 		print("no page ", page, " found")
 		return
+		
+	page1.visible = newpage == 1
+	page2.visible = newpage == 2
+	page3.visible = newpage == 3
+	page4.visible = newpage == 4
 	page = newpage
 	update_notes()
 	
@@ -109,3 +106,17 @@ func update_notes():
 	
 func _test_var(name: String):
 	return Dialogic.get_variable(name, 'false') == 'true'
+
+
+func _on_HomeButton_pressed():
+	var newpage = page - 1
+	if newpage < 1:
+		get_parent()._on_HomeButton_pressed()
+	else:
+		self.page = newpage
+
+
+func _on_NextButton_pressed():
+	var newpage = page + 1
+	if newpage <= 4:
+		self.page = newpage
