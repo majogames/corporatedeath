@@ -17,7 +17,7 @@
 [ext_resource path="res://assets/bedroom/table.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/bedroom/microwave.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/highlight.material.tres" type="Material" id=17]
-[ext_resource path="res://assets/bedroom/laptop.glb" type="PackedScene" id=18]
+[ext_resource path="res://assets/office/mylaptop.tscn" type="PackedScene" id=18]
 [ext_resource path="res://assets/bedroom/chair.tscn" type="PackedScene" id=19]
 [ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/bedroom/shower.tscn" type="PackedScene" id=21]
@@ -99,8 +99,8 @@ points = PoolVector3Array( 2.1, 3, -4, -2.22463, 3, -4, 2.1266, 3, 4, 2.1266, -0
 [node name="desk" parent="RoomList/Studio" instance=ExtResource( 6 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 4 )
 
-[node name="laptop" parent="RoomList/Studio/desk" instance=ExtResource( 18 )]
-transform = Transform( -0.990729, 0, -0.135854, 0, 1, 0, 0.135854, 0, -0.990729, 0.261953, 0.668979, 0.635742 )
+[node name="mylaptop" parent="RoomList/Studio/desk" instance=ExtResource( 18 )]
+transform = Transform( -0.990729, 0, -0.135854, 0, 1, 0, 0.135854, 0, -0.990729, 0.290844, 0.695344, 0.686393 )
 
 [node name="microwave" parent="RoomList/Studio" instance=ExtResource( 16 )]
 transform = Transform( -0.268785, 0, 0.9632, 0, 1, 0, -0.9632, 0, -0.268785, -1.48415, 1.05127, -0.586879 )
