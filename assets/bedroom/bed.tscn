@@ -25,6 +25,7 @@ script = ExtResource( 3 )
 
 [node name="Highlight" type="MeshInstance" parent="." index="0"]
 transform = Transform( 0, 0, 1, 0, 1, 0, -1, 0, 0, 0.229329, 0.461576, 0 )
+visible = false
 mesh = SubResource( 2 )
 skeleton = NodePath("../Mattress")
 material/0 = ExtResource( 2 )

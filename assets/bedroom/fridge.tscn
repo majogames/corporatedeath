@@ -175,6 +175,7 @@ script = ExtResource( 9 )
 
 [node name="Highlight" type="MeshInstance" parent="banana" index="1"]
 transform = Transform( -0.353689, -0.369027, -0.00411681, -0.0145099, 0.00820736, 0.510897, -0.368765, 0.353618, -0.0161539, 0, 0, 0 )
+visible = false
 mesh = SubResource( 12 )
 skeleton = NodePath("../banana")
 material/0 = ExtResource( 7 )
@@ -197,6 +198,7 @@ script = ExtResource( 9 )
 
 [node name="Highlight" type="MeshInstance" parent="red apple" index="1"]
 transform = Transform( 0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 0.0246758, 0 )
+visible = false
 mesh = SubResource( 11 )
 material/0 = ExtResource( 7 )
 
