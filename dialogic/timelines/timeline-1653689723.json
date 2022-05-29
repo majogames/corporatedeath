@@ -22,7 +22,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.3
 		},
 		{
 			"event_id": "dialogic_013"
@@ -47,7 +47,7 @@
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.3
 		},
 		{
 			"event_id": "dialogic_013"
@@ -60,6 +60,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "I should prepare myself before going to work."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
 		}
 	],
 	"metadata": {
