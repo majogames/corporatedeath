@@ -1,0 +1,39 @@
+{
+	"events": [
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It’s important to keep my phone charged at all times."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I should never forget to charge my phone."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh, strange... This always works. Anyway, the code is 436."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I should charge my phone. I guess I need to use the wire charger since the wireless works only with face recognition."
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well, this is great, the bank app doesn't work anymore. What am I going to do?! I bet calling, notes and email doesn't work anymore either."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653836375.json",
+		"name": "phone"
+	}
+}

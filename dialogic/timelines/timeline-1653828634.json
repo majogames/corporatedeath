@@ -7,10 +7,10 @@
 			"value": "home"
 		},
 		{
-			"character": "",
+			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "work from home"
+			"text": "Finally back home, uff. Let’s see what I need to do."
 		},
 		{
 			"event_id": "dialogic_022",
@@ -26,10 +26,10 @@
 			"value": "office"
 		},
 		{
-			"character": "",
+			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "work from office"
+			"text": "So, what kind of pointless work am I supposed to do today."
 		},
 		{
 			"event_id": "dialogic_022",

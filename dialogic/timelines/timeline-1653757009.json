@@ -27,7 +27,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Nice book!"
+			"text": "This is a nice book. I’ll read more later."
 		},
 		{
 			"event_id": "dialogic_013"
@@ -42,7 +42,7 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "no time to read a book"
+			"text": "No time to read a book. Let's focus on my tasks."
 		},
 		{
 			"event_id": "dialogic_013"

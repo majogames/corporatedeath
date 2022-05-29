@@ -1,0 +1,33 @@
+{
+	"events": [
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don’t know what to do. What’s happening to me?! Walking takes so long and it’s so tiring!"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh, I’ve always wanted a cat. They are so cute. Hello, kitty kitty kitty… "
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Omg, omg, I am dying. Sooooo many stairs. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This also doesn’t work?!? I have to use the actual key to open my apartment door?! What the hell is going on. I am seriously getting worried."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653837909.json",
+		"name": "walking home"
+	}
+}

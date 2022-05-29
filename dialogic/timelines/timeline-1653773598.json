@@ -16,7 +16,13 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Mail already done"
+			"text": "I wish I got other letters besides all the bills. At least one postcard!"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Strange, I always get my mail in the morning."
 		},
 		{
 			"event_id": "dialogic_022",

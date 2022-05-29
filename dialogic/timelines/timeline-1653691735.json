@@ -1,7 +1,7 @@
 {
 	"events": [
 		{
-			"character": "",
+			"character": "character-1653836028.json",
 			"event_id": "dialogic_010",
 			"options": [
 
@@ -33,10 +33,16 @@
 			"set_value": "true"
 		},
 		{
-			"character": "",
+			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Going to work..."
+			"text": "Sometimes I wonder what would happen if the elevator broke down. Do we even have stairs here?"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So claustrophobic."
 		},
 		{
 			"change_scene": "res://office.tscn",
@@ -66,10 +72,16 @@
 			"set_value": "true"
 		},
 		{
-			"character": "",
+			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Going home..."
+			"text": "Weird, I am always alone in the elevator. I guess everyone wants to go by themselves to avoid small talk. I would love to have a small talk!"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I am looking forward to being home. Not that it’s that amazing… "
 		},
 		{
 			"change_scene": "res://home.tscn",
@@ -84,6 +96,12 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmm, this should work. I paid for my public transport pass yesterday. I guess I should look for a staircase."
 		}
 	],
 	"metadata": {
