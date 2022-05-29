@@ -1,16 +1,6 @@
 {
 	"events": [
 		{
-			"call_node": {
-				"arguments": [
-
-				],
-				"method_name": "update_notes",
-				"target_node_path": "/root/Spatial/Spatial2/Player/head/phone/Viewport/Control/Notes"
-			},
-			"event_id": "dialogic_042"
-		},
-		{
 			"condition": "",
 			"definition": "1653771082-648",
 			"event_id": "dialogic_012",
@@ -43,13 +33,21 @@
 			"set_value": "done"
 		},
 		{
-			"event_id": "dialogic_013"
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		},
 		{
 			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
 		}
 	],
 	"metadata": {

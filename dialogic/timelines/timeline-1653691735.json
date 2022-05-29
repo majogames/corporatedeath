@@ -25,6 +25,14 @@
 			"set_value": "different"
 		},
 		{
+			"definition": "1653825988-366",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -48,6 +56,14 @@
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "different"
+		},
+		{
+			"definition": "1653826025-146",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
 		},
 		{
 			"character": "",

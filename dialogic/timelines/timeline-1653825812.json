@@ -1,0 +1,55 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1653729061-648",
+			"event_id": "dialogic_012",
+			"value": "home"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "update_notes",
+				"target_node_path": "/root/Spatial/Spatial2/Player/head/phone/Viewport/Control/Notes"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1653729061-648",
+			"event_id": "dialogic_012",
+			"value": "office"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "update_notes",
+				"target_node_path": "/root/Spatial/Player/head/phone/Viewport/Control/Notes"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653825812.json",
+		"name": "update_tasks"
+	}
+}

@@ -56,6 +56,18 @@
 			"name": "MorningTasks",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1653825988-366",
+			"name": "task_go_to_work",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653826025-146",
+			"name": "task_go_to_home",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }

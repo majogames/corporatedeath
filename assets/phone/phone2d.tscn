@@ -205,6 +205,7 @@ margin_bottom = 1322.0
 rect_pivot_offset = Vector2( 139, 226 )
 
 [node name="Notes" type="Control" parent="."]
+visible = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0

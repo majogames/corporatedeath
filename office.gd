@@ -7,5 +7,5 @@ func _ready():
 	Dialogic.set_variable('previous_location', previous_location)
 	print('previous location: ', previous_location)
 	Dialogic.set_variable('location', 'office')
-	previous_location = Dialogic.get_variable('location')
-	print('test new location: ', previous_location)
+	
+	$Player/head/phone/Viewport/Control/Notes.update_notes()

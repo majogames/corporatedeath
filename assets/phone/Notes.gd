@@ -50,6 +50,7 @@ var page = 1 setget set_page
 
 func _ready():
 	print("Notes app full path is: ", get_path())
+	update_notes()
 
 func set_page(newpage):
 	if page == 1:

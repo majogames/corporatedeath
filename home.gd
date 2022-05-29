@@ -17,3 +17,5 @@ func _ready():
 		Dialogic.set_variable('location', 'home')
 		previous_location = Dialogic.get_variable('location')
 		print('HOME test new location: ', previous_location)
+
+	$Player/head/phone/Viewport/Control/Notes.update_notes()
