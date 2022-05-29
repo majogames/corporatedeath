@@ -1,0 +1,69 @@
+{
+	"events": [
+		{
+			"condition": "!=",
+			"definition": "1653839260-842",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1653855826.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm busy now."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1653839270-905",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi Greg. I need those forms you promised me yesterday."
+		},
+		{
+			"character": "character-1653855826.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Here they are. "
+		},
+		{
+			"definition": "1653839270-905",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653855646.json",
+		"name": "forms from greg"
+	}
+}

@@ -1,0 +1,93 @@
+{
+	"events": [
+		{
+			"condition": "==",
+			"definition": "1653827116-918",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"emit_signal": "WORKING",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1653836195.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "To clock in, please, unlock your phone next to the NFC tag."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"condition": "==",
+			"definition": "1653691258-146",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"definition": "1653827116-918",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"emit_signal": "GOOD",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1653836195.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Welcome back!"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What do I have to do today?"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"emit_signal": "BAD",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1653836195.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "ERROR"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653848894.json",
+		"name": "work checkin"
+	}
+}

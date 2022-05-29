@@ -17,9 +17,9 @@ func _ready():
 
 
 func _on_WorkPassArea_body_entered(body):
-	pass
+	var dialog = Dialogic.start('work entered')
+	add_child(dialog)
 
 
 func _on_WorkPassArea_body_exited(body):
-	var dialog = Dialogic.start('work entered')
-	add_child(dialog)
+	pass

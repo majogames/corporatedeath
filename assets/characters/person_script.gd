@@ -21,6 +21,8 @@ onready var animation_tree: AnimationTree = $AnimationTree
 enum Anim {Idle, Walking, Typing, MeetingCross, MeetingSpread, IdlePhone, SitSad, WalkingPhone}
 export(Anim) var animation_state = Anim.Idle setget set_animation_state
 
+export var is_greg = false
+
 func _init():
 	skinmaterial.subsurf_scatter_enabled = true
 	skinmaterial.subsurf_scatter_strength = 0.1
@@ -57,3 +59,8 @@ func set_hair_color(newcolor):
 func set_skin_color(newcolor):
 	skin_color = newcolor
 	skinmaterial.albedo_color = newcolor
+	
+func action():
+	if is_greg:
+		var dialog = Dialogic.start('forms from greg')
+		add_child(dialog)

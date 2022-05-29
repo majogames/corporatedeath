@@ -7,18 +7,10 @@
 			"value": "true"
 		},
 		{
-			"definition": "1653827116-918",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "true"
-		},
-		{
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Here we are again, work, uh. Hey Jenny, how are you? "
+			"text": "Here we are again, work, uh.\nHey Jenny, how are you? "
 		},
 		{
 			"character": "character-1653835169.json",
@@ -27,28 +19,8 @@
 			"text": "I am good, thanks for asking."
 		},
 		{
-			"character": "character-1653836195.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "To clock in, please, unlock your phone next to the NFC tag."
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "What do I have to do today?"
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Maybe I’ll have time during my lunch break."
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "I could listen to music on my way home even though I never do. So little time to do fun things."
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
 		},
 		{
 			"character": "character-1653688429.json",
@@ -105,6 +77,13 @@
 			"text": "Goodbye and see you tomorrow!"
 		},
 		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -135,11 +114,8 @@
 			"text": "Excuse me? I don’t know you. Please, leave the premises or else I’ll call the security guard. "
 		},
 		{
-			"change_timeline": "timeline-1653825812.json",
-			"event_id": "dialogic_020"
-		},
-		{
-			"event_id": "dialogic_013"
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
 		}
 	],
 	"metadata": {
