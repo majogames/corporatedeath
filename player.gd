@@ -42,7 +42,6 @@ func _input(event):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-
 	direction = Vector3()
 
 	if not is_on_floor():

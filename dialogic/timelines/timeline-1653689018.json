@@ -1,6 +1,12 @@
 {
 	"events": [
 		{
+			"condition": "",
+			"definition": "1653815175-648",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -17,11 +23,22 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "  Press ESC to access the phone"
+		},
+		{
+			"definition": "1653815175-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "false"
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
 		"file": "timeline-1653689018.json",
-		"name": "Morning first day"
+		"name": "Home load"
 	}
 }

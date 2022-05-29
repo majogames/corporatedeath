@@ -17,14 +17,6 @@
 			"value": "office"
 		},
 		{
-			"definition": "1653729061-648",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "office"
-		},
-		{
 			"change_scene": "res://office.tscn",
 			"event_id": "dialogic_041"
 		},
@@ -36,15 +28,7 @@
 			"value": "home"
 		},
 		{
-			"definition": "1653729061-648",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "home"
-		},
-		{
-			"change_scene": "res://root.tscn",
+			"change_scene": "res://home.tscn",
 			"event_id": "dialogic_041"
 		},
 		{

@@ -10,12 +10,6 @@
 			"value": "false"
 		},
 		{
-			"id": "1653729061-648",
-			"name": "location",
-			"type": 0,
-			"value": "home"
-		},
-		{
 			"id": "1653771082-648",
 			"name": "morning_breakfast",
 			"type": 0,
@@ -34,16 +28,28 @@
 			"value": "false"
 		},
 		{
+			"id": "1653771149-366",
+			"name": "dressed",
+			"type": 0,
+			"value": "false"
+		},
+		{
 			"id": "1653691133-366",
 			"name": "Time of the day",
 			"type": 0,
 			"value": "Morning"
 		},
 		{
-			"id": "1653771149-366",
-			"name": "dressed",
+			"id": "1653815175-648",
+			"name": "game_just_loaded",
 			"type": 0,
-			"value": "false"
+			"value": "true"
+		},
+		{
+			"id": "1653729061-648",
+			"name": "location",
+			"type": 0,
+			"value": "home"
 		}
 	]
 }
