@@ -1,13 +1,9 @@
 extends Control
 
-enum BankPage {List, Transport, TransportDone, Insurance, InsuranceDone, OutOrder}
+enum BankPage {List, Transport, TransportDone, Insurance, InsuranceDone}
 
 var current_page = BankPage.List setget _set_page
 var dialog = null 
-
-func _ready():
-	#dialog = Dialogic.open
-	pass
 
 func _set_page(newpage):
 	current_page = newpage
@@ -16,14 +12,13 @@ func _set_page(newpage):
 	$PayTransportDone.visible = newpage == BankPage.TransportDone
 	$PayInsurance.visible = newpage == BankPage.Insurance
 	$PayInsuranceDone.visible = newpage == BankPage.InsuranceDone
-	$OutOfOrder.visible = newpage == BankPage.OutOrder
 
 func _on_HomeButton_pressed():
 	match current_page:
 		BankPage.List:
 			get_parent()._on_HomeButton_pressed()
-		BankPage.OutOrder:
-			get_parent()._on_HomeButton_pressed()
+#		BankPage.OutOrder:
+#			get_parent()._on_HomeButton_pressed()
 		_:
 			self.current_page = BankPage.List
 

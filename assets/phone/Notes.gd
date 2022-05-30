@@ -65,7 +65,7 @@ func set_page(newpage):
 	update_notes()
 	
 func update_notes():
-	print("diocane")
+	print("updating notes")
 	if page == 1:
 		$Ticks/Tick1.visible = _test_var('task_breakfast')
 		$Ticks/Tick2.visible = _test_var('task_sortmail')
@@ -108,6 +108,7 @@ func update_notes():
 		print("ERROR NO PAGE 4")
 
 func reset_notes():
+	print("resetting notes")
 	_reset_var('task_breakfast')
 	_reset_var('task_sortmail')
 	_reset_var('task_go_to_work')

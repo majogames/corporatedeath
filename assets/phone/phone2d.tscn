@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://assets/phone/PNG/email_prince_3.png" type="Texture" id=1]
 [ext_resource path="res://assets/phone/PNG/phone.png" type="Texture" id=2]
@@ -45,6 +45,9 @@
 [ext_resource path="res://assets/phone/PNG/email_DIOTB_2.png" type="Texture" id=43]
 [ext_resource path="res://assets/phone/PNG/email_dentist_reply.png" type="Texture" id=44]
 [ext_resource path="res://assets/music/tap_xylo.mp3" type="AudioStream" id=45]
+[ext_resource path="res://assets/phone/PNG/email_out_of_order.png" type="Texture" id=46]
+[ext_resource path="res://assets/phone/PNG/notes_out_of_order.png" type="Texture" id=47]
+[ext_resource path="res://assets/phone/PNG/banking_out_of_order.png" type="Texture" id=48]
 
 [node name="Control" type="PanelContainer"]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -349,19 +352,27 @@ rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 14 )
 expand = true
 
-[node name="HomeButton" type="Button" parent="Notes"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 57.0
-margin_top = 187.0
-margin_right = 167.0
-margin_bottom = 305.0
-
 [node name="NextButton" type="Button" parent="Notes"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 313.0
 margin_top = 1407.0
 margin_right = 474.0
 margin_bottom = 1563.0
+
+[node name="outoforder" type="TextureRect" parent="Notes"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 47 )
+expand = true
+
+[node name="HomeButton" type="Button" parent="Notes"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 57.0
+margin_top = 187.0
+margin_right = 167.0
+margin_bottom = 305.0
 
 [node name="Calls" type="Control" parent="."]
 visible = false
@@ -530,6 +541,7 @@ margin_right = 166.0
 margin_bottom = 266.0
 
 [node name="Mail" type="Control" parent="."]
+visible = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
@@ -620,13 +632,6 @@ rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 42 )
 expand = true
 
-[node name="HomeButton" type="Button" parent="Mail"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 52.0
-margin_top = 178.0
-margin_right = 168.0
-margin_bottom = 304.0
-
 [node name="Next button" type="Button" parent="Mail"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 35.0
@@ -634,21 +639,27 @@ margin_top = 422.0
 margin_right = 753.0
 margin_bottom = 1581.0
 
-[node name="Bank" type="Control" parent="."]
+[node name="outoforder" type="TextureRect" parent="Mail"]
 visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 46 )
+expand = true
+
+[node name="HomeButton" type="Button" parent="Mail"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 52.0
+margin_top = 178.0
+margin_right = 168.0
+margin_bottom = 304.0
+
+[node name="Bank" type="Control" parent="."]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
 margin_bottom = 1695.0
 script = ExtResource( 35 )
-
-[node name="OutOfOrder" type="TextureRect" parent="Bank"]
-visible = false
-margin_right = 780.0
-margin_bottom = 1688.0
-rect_min_size = Vector2( 780, 1688 )
-texture = ExtResource( 31 )
-expand = true
 
 [node name="PayTransport" type="TextureRect" parent="Bank"]
 visible = false
@@ -703,19 +714,27 @@ margin_top = 432.0
 margin_right = 744.0
 margin_bottom = 506.0
 
-[node name="HomeButton" type="Button" parent="Bank"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 50.0
-margin_top = 140.0
-margin_right = 166.0
-margin_bottom = 266.0
-
 [node name="PayButton" type="Button" parent="Bank"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 44.0
 margin_top = 1416.0
 margin_right = 744.0
 margin_bottom = 1554.0
+
+[node name="OutOfOrder" type="TextureRect" parent="Bank"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 48 )
+expand = true
+
+[node name="HomeButton" type="Button" parent="Bank"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 50.0
+margin_top = 140.0
+margin_right = 166.0
+margin_bottom = 266.0
 
 [node name="Internet" type="Control" parent="."]
 visible = false
@@ -794,8 +813,8 @@ margin_bottom = 266.0
 [connection signal="pressed" from="Home/TextureRect/LaunchInternet" to="." method="_on_LaunchInternet_pressed"]
 [connection signal="pressed" from="Home/TextureRect/LaunchPhone" to="." method="_on_LaunchPhone_pressed"]
 [connection signal="pressed" from="Home/TextureRect/LaunchEmail" to="." method="_on_LaunchEmail_pressed"]
-[connection signal="pressed" from="Notes/HomeButton" to="Notes" method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Notes/NextButton" to="Notes" method="_on_NextButton_pressed"]
+[connection signal="pressed" from="Notes/HomeButton" to="Notes" method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Calls/ContactList/CEO" to="Calls" method="_on_CEO_pressed"]
 [connection signal="pressed" from="Calls/ContactList/CFO" to="Calls" method="_on_CFO_pressed"]
 [connection signal="pressed" from="Calls/ContactList/CIO" to="Calls" method="_on_CIO_pressed"]
@@ -811,11 +830,11 @@ margin_bottom = 266.0
 [connection signal="pressed" from="Calls/ContactList/Work colleague" to="Calls" method="_on_Work_colleague_pressed"]
 [connection signal="pressed" from="Calls/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Maps/HomeButton" to="." method="_on_HomeButton_pressed"]
-[connection signal="pressed" from="Mail/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Mail/Next button" to="Mail" method="_on_Next_button_pressed"]
+[connection signal="pressed" from="Mail/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Bank/BankList/PayTransportButton" to="Bank" method="_on_PayTransportButton_pressed"]
 [connection signal="pressed" from="Bank/BankList/PayInsuranceButton" to="Bank" method="_on_PayInsuranceButton_pressed"]
-[connection signal="pressed" from="Bank/HomeButton" to="Bank" method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Bank/PayButton" to="Bank" method="_on_PayButton_pressed"]
+[connection signal="pressed" from="Bank/HomeButton" to="Bank" method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Internet/Meeting/CreateMeeting" to="Internet" method="_on_CreateMeeting_pressed"]
 [connection signal="pressed" from="Internet/HomeButton" to="." method="_on_HomeButton_pressed"]

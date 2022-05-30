@@ -344,6 +344,12 @@
 			"name": "MorningTasks",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1653927728-648",
+			"name": "panic_bank",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }

@@ -4,6 +4,11 @@ extends Control
 var page_index = 0 setget _set_page
 onready var pages = $Pages
 
+#func _ready():
+#
+#	$outoforder.visible = true
+#	$Pages.visible = false
+
 func _set_page(index):
 	var page_count = pages.get_child_count()
 	if index >= page_count:

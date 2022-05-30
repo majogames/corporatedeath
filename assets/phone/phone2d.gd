@@ -21,8 +21,17 @@ var ready = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ready = true
-	if Dialogic.get_variable('dead') == 'true':
+	var dead: bool = Dialogic.get_variable('dead') == 'true'
+	var panic: bool = Dialogic.get_variable('panic') == 'true'
+	if dead:
 		self.current_page = PhonePage.Lockscreen
+		$Mail/outoforder.visible = true
+		$Mail/Pages.visible = false
+		$"Calls/out of order".visible = true
+		$Bank/OutOfOrder.visible = true
+		$Notes/outoforder.visible = true
+#		$Notes/Notes1.visible = false
+#		$Notes/Ticks.visible = false
 	else:
 		self.current_page = PhonePage.Home
 
@@ -40,6 +49,12 @@ func _set_page(newpage):
 	mail.visible = (newpage == PhonePage.Mail)
 	bank.visible = (newpage == PhonePage.Bank)
 	internet.visible = (newpage == PhonePage.Internet)
+	
+	var dead: bool = Dialogic.get_variable('dead') == 'true'
+	var panic: bool = Dialogic.get_variable('panic') == 'true'
+	if panic and bank.visible:
+		var dialog = Dialogic.start('panic_bank')
+		get_viewport().get_parent().add_child(dialog)
 
 func unlockscreen():
 	pass
