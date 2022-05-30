@@ -95,11 +95,13 @@ func update_notes():
 		$Ticks/Tick8.visible = _test_var('task_clean_spam')
 	elif page == 4:
 		$Ticks/Tick1.visible = _test_var('task_reply_dentist')
-		$Ticks/Tick2.visible = _test_var('task_create_next_day_todo')
-		$Ticks/Tick3.visible = _test_var('task_charge_phone')
-		$Ticks/Tick4.visible = _test_var('task_clean_kitchen')
-		$Ticks/Tick5.visible = _test_var('task_take_quick_shower')
-		$Ticks/Tick6.visible = _test_var('task_sleep')
+		#$Ticks/Tick2.visible = _test_var('task_create_next_day_todo')
+		$Ticks/Tick2.visible = _test_var('task_charge_phone')
+		#$Ticks/Tick4.visible = _test_var('task_clean_kitchen')
+		$Ticks/Tick3.visible = _test_var('task_take_quick_shower')
+		$Ticks/Tick4.visible = _test_var('task_sleep')
+		$Ticks/Tick5.visible = false
+		$Ticks/Tick6.visible = false
 		$Ticks/Tick7.visible = false
 		$Ticks/Tick8.visible = false
 	else:
@@ -131,9 +133,9 @@ func reset_notes():
 	_reset_var('task_dinner')
 	_reset_var('task_clean_spam')
 	_reset_var('task_reply_dentist')
-	_reset_var('task_create_next_day_todo')
+#	_reset_var('task_create_next_day_todo')
 	_reset_var('task_charge_phone')
-	_reset_var('task_clean_kitchen')
+#	_reset_var('task_clean_kitchen')
 	_reset_var('task_take_quick_shower')
 	_reset_var('task_sleep')
 	

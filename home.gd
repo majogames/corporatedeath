@@ -18,10 +18,23 @@ func _debug_evening():
 	Dialogic.set_variable('task_breakfast', 'true')
 	Dialogic.set_variable('dressed', 'true')
 	$"RoomList/ElevatorCorridor/elevator corridor".ignore_first_event = true
+	
+func _debug_night():
+	_debug_evening()
+	Dialogic.set_variable('dressed', 'false')
+	Dialogic.set_variable('task_vacuum', 'true')
+	Dialogic.set_variable('task_pay_transport', 'true')
+	Dialogic.set_variable('task_pay_insurance', 'true')
+	Dialogic.set_variable('task_dinner', 'true')
+	Dialogic.set_variable('task_clean_spam', 'true')
+	Dialogic.set_variable('task_reply_dentist', 'true')
+#	Dialogic.set_variable('task_create_next_day_todo', 'true')
+	Dialogic.set_variable('task_charge_phone', 'true')
+#	Dialogic.set_variable('task_clean_kitchen', 'true')
+	Dialogic.set_variable('task_take_quick_shower', 'true')
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#self._debug_evening()
 	
 	var previous_location = Dialogic.get_variable('location')
 	Dialogic.set_variable('previous_location', previous_location)
@@ -34,3 +47,8 @@ func _ready():
 		print('HOME test new location: ', previous_location)
 
 	$Player/head/phone/Viewport/Control/Notes.update_notes()
+
+func _input(event):
+	if Input.is_action_just_pressed("debug"):
+		#self._debug_evening()
+		self._debug_night()

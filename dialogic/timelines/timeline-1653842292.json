@@ -18,6 +18,14 @@
 			"event_id": "dialogic_013"
 		},
 		{
+			"definition": "1653691133-366",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "Morning"
+		},
+		{
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",

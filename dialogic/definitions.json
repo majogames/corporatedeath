@@ -58,12 +58,6 @@
 			"value": "false"
 		},
 		{
-			"id": "1653839423-113",
-			"name": "task_clean_kitchen",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653861375-918",
 			"name": "calling",
 			"type": 0,
@@ -202,22 +196,10 @@
 			"value": "false"
 		},
 		{
-			"id": "1653839411-323",
-			"name": "task_create_next_day_todo",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653845366-366",
 			"name": "MorningTasks",
 			"type": 0,
 			"value": "false"
-		},
-		{
-			"id": "1653691133-366",
-			"name": "Time of the day",
-			"type": 0,
-			"value": "Morning"
 		},
 		{
 			"id": "1653899929-648",
@@ -266,6 +248,18 @@
 			"name": "mail_app_action",
 			"type": 0,
 			"value": ""
+		},
+		{
+			"id": "1653691133-366",
+			"name": "Time of the day",
+			"type": 0,
+			"value": "Morning"
+		},
+		{
+			"id": "1653914617-713",
+			"name": "task_charge_phone",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }
