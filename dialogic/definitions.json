@@ -254,6 +254,18 @@
 			"name": "bank action",
 			"type": 0,
 			"value": "open"
+		},
+		{
+			"id": "1653911034-918",
+			"name": "mail_app_page",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1653912792-483",
+			"name": "mail_app_action",
+			"type": 0,
+			"value": ""
 		}
 	]
 }
