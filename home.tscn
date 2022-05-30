@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
@@ -37,6 +37,8 @@
 [ext_resource path="res://assets/bedroom/ShowerButton.gd" type="Script" id=35]
 [ext_resource path="res://assets/phone/phone.tscn" type="PackedScene" id=36]
 [ext_resource path="res://assets/bedroom/Phone Charger.gd" type="Script" id=37]
+[ext_resource path="res://walls.gd" type="Script" id=38]
+[ext_resource path="res://assets/bedroom/wall_colorable.tscn" type="PackedScene" id=39]
 
 [sub_resource type="SpatialMaterial" id=22]
 albedo_color = Color( 0.45098, 0.45098, 0.45098, 1 )
@@ -220,6 +222,7 @@ material/0 = null
 shape = SubResource( 11 )
 
 [node name="walls" type="Spatial" parent="RoomList/Studio"]
+script = ExtResource( 38 )
 
 [node name="pillar" parent="RoomList/Studio/walls" instance=ExtResource( 23 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -1.97836 )
@@ -233,43 +236,43 @@ transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1, 0, -4 
 enabled = true
 homedoor = true
 
-[node name="wall" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 4 )
 
-[node name="wall2" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable2" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 4 )
 
-[node name="wall8" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable3" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -2, 0, -4 )
 
-[node name="wall13" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable4" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -1.99688, 4.76837e-07, -1.98609 )
 
-[node name="wall3" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable5" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, -2 )
 
-[node name="wall4" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable6" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, 1.19209e-07 )
 
-[node name="wall5" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable7" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, 2 )
 
-[node name="wall6" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable8" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, 4 )
 
-[node name="wall9" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable9" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 2, 0, 2 )
 
-[node name="wall10" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable10" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 2, 0, -2.38419e-07 )
 
-[node name="wall11" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable11" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 2, 0, -2 )
 
-[node name="wall12" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable12" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 2, 0, -4 )
 
-[node name="wall14" parent="RoomList/Studio/walls" instance=ExtResource( 2 )]
+[node name="wall_colorable13" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 0.5, 0, -1.74846e-07, 0, 1, -1.99688, 4.76837e-07, 0.0442565 )
 
 [node name="shelves" type="Spatial" parent="RoomList/Studio"]
