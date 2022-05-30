@@ -362,6 +362,12 @@
 			"name": "neighbour_talked",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1653935647-512",
+			"name": "has_bucket_list",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }

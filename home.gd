@@ -60,6 +60,9 @@ func _ready():
 		#this is supposed to be the sleep
 		$Player/head/phone/Viewport/Control/Notes.reset_notes()
 	
+	if dead:
+		$lisa_neighbour.visible = true
+		$lisa_neighbour/StaticBody/CollisionShape.disabled = false
 	
 	if Dialogic.get_variable('bucket_buy_plants') == 'true':
 		$RoomList/Studio/Flowers.visible = true
