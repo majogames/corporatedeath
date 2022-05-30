@@ -1,0 +1,63 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1653912792-483",
+			"event_id": "dialogic_012",
+			"value": "prince3"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmmm, what did I just agree to?\nIt said something about that the death is only the beginning??\nhmmm, that’s weird, I probably misread… \nI am sure it was just a dumb marketing headline…"
+		},
+		{
+			"definition": "1653839400-935",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1653912792-483",
+			"event_id": "dialogic_012",
+			"value": "Dentist"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hope he can take me on Saturday. I can’t miss work."
+		},
+		{
+			"definition": "1653839404-833",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653912872.json",
+		"name": "email app"
+	}
+}
