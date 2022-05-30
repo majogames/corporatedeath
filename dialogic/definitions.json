@@ -4,36 +4,6 @@
 	],
 	"variables": [
 		{
-			"id": "1653729061-648",
-			"name": "location",
-			"type": 0,
-			"value": "home"
-		},
-		{
-			"id": "1653691258-146",
-			"name": "dead",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653825988-366",
-			"name": "task_go_to_work",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653691133-366",
-			"name": "Time of the day",
-			"type": 0,
-			"value": "Morning"
-		},
-		{
-			"id": "1653835848-970",
-			"name": "screen_saturation",
-			"type": 0,
-			"value": "0.5"
-		},
-		{
 			"id": "1653830872-483",
 			"name": "task_create_meeting",
 			"type": 0,
@@ -46,38 +16,8 @@
 			"value": "false"
 		},
 		{
-			"id": "1653817643-787",
-			"name": "previous_location",
-			"type": 0,
-			"value": "home"
-		},
-		{
-			"id": "1653815175-648",
-			"name": "game_just_loaded",
-			"type": 0,
-			"value": "true"
-		},
-		{
 			"id": "1653826025-146",
 			"name": "task_go_to_home",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653839224-713",
-			"name": "task_computer_work",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653839238-339",
-			"name": "task_fill_excel_sheet",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653839250-785",
-			"name": "task_take_break",
 			"type": 0,
 			"value": "false"
 		},
@@ -88,20 +28,8 @@
 			"value": "false"
 		},
 		{
-			"id": "1653839270-905",
-			"name": "task_get_forms",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653839279-192",
 			"name": "task_lunch",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653839286-574",
-			"name": "task_join_physical_meeting",
 			"type": 0,
 			"value": "false"
 		},
@@ -166,12 +94,6 @@
 			"value": "false"
 		},
 		{
-			"id": "1653845366-366",
-			"name": "MorningTasks",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653839443-849",
 			"name": "task_sleep",
 			"type": 0,
@@ -184,20 +106,8 @@
 			"value": "false"
 		},
 		{
-			"id": "1653839411-323",
-			"name": "task_create_next_day_todo",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653839404-833",
 			"name": "task_reply_dentist",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653839394-934",
-			"name": "task_dinner",
 			"type": 0,
 			"value": "false"
 		},
@@ -208,20 +118,8 @@
 			"value": "false"
 		},
 		{
-			"id": "1653839371-233",
-			"name": "task_vacuum",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653839342-501",
 			"name": "task_clock_out_work",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1653839326-600",
-			"name": "task_take_break_2",
 			"type": 0,
 			"value": "false"
 		},
@@ -236,6 +134,108 @@
 			"name": "task_call_manager",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1653815175-648",
+			"name": "game_just_loaded",
+			"type": 0,
+			"value": "true"
+		},
+		{
+			"id": "1653729061-648",
+			"name": "location",
+			"type": 0,
+			"value": "home"
+		},
+		{
+			"id": "1653691258-146",
+			"name": "dead",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653825988-366",
+			"name": "task_go_to_work",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839224-713",
+			"name": "task_computer_work",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839238-339",
+			"name": "task_fill_excel_sheet",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653835848-970",
+			"name": "screen_saturation",
+			"type": 0,
+			"value": "0.5"
+		},
+		{
+			"id": "1653839250-785",
+			"name": "task_take_break",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839270-905",
+			"name": "task_get_forms",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839286-574",
+			"name": "task_join_physical_meeting",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839326-600",
+			"name": "task_take_break_2",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839371-233",
+			"name": "task_vacuum",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839394-934",
+			"name": "task_dinner",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839411-323",
+			"name": "task_create_next_day_todo",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653845366-366",
+			"name": "MorningTasks",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653691133-366",
+			"name": "Time of the day",
+			"type": 0,
+			"value": "Morning"
+		},
+		{
+			"id": "1653817643-787",
+			"name": "previous_location",
+			"type": 0,
+			"value": "home"
 		}
 	]
 }
