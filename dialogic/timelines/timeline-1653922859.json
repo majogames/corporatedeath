@@ -1,19 +1,26 @@
 {
 	"events": [
 		{
-			"condition": "!=",
+			"condition": "",
 			"definition": "1653691258-146",
 			"event_id": "dialogic_012",
-			"value": "true"
+			"value": "false"
 		},
 		{
-			"event_id": "dialogic_015",
-			"id": "anchor-1634488067",
-			"index": 0,
-			"name": "elevator_question"
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I should probably use the elevator."
 		},
 		{
-			"character": "character-1653836028.json",
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "",
 			"event_id": "dialogic_010",
 			"options": [
 
@@ -27,18 +34,6 @@
 			"definition": "1653729061-648",
 			"event_id": "dialogic_011",
 			"value": "office"
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Sometimes I wonder what would happen if the elevator broke down. Do we even have stairs here?"
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "So claustrophobic."
 		},
 		{
 			"definition": "1653817643-787",
@@ -68,18 +63,6 @@
 			"value": "home"
 		},
 		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Weird, I am always alone in the elevator. I guess everyone wants to go by themselves to avoid small talk. I would love to have a small talk!"
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "I am looking forward to being home. Not that it’s that amazing… "
-		},
-		{
 			"definition": "1653817643-787",
 			"event_id": "dialogic_014",
 			"operation": "=",
@@ -107,14 +90,8 @@
 			"value": ""
 		},
 		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "I don't have time, maybe I can go another day"
-		},
-		{
-			"anchor_id": "anchor-1634488067",
-			"event_id": "dialogic_016"
+			"change_scene": "res://forest.tscn",
+			"event_id": "dialogic_041"
 		},
 		{
 			"choice": "Cancel",
@@ -135,30 +112,11 @@
 		},
 		{
 			"event_id": "dialogic_013"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Hmm, this should work. I paid for my public transport pass yesterday. I guess I should look for a staircase."
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "I should call my manager or the CEO and apologize that I’ll be late."
-		},
-		{
-			"event_id": "dialogic_022",
-			"transition_duration": 0.3
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1653691735.json",
-		"name": "Elevator"
+		"file": "timeline-1653922859.json",
+		"name": "corridor"
 	}
 }

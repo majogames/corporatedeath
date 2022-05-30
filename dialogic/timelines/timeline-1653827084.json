@@ -117,24 +117,6 @@
 			"text": "Hmm... Jenny always says hi, I guess she is busy."
 		},
 		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "This never happens. Probably just a bug in the system. "
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Hey Jenny, I can’t clock in, could you clock me in manually, please? "
-		},
-		{
-			"character": "character-1653835169.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Excuse me? I don’t know you. Please, leave the premises or else I’ll call the security guard. "
-		},
-		{
 			"event_id": "dialogic_022",
 			"transition_duration": 0.3
 		}
