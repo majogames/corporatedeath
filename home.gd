@@ -6,8 +6,23 @@ onready var elevator: Spatial = $"RoomList/ElevatorCorridor/elevator corridor/el
 onready var elevator_entrance: Spatial = $"RoomList/ElevatorCorridor/elevator corridor"
 
 
+func _debug_evening():
+	Dialogic.set_variable('Time of the day', 'Evening')
+	Dialogic.set_variable('location', 'office')
+	Dialogic.set_variable('previous_location', 'home')
+	Dialogic.set_variable('game_just_loaded', 'false')
+	Dialogic.set_variable('task_go_to_work', 'true')
+	Dialogic.set_variable('task_go_to_home', 'true')
+	Dialogic.set_variable('MorningTasks', 'true')
+	Dialogic.set_variable('task_sortmail', 'true')
+	Dialogic.set_variable('task_breakfast', 'true')
+	Dialogic.set_variable('dressed', 'true')
+	$"RoomList/ElevatorCorridor/elevator corridor".ignore_first_event = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#self._debug_evening()
+	
 	var previous_location = Dialogic.get_variable('location')
 	Dialogic.set_variable('previous_location', previous_location)
 	print('HOME previous location ', previous_location)
