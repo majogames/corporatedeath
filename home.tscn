@@ -44,7 +44,7 @@ extents = Vector3( 2, 0.001, 4 )
 size = Vector2( 4, 8 )
 
 [sub_resource type="PlaneMesh" id=3]
-size = Vector2( 20, 4 )
+size = Vector2( 21, 4 )
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 10, 0.01, 2 )
@@ -300,6 +300,7 @@ transform = Transform( 1, 0, 1.04308e-07, 0, 1, 0, -1.04308e-07, 0, 1, -0.051301
 
 [node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flower5" instance=ExtResource( 26 )]
 transform = Transform( 1, 0, 7.45058e-08, 0, 1, 0, -7.45058e-08, 0, 1, -0.00176835, 0, -0.0524044 )
+
 [node name="vacuum" parent="RoomList/Studio" instance=ExtResource( 33 )]
 transform = Transform( -0.987628, 0, -0.156814, 0, 1, 0, 0.156814, 0, -0.987628, -1.60593, -0.0190003, 3.56624 )
 
