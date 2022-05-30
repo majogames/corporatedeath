@@ -117,7 +117,7 @@ material/0 = SubResource( 7 )
 size = Vector2( 1868, 2664 )
 render_target_v_flip = true
 
-[node name="Control" parent="head/BucketList/Viewport" instance=ExtResource( 5 )]
+[node name="BucketList2D" parent="head/BucketList/Viewport" instance=ExtResource( 5 )]
 
 [node name="Hand" type="Spatial" parent="head"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.377223, -0.122805, -0.590571 )

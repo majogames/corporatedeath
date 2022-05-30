@@ -126,6 +126,38 @@
 			"event_id": "dialogic_013"
 		},
 		{
+			"condition": "",
+			"definition": "1653729061-648",
+			"event_id": "dialogic_012",
+			"value": "park"
+		},
+		{
+			"condition": "!=",
+			"definition": "1653919554-265",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "On my way here I found a garden shop.\nI think I'll buy some carrots to grow on my way back home."
+		},
+		{
+			"definition": "1653919554-265",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
 			"definition": "1653817643-787",
 			"event_id": "dialogic_014",
 			"operation": "=",

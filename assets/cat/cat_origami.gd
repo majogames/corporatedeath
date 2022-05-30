@@ -1,11 +1,10 @@
 extends Spatial
 
 export var cat_name = 'none'
+var dialog = null
 
 func action():
-	if get_tree().get_current_scene().get_name() == "Forest":
-		print(cat_name)
-		print("bring me home!!")
-	else:
-		print("purr")
-	pass
+	if is_instance_valid(dialog):
+		return
+	dialog = Dialogic.start('pet cat')
+	add_child(dialog)

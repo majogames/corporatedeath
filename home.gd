@@ -32,6 +32,11 @@ func _debug_night():
 	Dialogic.set_variable('task_charge_phone', 'true')
 #	Dialogic.set_variable('task_clean_kitchen', 'true')
 	Dialogic.set_variable('task_take_quick_shower', 'true')
+	
+func _debug_bucket():
+	Dialogic.set_variable('dead', 'true')
+	Dialogic.set_variable('panic', 'false')
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -72,8 +77,14 @@ func _ready():
 	if Dialogic.get_variable('bucket_buy_plants') == 'true':
 		$RoomList/Studio/Flowers.visible = true
 	if Dialogic.get_variable('bucket_cat') == 'true':
-		$RoomList/Studio/Carpet/cat_origami.visible = true
-		$RoomList/Studio/cat2.visible = true
+		var cat_name = Dialogic.get_variable('cat_name')
+		match cat_name:
+			"Tabby":
+				$RoomList/Studio/cat2.visible = true
+			"Origami":
+				$RoomList/Studio/Carpet/cat_origami.visible = true
+			_:
+				print("CAT ERROR ", cat_name)
 	if Dialogic.get_variable('bucket_grow_food') == 'true':
 		$RoomList/CarrotPot.visible = true
 
@@ -82,4 +93,5 @@ func _ready():
 func _input(event):
 	if Input.is_action_just_pressed("debug"):
 		#self._debug_evening()
-		self._debug_night()
+		#self._debug_night()
+		_debug_bucket()
