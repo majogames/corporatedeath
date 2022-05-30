@@ -243,7 +243,7 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 4
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 4 )
 
 [node name="wall_colorable3" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -2, 0, -4 )
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -2, 0, -3.99034 )
 
 [node name="wall_colorable4" parent="RoomList/Studio/walls" instance=ExtResource( 39 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -1.99688, 4.76837e-07, -1.98609 )
@@ -424,6 +424,9 @@ transform = Transform( -1, 0, -2.62269e-07, 0, 1, 0, 2.62269e-07, 0, -1, 2, 0, -
 
 [node name="wall14" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -6, 0, -4 )
+
+[node name="wall25" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -2, 0, -4 )
 
 [node name="wall15" parent="RoomList/Corridor/other walls" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 2, 0, -4 )
