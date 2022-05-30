@@ -37,10 +37,15 @@ func _debug_night():
 func _ready():
 	var dead: bool = Dialogic.get_variable('dead') == 'true'
 	var panic: bool = Dialogic.get_variable('panic') == 'true'
+	var time: String = Dialogic.get_variable('Time of the day')
 	if panic:
 		$"RoomList/Studio/Carpet/letter pile/MeshInstance".visible = false
 	if not panic and dead:
 		$"RoomList/Studio/Carpet/letter pile".visible = false
+	if time != 'Morning':
+		pass #TODO
+		#$"RoomList/Studio/Carpet/letter pile".visible = false
+		#$"RoomList/Studio/Carpet/letter pile/StaticBody/CollisionShape".disabled = true
 	
 	var previous_location = Dialogic.get_variable('location')
 	Dialogic.set_variable('previous_location', previous_location)

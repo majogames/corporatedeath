@@ -147,14 +147,14 @@
 		},
 		{
 			"choice": "Park",
-			"condition": "",
-			"definition": "",
+			"condition": "!=",
+			"definition": "1653729061-648",
 			"event_id": "dialogic_011",
-			"value": ""
+			"value": "park"
 		},
 		{
-			"condition": "",
-			"definition": "1653901544-787",
+			"condition": "!=",
+			"definition": "1653935647-512",
 			"event_id": "dialogic_012",
 			"value": "true"
 		},
