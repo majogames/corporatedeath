@@ -7,6 +7,55 @@
 			"value": "true"
 		},
 		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "What do you wanna do?"
+		},
+		{
+			"choice": "Tie-dye the bed sheets",
+			"condition": "!=",
+			"definition": "1653919573-701",
+			"event_id": "dialogic_011",
+			"value": "true"
+		},
+		{
+			"definition": "1653919573-701",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"emit_signal": "tiedye",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well, it’s a little 60’ style but I like it!!"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "Take a long nap",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
 			"definition": "1653919466-250",
 			"event_id": "dialogic_014",
 			"operation": "=",
@@ -27,6 +76,24 @@
 		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
+		},
+		{
+			"choice": "Cancel",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.2
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.2
 		},
 		{
 			"event_id": "dialogic_013"

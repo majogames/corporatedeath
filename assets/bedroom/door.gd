@@ -15,6 +15,10 @@ func toggle_door():
 			print("dialog still running")
 			return
 		
+		if Dialogic.get_variable('has_bucket_list') == 'true':
+			_toggle_door()
+			return
+		
 		var time_of_day = Dialogic.get_variable("Time of the day")
 		if time_of_day == 'Morning':
 			dialog = Dialogic.start('Home door')
@@ -23,6 +27,9 @@ func toggle_door():
 		if tasks_done != 'true':
 			return
 	
+	_toggle_door()
+	
+func _toggle_door():
 	door_open = !door_open
 	if door_open == true:
 		$AnimationPlayer.play("DoorOpen")
