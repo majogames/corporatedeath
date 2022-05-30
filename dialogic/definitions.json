@@ -364,14 +364,14 @@
 			"value": "false"
 		},
 		{
-			"id": "1653935647-512",
-			"name": "has_bucket_list",
+			"id": "1653935901-219",
+			"name": "work_checkin_fail",
 			"type": 0,
 			"value": "false"
 		},
 		{
-			"id": "1653935901-219",
-			"name": "work_checkin_fail",
+			"id": "1653935647-512",
+			"name": "has_bucket_list",
 			"type": 0,
 			"value": "false"
 		}
