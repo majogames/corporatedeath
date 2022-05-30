@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
@@ -42,6 +42,9 @@
 [ext_resource path="res://assets/corridor.tscn" type="PackedScene" id=40]
 [ext_resource path="res://assets/cat/cat_origami.tscn" type="PackedScene" id=41]
 [ext_resource path="res://assets/cat/cat_tabby.tscn" type="PackedScene" id=42]
+[ext_resource path="res://assets/MBJ_flowerpack01/BLENDER_RENDER_MBJ_PlantPack01_v006-vase-1.glb" type="PackedScene" id=43]
+[ext_resource path="res://assets/food/carrot/carrot.glb" type="PackedScene" id=44]
+[ext_resource path="res://carrots.gd" type="Script" id=45]
 
 [sub_resource type="SpatialMaterial" id=22]
 albedo_color = Color( 0.45098, 0.45098, 0.45098, 1 )
@@ -835,6 +838,46 @@ transform = Transform( 1.31135e-07, 0, -1, 0, 1, 0, 1, 0, 1.31135e-07, 14, 0, -8
 
 [node name="door16" parent="RoomList/MainCorridor" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0, -9 )
+
+[node name="Spatial" type="Spatial" parent="RoomList"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59689, 0.5612, 1.98689 )
+
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-1" parent="RoomList/Spatial" instance=ExtResource( 43 )]
+transform = Transform( 0.8, 0, 0, 0, 0.5, 0, 0, 0, 0.8, 0, 0, 0 )
+
+[node name="carrots" type="Spatial" parent="RoomList/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.032, 0 )
+script = ExtResource( 45 )
+
+[node name="carrot" parent="RoomList/Spatial/carrots" instance=ExtResource( 44 )]
+transform = Transform( 0.9, 0, 0, 0, 0.0357576, 0.899289, 0, -0.899289, 0.0357576, 0, 0.292556, 0 )
+
+[node name="carrot9" parent="RoomList/Spatial/carrots" instance=ExtResource( 44 )]
+transform = Transform( 0.894188, 0.00405717, 0.0566869, -0.101525, 0.132006, 0.491366, -0.010979, -0.890257, 0.0731176, 0.0827667, 0.242323, 0.0967102 )
+
+[node name="carrot2" parent="RoomList/Spatial/carrots" instance=ExtResource( 44 )]
+transform = Transform( 0.190479, -0.773261, -0.0760551, -0.0938821, -0.100638, 0.788072, -0.7713, -0.178714, -0.114706, -0.120565, 0.267037, -0.0597672 )
+
+[node name="carrot3" parent="RoomList/Spatial/carrots" instance=ExtResource( 44 )]
+transform = Transform( -0.37702, -0.39378, -0.0131797, -0.0289025, 0.0157987, 0.49899, -0.32714, 0.452425, -0.028896, -0.00100863, 0.262633, 0.125581 )
+
+[node name="carrot8" parent="RoomList/Spatial/carrots" instance=ExtResource( 44 )]
+transform = Transform( -0.301616, -0.26252, -0.0184516, -0.0702955, 0.065167, 0.679604, -0.253153, 0.294681, -0.166728, 0.0336007, 0.264168, -0.141416 )
+
+[node name="carrot10" parent="RoomList/Spatial/carrots" instance=ExtResource( 44 )]
+transform = Transform( 0.0386024, 0.294465, -0.0707098, -0.0527217, 0.0488753, 0.485431, 0.292797, -0.0300217, 0.0967301, -0.0604544, 0.25289, 0.131063 )
+
+[node name="carrot7" parent="RoomList/Spatial/carrots" instance=ExtResource( 44 )]
+transform = Transform( -0.473546, -0.133846, 0.141667, 0.0793978, 0.0443346, 0.786657, -0.139464, 0.479708, -0.0331757, 0.122039, 0.258979, -0.00640321 )
+
+[node name="carrot4" parent="RoomList/Spatial/carrots" instance=ExtResource( 44 )]
+transform = Transform( -0.0188325, -0.899092, 0.0357498, 0, 0.0357576, 0.899289, -0.899803, 0.0188176, -0.000748225, -0.0290504, 0.292556, -0.074825 )
+
+[node name="carrot5" parent="RoomList/Spatial/carrots" instance=ExtResource( 44 )]
+transform = Transform( -0.781736, -0.164968, -0.0409269, -0.0462438, 0.0210648, 0.798384, -0.163557, 0.782523, -0.0301198, -0.111631, 0.27715, 0.050693 )
+
+[node name="carrot6" parent="RoomList/Spatial/carrots" instance=ExtResource( 44 )]
+transform = Transform( -0.319179, 0.460565, -0.0286139, -0.0289025, 0.0157987, 0.49899, 0.383783, 0.384226, 0.0137815, 0.0965244, 0.272093, -0.0764444 )
 
 [node name="Navigation" type="Navigation" parent="."]
 
