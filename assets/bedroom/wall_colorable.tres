@@ -1,0 +1,8 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://assets/bedroom/TexturesCom_PlasterWhite0083_1_seamless_S.jpg" type="Texture" id=1]
+
+[resource]
+albedo_color = Color( 0.113725, 0.670588, 0.870588, 0.341176 )
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 20, 20, 1 )

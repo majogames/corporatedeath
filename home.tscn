@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
@@ -40,6 +40,8 @@
 [ext_resource path="res://walls.gd" type="Script" id=38]
 [ext_resource path="res://assets/bedroom/wall_colorable.tscn" type="PackedScene" id=39]
 [ext_resource path="res://assets/corridor.tscn" type="PackedScene" id=40]
+[ext_resource path="res://assets/cat/cat_origami.tscn" type="PackedScene" id=41]
+[ext_resource path="res://assets/cat/cat_tabby.tscn" type="PackedScene" id=42]
 
 [sub_resource type="SpatialMaterial" id=22]
 albedo_color = Color( 0.45098, 0.45098, 0.45098, 1 )
@@ -211,6 +213,9 @@ shape = SubResource( 11 )
 [node name="letter pile" parent="RoomList/Studio/Carpet" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06907, 0.00651385, -3.15169 )
 
+[node name="cat_origami" parent="RoomList/Studio/Carpet" instance=ExtResource( 41 )]
+transform = Transform( 0.0124098, 0, 0.00268102, 0, 0.011, 0, -0.00387259, 0, 0.0085914, -0.472468, -0.00110982, 0.460089 )
+
 [node name="Ceiling" type="MeshInstance" parent="RoomList/Studio"]
 transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 2.98, 0 )
 material_override = ExtResource( 1 )
@@ -335,62 +340,67 @@ mesh = SubResource( 21 )
 skeleton = NodePath("../..")
 material/0 = ExtResource( 34 )
 
-[node name="Bonsai" type="Spatial" parent="RoomList/Studio"]
+[node name="Flowers" type="Spatial" parent="RoomList/Studio"]
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Bonsai" instance=ExtResource( 26 )]
+[node name="Bonsai" type="Spatial" parent="RoomList/Studio/Flowers"]
+
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flowers/Bonsai" instance=ExtResource( 26 )]
 transform = Transform( 0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.7, -0.466128, 0.69379, 3.31495 )
 
-[node name="Tree Type0 01" parent="RoomList/Studio/Bonsai" instance=ExtResource( 10 )]
+[node name="Tree Type0 01" parent="RoomList/Studio/Flowers/Bonsai" instance=ExtResource( 10 )]
 transform = Transform( 0.09, 0, 0, 0, 0.1, 0, 0, 0, 0.09, -0.451373, 0.816845, 3.3212 )
 
-[node name="Flower1" type="Spatial" parent="RoomList/Studio"]
+[node name="Flower1" type="Spatial" parent="RoomList/Studio/Flowers"]
 transform = Transform( -0.86599, 0, -0.500061, 0, 1, 0, 0.500061, 0, -0.86599, 1.59959, 1.19209e-07, -0.324769 )
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-1" parent="RoomList/Studio/Flower1" instance=ExtResource( 27 )]
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-1" parent="RoomList/Studio/Flowers/Flower1" instance=ExtResource( 27 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0349326, 0.370896, 0.100828 )
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flower1" instance=ExtResource( 26 )]
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flowers/Flower1" instance=ExtResource( 26 )]
 
-[node name="Flower2" type="Spatial" parent="RoomList/Studio"]
+[node name="Flower2" type="Spatial" parent="RoomList/Studio/Flowers"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50616, 1.03945, -1.4508 )
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-2" parent="RoomList/Studio/Flower2" instance=ExtResource( 28 )]
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-2" parent="RoomList/Studio/Flowers/Flower2" instance=ExtResource( 28 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32891, 0 )
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flower2" instance=ExtResource( 26 )]
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flowers/Flower2" instance=ExtResource( 26 )]
 
-[node name="Flower3" type="Spatial" parent="RoomList/Studio"]
+[node name="Flower3" type="Spatial" parent="RoomList/Studio/Flowers"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5947, 2.00614, 1.46652 )
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-3" parent="RoomList/Studio/Flower3" instance=ExtResource( 29 )]
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-3" parent="RoomList/Studio/Flowers/Flower3" instance=ExtResource( 29 )]
 transform = Transform( 0.785673, 0, 0.618641, 0, 1, 0, -0.618641, 0, 0.785673, 0.0437441, 0.248058, -0.00877094 )
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flower3" instance=ExtResource( 26 )]
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flowers/Flower3" instance=ExtResource( 26 )]
 transform = Transform( 0.9, 0, 0, 0, 0.8, 0, 0, 0, 0.9, 0, 0, 0 )
 
-[node name="Flower4" type="Spatial" parent="RoomList/Studio"]
+[node name="Flower4" type="Spatial" parent="RoomList/Studio/Flowers"]
 transform = Transform( 0.389183, 0, 0.0923935, 0, 0.4, 0, -0.0923935, 0, 0.389183, 0.140186, 0.69726, 3.40055 )
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-4" parent="RoomList/Studio/Flower4" instance=ExtResource( 30 )]
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-4" parent="RoomList/Studio/Flowers/Flower4" instance=ExtResource( 30 )]
 transform = Transform( -0.224407, 0, 0.974496, 0, 1, 0, -0.974496, 0, -0.224407, 0, 0.327112, -4.76837e-07 )
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-5" parent="RoomList/Studio/Flower4" instance=ExtResource( 30 )]
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-5" parent="RoomList/Studio/Flowers/Flower4" instance=ExtResource( 30 )]
 transform = Transform( -0.687849, 0, -0.129859, 0, 0.7, 0, 0.129859, 0, -0.687849, 0.0180536, 0.327112, -0.115406 )
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flower4" instance=ExtResource( 26 )]
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flowers/Flower4" instance=ExtResource( 26 )]
 transform = Transform( 1, 0, 2.98023e-08, 0, 0.8, 0, -2.98023e-08, 0, 1, 0, 0, 0 )
 
-[node name="Flower5" type="Spatial" parent="RoomList/Studio"]
+[node name="Flower5" type="Spatial" parent="RoomList/Studio/Flowers"]
 transform = Transform( -0.227314, 0, -0.195776, 0, 0.3, 0, 0.195776, 0, -0.227314, 1.32853, 0.69726, 3.51397 )
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-5" parent="RoomList/Studio/Flower5" instance=ExtResource( 31 )]
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-5" parent="RoomList/Studio/Flowers/Flower5" instance=ExtResource( 31 )]
 transform = Transform( 1, 0, 1.04308e-07, 0, 1, 0, -1.04308e-07, 0, 1, -0.0513015, 0.411798, 0.00295877 )
 
-[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flower5" instance=ExtResource( 26 )]
+[node name="BLENDER_RENDER_MBJ_PlantPack01_v006-vase-2" parent="RoomList/Studio/Flowers/Flower5" instance=ExtResource( 26 )]
 transform = Transform( 1, 0, 7.45058e-08, 0, 1, 0, -7.45058e-08, 0, 1, -0.00176835, 0, -0.0524044 )
 
 [node name="vacuum" parent="RoomList/Studio" instance=ExtResource( 33 )]
 transform = Transform( -0.987628, 0, -0.156814, 0, 1, 0, 0.156814, 0, -0.987628, -1.60593, -0.0190003, 3.56624 )
+
+[node name="cat2" parent="RoomList/Studio" instance=ExtResource( 42 )]
+transform = Transform( -0.432069, 0, 1.43642, 0, 1.5, 0, -1.43642, 0, -0.432069, -1.45168, 0.624007, 2.13005 )
 
 [node name="Corridor" type="Room" parent="RoomList" groups=["navmesh"]]
 points = PoolVector3Array( -10.0317, 3, -8, -9.687, 3, -8.11577, -10.154, 3, -4, 10, 3, -8.08856, 10.0309, 3, -4, -10, -0.0600051, -8.12781, 10.031, -0.000389393, -4, 10, -0.0163546, -8.1, -10.1263, -0.0442695, -4 )
