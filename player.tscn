@@ -85,6 +85,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.737729, 0 )
 
 [node name="Camera" type="Camera" parent="head"]
 current = true
+far = 240.0
 
 [node name="EyesRayCast" type="RayCast" parent="head/Camera"]
 enabled = true
