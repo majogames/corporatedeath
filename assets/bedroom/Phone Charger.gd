@@ -9,6 +9,5 @@ func action():
 	add_child(dialog)
 	yield(dialog, "timeline_end")
 	var phone_charging = Dialogic.get_variable("task_charge_phone", 'false')
-	print("ALLLORAAAA ", phone_charging)
 	if phone_charging == 'true':
 		$phone.visible = true
