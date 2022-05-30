@@ -122,7 +122,7 @@
 			"set_value": "home"
 		},
 		{
-			"change_scene": "res://home.tscn",
+			"change_scene": "res://root.tscn",
 			"event_id": "dialogic_041"
 		},
 		{

@@ -138,6 +138,7 @@ func reset_notes():
 #	_reset_var('task_clean_kitchen')
 	_reset_var('task_take_quick_shower')
 	_reset_var('task_sleep')
+	_reset_var('MorningTasks')
 	
 	
 func _test_var(name: String):
