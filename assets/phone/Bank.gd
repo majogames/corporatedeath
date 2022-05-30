@@ -28,15 +28,25 @@ func _on_HomeButton_pressed():
 			self.current_page = BankPage.List
 
 func _on_PayButton_pressed():
+	if is_instance_valid(dialog):
+		return
 	match current_page:
 		BankPage.Transport:
-			Dialogic.set_variable('task_pay_transport', 'true')
-			self.current_page = BankPage.TransportDone
+			Dialogic.set_variable('bank action', 'transport')
+			#self.current_page = BankPage.TransportDone
 		BankPage.Insurance:
-			Dialogic.set_variable('task_pay_insurance', 'true')
-			self.current_page = BankPage.InsuranceDone
+			Dialogic.set_variable('bank action', 'insurance')
+			#self.current_page = BankPage.InsuranceDone
 		_:
 			return
+	dialog = Dialogic.start('bank app')
+	get_viewport().get_parent().add_child(dialog)
+	yield(dialog, "timeline_end")
+	match current_page:
+		BankPage.Transport:
+			_on_PayTransportButton_pressed()
+		BankPage.Insurance:
+			_on_PayInsuranceButton_pressed()
 
 
 func _on_PayTransportButton_pressed():
