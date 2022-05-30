@@ -39,6 +39,8 @@ func _ready():
 	var panic: bool = Dialogic.get_variable('panic') == 'true'
 	if panic:
 		$"RoomList/Studio/Carpet/letter pile/MeshInstance".visible = false
+	if not panic and dead:
+		$"RoomList/Studio/Carpet/letter pile".visible = false
 	
 	var previous_location = Dialogic.get_variable('location')
 	Dialogic.set_variable('previous_location', previous_location)
@@ -50,6 +52,7 @@ func _ready():
 		previous_location = Dialogic.get_variable('location')
 		print('HOME test new location: ', previous_location)
 
+	$Player/head/phone/Viewport/Control/Notes.reset_notes()
 	$Player/head/phone/Viewport/Control/Notes.update_notes()
 
 func _input(event):

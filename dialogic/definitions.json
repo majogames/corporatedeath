@@ -196,12 +196,6 @@
 			"value": "false"
 		},
 		{
-			"id": "1653845366-366",
-			"name": "MorningTasks",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653899929-648",
 			"name": "being payed",
 			"type": 0,
@@ -266,6 +260,90 @@
 			"name": "phone_lock_firsttime",
 			"type": 0,
 			"value": "true"
+		},
+		{
+			"id": "1653919436-842",
+			"name": "bucket_long_shower",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919443-905",
+			"name": "bucket_play_game",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919452-192",
+			"name": "bucket_long_breakfast",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919460-574",
+			"name": "bucket_buy_plants",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919466-250",
+			"name": "bucket_long_nap",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919479-416",
+			"name": "bucket_read_book",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919500-600",
+			"name": "bucket_change_wall_color",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919489-953",
+			"name": "bucket_club",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919554-265",
+			"name": "bucket_grow_food",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919562-501",
+			"name": "bucket_goto_park",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919573-701",
+			"name": "bucket_tiedye_bedsheets",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919606-233",
+			"name": "bucket_cat",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653919611-133",
+			"name": "bucket_vacation",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653845366-366",
+			"name": "MorningTasks",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }
