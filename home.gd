@@ -47,10 +47,10 @@ func _ready():
 	print('HOME previous location ', previous_location)
 	if previous_location != 'home':
 		var newtransform: Transform
-		if Dialogic.get_variable('dead') == 'true':
-			$CorridorEnter.global_transform
+		if dead:
+			newtransform = $CorridorEnter.global_transform
 		else:
-			elevator_entrance.find_node('PlayerEnter', false).global_transform
+			newtransform = elevator_entrance.find_node('PlayerEnter', false).global_transform
 			elevator_entrance.toggle_door()
 		player.transform = newtransform
 		Dialogic.set_variable('location', 'home')
