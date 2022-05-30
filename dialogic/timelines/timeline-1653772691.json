@@ -98,6 +98,34 @@
 			"event_id": "dialogic_042"
 		},
 		{
+			"definition": "1653691258-146",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"definition": "1653901544-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"definition": "1653729061-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "home"
+		},
+		{
+			"change_scene": "res://home.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
 			"change_timeline": "timeline-1653842292.json",
 			"event_id": "dialogic_020"
 		},
