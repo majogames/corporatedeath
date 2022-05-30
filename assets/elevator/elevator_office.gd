@@ -6,7 +6,8 @@ onready var elevator = $"elevator box/AnimationPlayer"
 var first_event = true
 
 func _ready():
-	toggle_door()
+	if Dialogic.get_variable('dead') == 'false':
+		toggle_door()
 
 func toggle_door():
 	door_open = !door_open
