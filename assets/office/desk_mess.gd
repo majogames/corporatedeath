@@ -2,6 +2,7 @@ extends Spatial
 
 
 var dialog = null
+onready var orderedpens = $"../orderedpens"
 
 func action():
 	if is_instance_valid(dialog):
@@ -12,3 +13,4 @@ func action():
 	if Dialogic.get_variable("task_clean_desk") == 'true':
 		$StaticBody/CollisionShape.disabled = true
 		visible = false
+		orderedpens.visible = true
