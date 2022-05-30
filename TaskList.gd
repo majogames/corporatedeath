@@ -11,5 +11,7 @@ func update_bucket_list():
 
 func update_notes():
 	var player = get_tree().root.find_node('Player', true, false)
+	#update saturation
+	player.set_saturation()
 	var notes = player.find_node('Notes', true, false)
 	notes.update_notes()

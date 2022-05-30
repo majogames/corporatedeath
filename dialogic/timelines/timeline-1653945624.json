@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My apartment will be so much nice with these flowers.\nI can’t believe I'm allowed to bring them home."
+		},
+		{
+			"definition": "1653919460-574",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653945624.json",
+		"name": "pick flower"
+	}
+}

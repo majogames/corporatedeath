@@ -1,6 +1,48 @@
 {
 	"events": [
 		{
+			"condition": "==",
+			"definition": "1653935647-512",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(Taking your time to shower)"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
+		},
+		{
+			"definition": "1653919436-842",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ahhhhhh, that was so relaxing. I’ve never had time to do that before."
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
 			"condition": "",
 			"definition": "1653839437-258",
 			"event_id": "dialogic_012",
@@ -64,36 +106,6 @@
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "true"
-		},
-		{
-			"condition": "",
-			"definition": "1653691258-146",
-			"event_id": "dialogic_012",
-			"value": "true"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "(Taking your time to shower)"
-		},
-		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": true,
-			"wait_seconds": 2
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Ahhhhhh, that was so relaxing. I’ve never had time to do that before."
-		},
-		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
-		},
-		{
-			"event_id": "dialogic_013"
 		},
 		{
 			"condition": "==",

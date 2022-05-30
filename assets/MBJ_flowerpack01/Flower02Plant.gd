@@ -1,5 +1,9 @@
 extends MeshInstance
 
-# Called when the node enters the scene tree for the first time.
+var dialog = null
+
 func action():
-	pass
+	if is_instance_valid(dialog):
+		return
+	dialog = Dialogic.start('pick flower')
+	add_child(dialog)
