@@ -190,12 +190,6 @@
 			"value": "false"
 		},
 		{
-			"id": "1653839394-934",
-			"name": "task_dinner",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653899929-648",
 			"name": "being payed",
 			"type": 0,
@@ -348,6 +342,24 @@
 		{
 			"id": "1653927728-648",
 			"name": "panic_bank",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653839394-934",
+			"name": "task_dinner",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653928580-648",
+			"name": "day",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1653929113-787",
+			"name": "neighbour_talked",
 			"type": 0,
 			"value": "false"
 		}
