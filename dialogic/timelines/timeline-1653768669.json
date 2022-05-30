@@ -137,9 +137,9 @@
 		},
 		{
 			"condition": "",
-			"definition": "1653847387-648",
+			"definition": "1653839394-934",
 			"event_id": "dialogic_012",
-			"value": "false"
+			"value": "true"
 		},
 		{
 			"character": "character-1653688429.json",
@@ -161,12 +161,12 @@
 			"text": "Having Dinner"
 		},
 		{
-			"definition": "1653847387-648",
+			"definition": "1653839394-934",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
 			"set_random": false,
-			"set_value": "false"
+			"set_value": "true"
 		},
 		{
 			"emit_signal": "dinner",
