@@ -35,6 +35,10 @@ func _debug_night():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var dead: bool = Dialogic.get_variable('dead') == 'true'
+	var panic: bool = Dialogic.get_variable('panic') == 'true'
+	if panic:
+		$"RoomList/Studio/Carpet/letter pile/MeshInstance".visible = false
 	
 	var previous_location = Dialogic.get_variable('location')
 	Dialogic.set_variable('previous_location', previous_location)

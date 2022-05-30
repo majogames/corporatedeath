@@ -260,6 +260,12 @@
 			"name": "task_charge_phone",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1653918793-785",
+			"name": "phone_lock_firsttime",
+			"type": 0,
+			"value": "true"
 		}
 	]
 }

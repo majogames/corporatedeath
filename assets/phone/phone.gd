@@ -33,3 +33,11 @@ func _unhandled_input(event):
 		
 		event.position = new_pos * viewport.size
 		viewport.input(event)
+
+func unlockscreen():
+	var dialog = Dialogic.start('unlock_phone')
+	add_child(dialog)
+	$Viewport/Control.unlockscreen()
+
+func lockscreen():
+	$Viewport/Control.lockscreen()

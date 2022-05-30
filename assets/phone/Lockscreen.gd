@@ -8,16 +8,28 @@ onready var control: Control
 signal unlock
 
 func _ready():
-	randomize()
 	control = get_parent()
+	var code = Dialogic.get_variable('phone_code', '')
+	if code == '':
+		_create_random_password()
+	else:
+		_load_password(code)
+	print("phone password is ", locksequence)
+
+func _create_random_password():
+	randomize()
 	# randomize password
 	locksequence = [
 		randi() % 10,
 		randi() % 10,
 		randi() % 10,
 		]
-	print("phone password is ", locksequence)
+	var code = "{0} {1} {2}".format(locksequence)
+	Dialogic.set_variable('phone_code', code)
+	
 
+func _load_password(code_str: String):
+	locksequence = code_str.split_floats(' ')
 
 func input_number(number):
 	print("unlock pressed number", number)

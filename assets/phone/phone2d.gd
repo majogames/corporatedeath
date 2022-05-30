@@ -41,6 +41,13 @@ func _set_page(newpage):
 	bank.visible = (newpage == PhonePage.Bank)
 	internet.visible = (newpage == PhonePage.Internet)
 
+func unlockscreen():
+	pass
+
+func lockscreen():
+	$lock.play()
+	if Dialogic.get_variable('dead') == 'true':
+		self.current_page = PhonePage.Lockscreen
 
 func _on_LaunchNotes_pressed():
 	$click.play()

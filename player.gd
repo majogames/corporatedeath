@@ -81,6 +81,10 @@ func _show_phone(show):
 	show_phone = show
 	if phone != null:
 		phone.visible = show_phone
+		if not show:
+			phone.lockscreen()
+		else:
+			phone.unlockscreen()
 
 func set_saturation():
 	var screen_saturation = Dialogic.get_variable('screen_saturation', 1.0)
