@@ -136,12 +136,6 @@
 			"value": "false"
 		},
 		{
-			"id": "1653815175-648",
-			"name": "game_just_loaded",
-			"type": 0,
-			"value": "true"
-		},
-		{
 			"id": "1653729061-648",
 			"name": "location",
 			"type": 0,
@@ -230,6 +224,24 @@
 			"name": "Time of the day",
 			"type": 0,
 			"value": "Morning"
+		},
+		{
+			"id": "1653899929-648",
+			"name": "being payed",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1653901544-787",
+			"name": "panic",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653815175-648",
+			"name": "game_just_loaded",
+			"type": 0,
+			"value": "true"
 		},
 		{
 			"id": "1653817643-787",
