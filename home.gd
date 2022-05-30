@@ -63,7 +63,7 @@ func _ready():
 	
 	if Dialogic.get_variable('bucket_buy_plants') == 'true':
 		$RoomList/Studio/Flowers.visible = true
-	if Dialogic.get_varialbe('bucket_cat') == 'true':
+	if Dialogic.get_variable('bucket_cat') == 'true':
 		$RoomList/Studio/Carpet/cat_origami.visible = true
 		$RoomList/Studio/cat2.visible = true
 	if Dialogic.get_variable('bucket_grow_food') == 'true':
