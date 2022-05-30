@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
@@ -46,6 +46,8 @@
 [ext_resource path="res://assets/food/carrot/carrot.glb" type="PackedScene" id=44]
 [ext_resource path="res://carrots.gd" type="Script" id=45]
 [ext_resource path="res://assets/characters/female tshirt/female tshirt.tscn" type="PackedScene" id=46]
+[ext_resource path="res://assets/bucket_list/bucket_list_alpha_ch.png" type="Texture" id=47]
+[ext_resource path="res://assets/bedroom/BucketList.gd" type="Script" id=48]
 
 [sub_resource type="SpatialMaterial" id=22]
 albedo_color = Color( 0.45098, 0.45098, 0.45098, 1 )
@@ -85,6 +87,21 @@ extents = Vector3( 2, 0.001, 4 )
 [sub_resource type="PlaneMesh" id=10]
 size = Vector2( 4, 8 )
 
+[sub_resource type="PlaneMesh" id=28]
+size = Vector2( 0.166, 0.25 )
+
+[sub_resource type="SpatialMaterial" id=33]
+resource_local_to_scene = true
+params_cull_mode = 2
+albedo_color = Color( 1, 0.968627, 0.839216, 1 )
+albedo_texture = ExtResource( 47 )
+
+[sub_resource type="BoxShape" id=31]
+extents = Vector3( 0.096779, 0.0149597, 0.142769 )
+
+[sub_resource type="CubeMesh" id=32]
+size = Vector3( 0.207, 0.012, 0.285 )
+
 [sub_resource type="CubeMesh" id=20]
 size = Vector3( 0.2, 0.4, 0.4 )
 
@@ -115,7 +132,7 @@ extents = Vector3( 16, 0.01, 2 )
 [sub_resource type="BoxShape" id=7]
 extents = Vector3( 16, 0.01, 2 )
 
-[sub_resource type="NavigationMesh" id=8]
+[sub_resource type="NavigationMesh" id=30]
 vertices = PoolVector3Array( 10.8734, 0.34, 5.7734, 13.2734, 0.34, 5.7734, 13.5734, 0.34, 5.1734, 13.2734, 0.34, 2.4734, 13.5734, 0.34, 5.1734, 15.9734, 0.34, 5.1734, 15.9734, 0.34, 2.7734, 13.2734, 0.34, 2.4734, 13.2734, 0.34, -15.2266, 10.8734, 0.34, -15.2266, 10.8734, 0.34, -7.4266, 13.2734, 0.34, -6.5266, 10.8734, 0.34, -7.4266, 8.1734, 0.34, -7.1266, 8.1734, 0.34, -4.7266, 10.8734, 0.34, -4.4266, 13.2734, 0.34, -6.5266, 10.8734, 0.34, -4.4266, 10.8734, 0.34, 5.7734, 13.2734, 0.34, 2.4734, 13.2734, 0.34, -6.5266, -9.2266, 0.34, -4.7266, -2.3266, 0.34, -4.7266, -2.0266, 0.34, -5.6266, -9.2266, 0.34, -7.1266, -9.2266, 0.34, -4.7266, -2.0266, 0.34, -5.6266, -0.526597, 0.34, -7.1266, 0.0734034, 0.34, -4.7266, 8.1734, 0.34, -4.7266, 8.1734, 0.34, -7.1266, -0.526597, 0.34, -7.1266, -0.526597, 0.34, -5.6266, -0.526597, 0.34, -7.1266, -2.0266, 0.34, -5.6266, -0.526597, 0.34, -5.6266, 33.3734, 0.34, 5.1734, 34.8734, 0.34, 3.9734, 33.3734, 0.34, 2.7734, 24.6734, 0.34, 2.7734, 24.6734, 0.34, 5.1734, 24.6734, 0.34, 2.7734, 15.9734, 0.34, 2.7734, 15.9734, 0.34, 5.1734, 24.6734, 0.34, 5.1734, 13.2734, 0.34, 5.7734, 10.8734, 0.34, 5.7734, 10.5734, 0.34, 12.9734, 13.2734, 0.34, 15.0734, 0.373403, 0.34, 12.9734, -9.2266, 0.34, 12.9734, -9.2266, 0.34, 15.0734, 1.8734, 0.34, 15.0734, 1.8734, 0.34, 15.0734, 13.2734, 0.34, 15.0734, 10.5734, 0.34, 12.9734, 0.373403, 0.34, 12.9734 )
 polygons = [ PoolIntArray( 1, 0, 2 ), PoolIntArray( 2, 0, 3 ), PoolIntArray( 5, 4, 6 ), PoolIntArray( 6, 4, 7 ), PoolIntArray( 9, 8, 10 ), PoolIntArray( 10, 8, 11 ), PoolIntArray( 16, 15, 12 ), PoolIntArray( 12, 15, 14 ), PoolIntArray( 12, 14, 13 ), PoolIntArray( 20, 19, 17 ), PoolIntArray( 17, 19, 18 ), PoolIntArray( 21, 23, 22 ), PoolIntArray( 25, 24, 26 ), PoolIntArray( 26, 24, 27 ), PoolIntArray( 32, 31, 28 ), PoolIntArray( 28, 31, 29 ), PoolIntArray( 29, 31, 30 ), PoolIntArray( 35, 34, 33 ), PoolIntArray( 37, 36, 38 ), PoolIntArray( 38, 36, 40 ), PoolIntArray( 38, 40, 39 ), PoolIntArray( 44, 43, 41 ), PoolIntArray( 41, 43, 42 ), PoolIntArray( 46, 45, 47 ), PoolIntArray( 47, 45, 48 ), PoolIntArray( 50, 49, 51 ), PoolIntArray( 51, 49, 52 ), PoolIntArray( 56, 55, 53 ), PoolIntArray( 53, 55, 54 ) ]
 geometry/source_geometry_mode = 1
@@ -303,6 +320,7 @@ transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, -0.
 
 [node name="book" parent="RoomList/Studio/shelves/shelf" instance=ExtResource( 22 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.222165, 2.00774, 0.322215 )
+color = Color( 0.717647, 0.556863, 0.4, 1 )
 
 [node name="book2" parent="RoomList/Studio/shelves/shelf" instance=ExtResource( 22 )]
 transform = Transform( 0.930967, 0.365104, 0, -0.365104, 0.930967, 0, 0, 0, 1, 0.121435, 2.00774, 0.322215 )
@@ -310,8 +328,59 @@ transform = Transform( 0.930967, 0.365104, 0, -0.365104, 0.930967, 0, 0, 0, 1, 0
 [node name="shelf4" parent="RoomList/Studio/shelves" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -1, 1, -0.429618, 3.92225 )
 
+[node name="BucketList" type="MeshInstance" parent="RoomList/Studio/shelves/shelf4"]
+transform = Transform( 0.832999, -1.86265e-09, 0.553275, 0.0187976, 0.999423, -0.0283013, -0.552956, 0.0339752, 0.832518, 0.566457, 2.00798, 0.347142 )
+mesh = SubResource( 28 )
+skeleton = NodePath("../phone")
+material/0 = SubResource( 33 )
+script = ExtResource( 48 )
+
+[node name="StaticBody" type="StaticBody" parent="RoomList/Studio/shelves/shelf4/BucketList"]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="RoomList/Studio/shelves/shelf4/BucketList/StaticBody"]
+shape = SubResource( 31 )
+
+[node name="Highlight" type="MeshInstance" parent="RoomList/Studio/shelves/shelf4/BucketList"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005, 0 )
+visible = false
+mesh = SubResource( 32 )
+material/0 = ExtResource( 34 )
+
+[node name="book" parent="RoomList/Studio/shelves/shelf4" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.451537, 2.00774, 0.322214 )
+color = Color( 0.717647, 0.556863, 0.4, 1 )
+
+[node name="book2" parent="RoomList/Studio/shelves/shelf4" instance=ExtResource( 22 )]
+transform = Transform( 0.930967, 0.365104, 0, -0.365104, 0.930967, 0, 0, 0, 1, -0.552267, 2.00774, 0.322214 )
+
+[node name="book3" parent="RoomList/Studio/shelves/shelf4" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.413094, 2.00774, 0.322214 )
+color = Color( 0.4, 0.627451, 0.717647, 1 )
+
+[node name="book4" parent="RoomList/Studio/shelves/shelf4" instance=ExtResource( 22 )]
+transform = Transform( -0.0125834, 0.999921, 0, -0.999921, -0.0125834, 0, 0, 0, 1, -0.383525, 2.01808, 0.322213 )
+color = Color( 0.4, 0.717647, 0.478431, 1 )
+
 [node name="shelf5" parent="RoomList/Studio/shelves" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -1, 1, 0.112226, 3.92225 )
+
+[node name="book" parent="RoomList/Studio/shelves/shelf5" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0205845, 2.00774, 0.322214 )
+color = Color( 0.572549, 0.4, 0.717647, 1 )
+
+[node name="book2" parent="RoomList/Studio/shelves/shelf5" instance=ExtResource( 22 )]
+transform = Transform( 0.930967, 0.365104, 0, -0.365104, 0.930967, 0, 0, 0, 1, -0.121314, 2.00774, 0.322213 )
+color = Color( 0.266667, 0.529412, 0.905882, 1 )
+
+[node name="book3" parent="RoomList/Studio/shelves/shelf5" instance=ExtResource( 22 )]
+transform = Transform( 0.315947, 0.948777, 0, -0.948777, 0.315947, 0, 0, 0, 1, 0.0813484, 2.01258, 0.322213 )
+color = Color( 0.4, 0.717647, 0.470588, 1 )
+
+[node name="book4" parent="RoomList/Studio/shelves/shelf5" instance=ExtResource( 22 )]
+transform = Transform( -0.0125834, 0.999921, 0, -0.999921, -0.0125834, 0, 0, 0, 1, 0.184508, 2.01636, 0.322213 )
+color = Color( 0.4, 0.486275, 0.717647, 1 )
 
 [node name="shelf2" parent="RoomList/Studio/shelves" instance=ExtResource( 5 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, 1.1964 )
@@ -900,7 +969,7 @@ transform = Transform( -0.319179, 0.460565, -0.0286139, -0.0289025, 0.0157987, 0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.46621, 0.382363, -6.82576 )
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation"]
-navmesh = SubResource( 8 )
+navmesh = SubResource( 30 )
 
 [node name="Path1" type="Spatial" parent="Navigation"]
 

@@ -18,6 +18,7 @@ export (bool) var show_phone: bool = false setget _show_phone
 onready var head = $head
 onready var phone = $head/phone
 onready var reach = $head/Camera/EyesRayCast
+onready var bucket_list = $head/BucketList
 
 var mat = SpatialMaterial.new()
 
@@ -79,12 +80,16 @@ func _physics_process(delta):
 
 func _show_phone(show):
 	show_phone = show
-	if phone != null:
-		phone.visible = show_phone
-		if not show:
-			phone.lockscreen()
-		else:
-			phone.unlockscreen()
+	if Dialogic.get_variable('has_bucket_list') == 'true':
+		if bucket_list != null:
+			bucket_list.visible = show_phone
+	else:
+		if phone != null:
+			phone.visible = show_phone
+			if not show:
+				phone.lockscreen()
+			else:
+				phone.unlockscreen()
 
 func set_saturation():
 	var screen_saturation = Dialogic.get_variable('screen_saturation', 1.0)
