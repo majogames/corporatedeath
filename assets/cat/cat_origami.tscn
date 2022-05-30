@@ -43,6 +43,8 @@ mesh = SubResource( 22 )
 material/0 = null
 
 [node name="StaticBody" type="StaticBody" parent="ORIGAMI_Chat"]
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="ORIGAMI_Chat/StaticBody"]
 shape = SubResource( 23 )
