@@ -1,4 +1,7 @@
-﻿Thank you for purchasing this pack!
+﻿### This pack is now free on itch.io: https://brokenvector.itch.io/low-poly-tree-pack ###
+#########################################################################################
+
+Thank you for purchasing this pack!
 If you have any problems, please don't hesitate to mail us (support@brokenvector.com).
 
 
