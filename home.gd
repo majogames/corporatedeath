@@ -59,6 +59,15 @@ func _ready():
 	else:
 		#this is supposed to be the sleep
 		$Player/head/phone/Viewport/Control/Notes.reset_notes()
+	
+	
+	if Dialogic.get_variable('bucket_buy_plants') == 'true':
+		$RoomList/Studio/Flowers.visible = true
+	if Dialogic.get_varialbe('bucket_cat') == 'true':
+		$RoomList/Studio/Carpet/cat_origami.visible = true
+		$RoomList/Studio/cat2.visible = true
+	if Dialogic.get_variable('bucket_grow_food') == 'true':
+		$RoomList/CarrotPot.visible = true
 
 	$Player/head/phone/Viewport/Control/Notes.update_notes()
 
