@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://assets/phone/PNG/Artboard 8 copy@2x.png" type="Texture" id=1]
 [ext_resource path="res://assets/phone/PNG/phone.png" type="Texture" id=2]
@@ -15,7 +15,7 @@
 [ext_resource path="res://assets/phone/PNG/lock_screen.png" type="Texture" id=13]
 [ext_resource path="res://assets/phone/PNG/notes_empty.png" type="Texture" id=14]
 [ext_resource path="res://assets/phone/PNG/notes_3.png" type="Texture" id=15]
-[ext_resource path="res://assets/phone/PNG/Artboard 4 copy 3@2x.png" type="Texture" id=16]
+[ext_resource path="res://assets/phone/PNG/pay_health_insurance_2.png" type="Texture" id=16]
 [ext_resource path="res://assets/phone/PNG/circle_mask_invert_alpha.png" type="Texture" id=17]
 [ext_resource path="res://assets/phone/PNG/Artboard 6 copy@2x.png" type="Texture" id=18]
 [ext_resource path="res://assets/phone/PNG/home_screen.png" type="Texture" id=19]
@@ -31,6 +31,10 @@
 [ext_resource path="res://assets/phone/PNG/phone_out_of_order.png" type="Texture" id=29]
 [ext_resource path="res://assets/phone/PNG/calling_manager.png" type="Texture" id=30]
 [ext_resource path="res://assets/phone/PNG/general_banking_app.png" type="Texture" id=31]
+[ext_resource path="res://assets/phone/PNG/pay_public_transport_2.png" type="Texture" id=32]
+[ext_resource path="res://assets/phone/PNG/pay_public_transport_1.png" type="Texture" id=33]
+[ext_resource path="res://assets/phone/PNG/pay_health_insurance_1.png" type="Texture" id=34]
+[ext_resource path="res://assets/phone/Bank.gd" type="Script" id=35]
 
 [node name="Control" type="PanelContainer"]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -537,15 +541,41 @@ margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
 margin_bottom = 1695.0
+script = ExtResource( 35 )
 
-[node name="BankList" type="TextureRect" parent="Bank"]
-margin_right = 390.0
-margin_bottom = 844.0
+[node name="OutOfOrder" type="TextureRect" parent="Bank"]
+visible = false
+margin_right = 780.0
+margin_bottom = 1688.0
 rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 31 )
 expand = true
 
-[node name="TextureRect2" type="TextureRect" parent="Bank"]
+[node name="PayTransport" type="TextureRect" parent="Bank"]
+visible = false
+margin_right = 390.0
+margin_bottom = 844.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 33 )
+expand = true
+
+[node name="PayTransportDone" type="TextureRect" parent="Bank"]
+visible = false
+margin_right = 390.0
+margin_bottom = 844.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 32 )
+expand = true
+
+[node name="PayInsurance" type="TextureRect" parent="Bank"]
+visible = false
+margin_right = 390.0
+margin_bottom = 844.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 34 )
+expand = true
+
+[node name="PayInsuranceDone" type="TextureRect" parent="Bank"]
 visible = false
 margin_right = 390.0
 margin_bottom = 844.0
@@ -553,12 +583,40 @@ rect_min_size = Vector2( 780, 1688 )
 texture = ExtResource( 16 )
 expand = true
 
+[node name="BankList" type="TextureRect" parent="Bank"]
+margin_right = 780.0
+margin_bottom = 1688.0
+rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 31 )
+expand = true
+
+[node name="PayTransportButton" type="Button" parent="Bank/BankList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 40.0
+margin_top = 506.0
+margin_right = 740.0
+margin_bottom = 580.0
+
+[node name="PayInsuranceButton" type="Button" parent="Bank/BankList"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 44.0
+margin_top = 432.0
+margin_right = 744.0
+margin_bottom = 506.0
+
 [node name="HomeButton" type="Button" parent="Bank"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 50.0
 margin_top = 140.0
 margin_right = 166.0
 margin_bottom = 266.0
+
+[node name="PayButton" type="Button" parent="Bank"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 44.0
+margin_top = 1416.0
+margin_right = 744.0
+margin_bottom = 1554.0
 
 [node name="Internet" type="Control" parent="."]
 visible = false
@@ -655,6 +713,9 @@ margin_bottom = 266.0
 [connection signal="pressed" from="Calls/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Maps/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="Mail/HomeButton" to="." method="_on_HomeButton_pressed"]
-[connection signal="pressed" from="Bank/HomeButton" to="." method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="Bank/BankList/PayTransportButton" to="Bank" method="_on_PayTransportButton_pressed"]
+[connection signal="pressed" from="Bank/BankList/PayInsuranceButton" to="Bank" method="_on_PayInsuranceButton_pressed"]
+[connection signal="pressed" from="Bank/HomeButton" to="Bank" method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="Bank/PayButton" to="Bank" method="_on_PayButton_pressed"]
 [connection signal="pressed" from="Internet/Meeting/CreateMeeting" to="Internet" method="_on_CreateMeeting_pressed"]
 [connection signal="pressed" from="Internet/HomeButton" to="." method="_on_HomeButton_pressed"]

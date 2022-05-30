@@ -104,10 +104,45 @@ func update_notes():
 		$Ticks/Tick8.visible = false
 	else:
 		print("ERROR NO PAGE 4")
+
+func reset_notes():
+	_reset_var('task_breakfast')
+	_reset_var('task_sortmail')
+	_reset_var('task_go_to_work')
+	_reset_var('task_work_checkin')
+	_reset_var('task_create_meeting')
+	_reset_var('task_computer_work')
+	_reset_var('task_fill_excel_sheet')
+	_reset_var('task_take_break')
+	_reset_var('task_join_virtual_meeting')
+	_reset_var('task_get_forms')
+	_reset_var('task_lunch')
+	_reset_var('task_join_physical_meeting')
+	_reset_var('task_call_manager')
+	_reset_var('task_more_excel_sheet')
+	_reset_var('task_work_new_forms')
+	_reset_var('task_take_break_2')
+	_reset_var('task_clean_desk')
+	_reset_var('task_clock_out_work')
+	_reset_var('task_go_to_home')
+	_reset_var('task_vacuum')
+	_reset_var('task_pay_transport')
+	_reset_var('task_pay_insurance')
+	_reset_var('task_dinner')
+	_reset_var('task_clean_spam')
+	_reset_var('task_reply_dentist')
+	_reset_var('task_create_next_day_todo')
+	_reset_var('task_charge_phone')
+	_reset_var('task_clean_kitchen')
+	_reset_var('task_take_quick_shower')
+	_reset_var('task_sleep')
+	
 	
 func _test_var(name: String):
 	return Dialogic.get_variable(name, 'false') == 'true'
 
+func _reset_var(name: String):
+	Dialogic.set_variable(name, 'false')
 
 func _on_HomeButton_pressed():
 	var newpage = page - 1
