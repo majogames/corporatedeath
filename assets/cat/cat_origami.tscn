@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/highlight.material.tres" type="Material" id=1]
 [ext_resource path="res://assets/cat/wire_115115115.material" type="Material" id=2]
+[ext_resource path="res://assets/cat/cat_origami.gd" type="Script" id=3]
 
 [sub_resource type="ArrayMesh" id=22]
 resource_name = "cat_origami_ORIGAMI_Chat"
@@ -41,6 +42,7 @@ transform = Transform( 0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 2.36884, 0 )
 transform = Transform( 1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0 )
 mesh = SubResource( 22 )
 material/0 = null
+script = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="ORIGAMI_Chat"]
 collision_layer = 8
