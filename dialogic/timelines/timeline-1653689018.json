@@ -10,13 +10,7 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Yawn... another day at BoringCorp started. Well, time to get up and get ready for work."
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "What should I do first? Let’s check my to-do list."
+			"text": "[speed=10]Yawn... [speed=5]another day at BoringCorp started. Well, time to get up and get ready for work.\nWhat should I do first? Let’s check my to-do list."
 		},
 		{
 			"definition": "1653815175-648",
@@ -29,6 +23,21 @@
 		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1653691258-146",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[speed=10]Yawn... [speed=1]WHAT TIME IS IT?\n[speed=1]Why the alarm clock didn't ring?\n[speed=1]It's connected to my calendar and my sleeping tracking bed.\n[speed=1]I'm going to be late at WORK!"
 		},
 		{
 			"event_id": "dialogic_013"
