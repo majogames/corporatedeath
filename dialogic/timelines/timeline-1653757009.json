@@ -25,14 +25,6 @@
 			"text": "This is a nice book. I’ll read more later."
 		},
 		{
-			"definition": "",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": ""
-		},
-		{
 			"event_id": "dialogic_013"
 		},
 		{
