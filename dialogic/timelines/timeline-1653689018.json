@@ -40,10 +40,8 @@
 			"value": "true"
 		},
 		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "[speed=10]Yawn... [speed=1]WHAT TIME IS IT?\n[speed=1]Why the alarm clock didn't ring?\n[speed=1]It's connected to my calendar and my sleeping tracking bed.\n[speed=1]I'm going to be late at WORK!"
+			"change_timeline": "timeline-1653842292.json",
+			"event_id": "dialogic_020"
 		},
 		{
 			"event_id": "dialogic_022",

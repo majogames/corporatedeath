@@ -124,12 +124,6 @@
 			"value": "false"
 		},
 		{
-			"id": "1653839318-953",
-			"name": "task_work_new_forms",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653839301-250",
 			"name": "task_call_manager",
 			"type": 0,
@@ -232,12 +226,6 @@
 			"value": ""
 		},
 		{
-			"id": "1653901544-787",
-			"name": "panic",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1653815175-648",
 			"name": "game_just_loaded",
 			"type": 0,
@@ -248,6 +236,24 @@
 			"name": "previous_location",
 			"type": 0,
 			"value": "home"
+		},
+		{
+			"id": "1653839318-953",
+			"name": "task_work_new_forms",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653901544-787",
+			"name": "panic",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1653902126-366",
+			"name": "bank action",
+			"type": 0,
+			"value": "open"
 		}
 	]
 }

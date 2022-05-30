@@ -1,22 +1,27 @@
 {
 	"events": [
 		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Why the alarm clock didn't ring? \nIt's connected to my calendar and my sleeping tracking bed."
+			"condition": "",
+			"definition": "1653691258-146",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"definition": "1653901544-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Let’s try to login to the system from my laptop."
-		},
-		{
-			"character": "character-1653688429.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Hmm, it’s still not working. I should check the bank app."
+			"text": "[speed=10]Yawn... [speed=1]WHAT TIME IS IT?\n[speed=1]Why the alarm clock didn't ring?\n[speed=1]It's connected to my calendar and my sleeping tracking bed.\n[speed=1]I'm going to be late at WORK!\n[speed=7]CALM DOWN.\nLet’s try to login to the system from my laptop."
 		},
 		{
 			"event_id": "dialogic_022",

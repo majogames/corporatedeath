@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://assets/phone/PNG/Artboard 8 copy@2x.png" type="Texture" id=1]
 [ext_resource path="res://assets/phone/PNG/phone.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://assets/phone/PNG/calling_CEO.png" type="Texture" id=28]
 [ext_resource path="res://assets/phone/PNG/phone_out_of_order.png" type="Texture" id=29]
 [ext_resource path="res://assets/phone/PNG/calling_manager.png" type="Texture" id=30]
+[ext_resource path="res://assets/phone/PNG/general_banking_app.png" type="Texture" id=31]
 
 [node name="Control" type="PanelContainer"]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -345,6 +346,7 @@ margin_right = 474.0
 margin_bottom = 1563.0
 
 [node name="Calls" type="Control" parent="."]
+visible = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
@@ -531,20 +533,20 @@ margin_right = 166.0
 margin_bottom = 266.0
 
 [node name="Bank" type="Control" parent="."]
-visible = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 787.0
 margin_bottom = 1695.0
 
-[node name="TextureRect1" type="TextureRect" parent="Bank"]
-visible = false
+[node name="BankList" type="TextureRect" parent="Bank"]
 margin_right = 390.0
 margin_bottom = 844.0
 rect_min_size = Vector2( 780, 1688 )
+texture = ExtResource( 31 )
 expand = true
 
 [node name="TextureRect2" type="TextureRect" parent="Bank"]
+visible = false
 margin_right = 390.0
 margin_bottom = 844.0
 rect_min_size = Vector2( 780, 1688 )

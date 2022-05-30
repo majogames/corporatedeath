@@ -40,28 +40,14 @@
 			"text": "TODO reset task variables"
 		},
 		{
-			"definition": "1653825988-366",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "false"
-		},
-		{
-			"definition": "1653826025-146",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "false"
-		},
-		{
-			"definition": "1653827116-918",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "false"
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "reset_notes",
+				"target_node_path": "/root/Spatial/Player/head/phone/Viewport/Control/Notes"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"change_timeline": "timeline-1653842292.json",
