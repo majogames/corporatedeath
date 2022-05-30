@@ -16,8 +16,9 @@ func _set_page(index):
 	var dialog = Dialogic.start('email app')
 	get_viewport().get_parent().add_child(dialog)
 	page_index = index
-	
-	
+
 
 func _on_Next_button_pressed():
-	self.page_index = page_index+1
+	var time_of_day = Dialogic.get_variable('Time of the day')
+	if time_of_day == 'Evening':
+		self.page_index = page_index+1
