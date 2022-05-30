@@ -56,8 +56,10 @@ func _ready():
 		Dialogic.set_variable('location', 'home')
 		previous_location = Dialogic.get_variable('location')
 		print('HOME test new location: ', previous_location)
+	else:
+		#this is supposed to be the sleep
+		$Player/head/phone/Viewport/Control/Notes.reset_notes()
 
-	$Player/head/phone/Viewport/Control/Notes.reset_notes()
 	$Player/head/phone/Viewport/Control/Notes.update_notes()
 
 func _input(event):
