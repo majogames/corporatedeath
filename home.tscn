@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://assets/bedroom/carpet/carpet_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/bedroom/wall.tscn" type="PackedScene" id=2]
@@ -45,6 +45,7 @@
 [ext_resource path="res://assets/MBJ_flowerpack01/BLENDER_RENDER_MBJ_PlantPack01_v006-vase-1.glb" type="PackedScene" id=43]
 [ext_resource path="res://assets/food/carrot/carrot.glb" type="PackedScene" id=44]
 [ext_resource path="res://carrots.gd" type="Script" id=45]
+[ext_resource path="res://assets/characters/female tshirt/female tshirt.tscn" type="PackedScene" id=46]
 
 [sub_resource type="SpatialMaterial" id=22]
 albedo_color = Color( 0.45098, 0.45098, 0.45098, 1 )
@@ -142,6 +143,13 @@ surfaces/0 = {
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
+
+[sub_resource type="SphereShape" id=26]
+radius = 0.525148
+
+[sub_resource type="SphereMesh" id=27]
+radius = 0.4
+height = 0.8
 
 [node name="Spatial2" type="Spatial"]
 script = ExtResource( 25 )
@@ -930,6 +938,29 @@ reset_saves = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 3 )
+
+[node name="lisa_neighbour" parent="." instance=ExtResource( 46 )]
+transform = Transform( -0.856529, 1.7551e-22, -0.5161, -1.64574e-22, 1, 1.57383e-22, 0.5161, -6.45626e-22, -0.856529, -6.10246, -0.00524881, -4.52659 )
+skin_color = Color( 0.780392, 0.54902, 0.415686, 1 )
+tshirt_color = Color( 0.290196, 0.0470588, 0.239216, 1 )
+trousers_color = Color( 0.0352941, 0.105882, 0.278431, 1 )
+hair_color = Color( 0.513726, 0.0431373, 0.137255, 1 )
+animation_state = 5
+is_tom = true
+
+[node name="StaticBody" type="StaticBody" parent="lisa_neighbour"]
+collision_layer = 8
+collision_mask = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="lisa_neighbour/StaticBody"]
+transform = Transform( 1, -9.46633e-30, -2.23517e-08, 7.88861e-31, 1, 7.57306e-29, 2.23517e-08, 0, 1, -4.76837e-07, 0.963536, 0.0672712 )
+shape = SubResource( 26 )
+
+[node name="Highlight" type="MeshInstance" parent="lisa_neighbour"]
+transform = Transform( 1, -6.31089e-30, -1.49012e-08, 7.88861e-31, 1, 5.04871e-29, 1.49012e-08, 0, 1, 0, 0.971477, 0 )
+visible = false
+mesh = SubResource( 27 )
+material/0 = ExtResource( 34 )
 
 [connection signal="body_entered" from="RoomList/ElevatorCorridor/elevator corridor/Area" to="RoomList/ElevatorCorridor/elevator corridor" method="home_on_Area_body_entered"]
 [connection signal="body_entered" from="RoomList/MainCorridor/Hallway area" to="RoomList/MainCorridor/Hallway area" method="_on_Hallway_area_body_entered"]

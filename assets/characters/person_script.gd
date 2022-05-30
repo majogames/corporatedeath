@@ -22,6 +22,7 @@ enum Anim {Idle, Walking, Typing, MeetingCross, MeetingSpread, IdlePhone, SitSad
 export(Anim) var animation_state = Anim.Idle setget set_animation_state
 
 export var is_greg = false
+export var is_tom = false
 
 func _init():
 	skinmaterial.subsurf_scatter_enabled = true
@@ -73,3 +74,6 @@ func action():
 				forms.visible = false
 				playerdesk_forms.visible = true
 				playerdesk_form_collision.disabled = false
+	if is_tom:
+		var dialog = Dialogic.start('neighbour')
+		add_child(dialog)
