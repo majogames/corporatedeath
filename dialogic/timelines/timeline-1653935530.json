@@ -1,0 +1,18 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_012",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653935530.json",
+		"name": "pick up bucket list"
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1653927728-648",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"condition": "",
+			"definition": "1653935901-219",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"definition": "1653901544-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "false"
+		},
+		{
+			"character": "character-1653688429.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Whatever! If nothing works. I’ll just do my bucket list!\nI think I left it on the shelf on top of my desk."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653935830.json",
+		"name": "panic_off"
+	}
+}

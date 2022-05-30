@@ -145,8 +145,12 @@
 			"text": "Excuse me? I don’t know you. Please, leave the premises or else I’ll call the security guard. "
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 0.3
+			"definition": "1653935901-219",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
 		},
 		{
 			"definition": "1653691133-366",
@@ -155,6 +159,14 @@
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "Afternoon"
+		},
+		{
+			"change_timeline": "timeline-1653935830.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
 		},
 		{
 			"event_id": "dialogic_013"
