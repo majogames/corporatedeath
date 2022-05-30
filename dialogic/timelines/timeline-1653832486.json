@@ -13,12 +13,16 @@
 			"text": "Delicious! I don’t remember the last time I had fresh fruit for breakfast."
 		},
 		{
-			"definition": "",
+			"definition": "1653919452-192",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
 			"set_random": false,
-			"set_value": ""
+			"set_value": "true"
+		},
+		{
+			"change_timeline": "timeline-1653825812.json",
+			"event_id": "dialogic_020"
 		},
 		{
 			"event_id": "dialogic_022",
@@ -31,7 +35,7 @@
 			"character": "character-1653688429.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "not time for nice food"
+			"text": "It takes too long to eat fresh fruit. It's for another time."
 		},
 		{
 			"event_id": "dialogic_022",
