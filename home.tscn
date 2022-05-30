@@ -247,6 +247,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06907, 0.00651385, -3.15169 
 [node name="cat_origami" parent="RoomList/Studio/Carpet" instance=ExtResource( 41 )]
 transform = Transform( 0.0124098, 0, 0.00268102, 0, 0.011, 0, -0.00387259, 0, 0.0085914, -0.472468, -0.00110982, 0.460089 )
 visible = false
+cat_name = "origami"
 
 [node name="Ceiling" type="MeshInstance" parent="RoomList/Studio"]
 transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 2.98, 0 )
@@ -487,6 +488,7 @@ transform = Transform( -0.987628, 0, -0.156814, 0, 1, 0, 0.156814, 0, -0.987628,
 [node name="cat2" parent="RoomList/Studio" instance=ExtResource( 42 )]
 transform = Transform( -0.432069, 0, 1.43642, 0, 1.5, 0, -1.43642, 0, -0.432069, -1.45168, 0.624007, 2.13005 )
 visible = false
+cat_name = "tabby"
 
 [node name="Corridor" type="Room" parent="RoomList" groups=["navmesh"]]
 points = PoolVector3Array( -10.0317, 3, -8, -9.687, 3, -8.11577, -10.154, 3, -4, 10, 3, -8.08856, 10.0309, 3, -4, -10, -0.0600051, -8.12781, 10.031, -0.000389393, -4, 10, -0.0163546, -8.1, -10.1263, -0.0442695, -4 )
