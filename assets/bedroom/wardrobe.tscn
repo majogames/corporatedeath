@@ -24,8 +24,7 @@ extents = Vector3( 0.784347, 1.4048, 0.33776 )
 script = ExtResource( 3 )
 
 [node name="Highlight" type="MeshInstance" parent="." index="0"]
-transform = Transform( 0.789844, 0, 0, 0, 1.4, 0, 0, 0, 0.311157, 0, 0, 0 )
-visible = false
+transform = Transform( 0.789844, 0, 0, 0, 1.34165, 0, 0, 0, 0.270532, 0, 0.0826496, 0.11896 )
 mesh = SubResource( 3 )
 skeleton = NodePath("../Wardrobe")
 material/0 = ExtResource( 2 )
