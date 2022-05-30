@@ -38,12 +38,30 @@
 			"text": "It's time for a new beginning!"
 		},
 		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "{Given the limited scope of the Game Jam we did not implement all the bucket list items, but a good handful are. Good hunting :D}"
+		},
+		{
+			"definition": "1653835848-970",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1.0"
+		},
+		{
 			"definition": "1653935647-512",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "true"
+		},
+		{
+			"change_timeline": "",
+			"event_id": "dialogic_020"
 		},
 		{
 			"event_id": "dialogic_022",

@@ -76,6 +76,8 @@ func _ready():
 	
 	if Dialogic.get_variable('bucket_buy_plants') == 'true':
 		$RoomList/Studio/Flowers.visible = true
+	else:
+		$RoomList/Studio/Flowers.translate(Vector3(0,-100,0))
 	if Dialogic.get_variable('bucket_cat') == 'true':
 		var cat_name = Dialogic.get_variable('cat_name')
 		match cat_name:
@@ -85,6 +87,11 @@ func _ready():
 				$RoomList/Studio/Carpet/cat_origami.visible = true
 			_:
 				print("CAT ERROR ", cat_name)
+	else:
+		print("removing cats")
+		$RoomList/Studio/cat2.translate(Vector3(100,-100,100))
+		$RoomList/Studio/Carpet/cat_origami.translate(Vector3(100,-100,100))
+		
 	if Dialogic.get_variable('bucket_grow_food') == 'true':
 		$RoomList/CarrotPot.visible = true
 
