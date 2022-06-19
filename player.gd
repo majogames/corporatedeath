@@ -1,11 +1,12 @@
 extends KinematicBody
 
-var speed = 5
+var speed = 3
 var acceleration = 9.8
 var gravity = 9.8
 var jump = 3
 
-var mouse_sensitivity = 0.1
+var mouse_sensitivity = 0.002
+var joy_sensitivity = 0.05
 
 var direction = Vector3()
 var velocity = Vector3()
@@ -27,7 +28,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	phone.visible = show_phone
 	self.set_saturation()
-	
+
 func movement_enabled():
 	if show_phone:
 		return false
@@ -36,11 +37,17 @@ func movement_enabled():
 		return false
 	return true
 
+func _rotate_camera(input: Vector2):
+	# if flip_y:
+	#     move_joystick.y = -move_joystick.y
+	rotate_y(-input.x)
+	head.rotate_x(-input.y)
+	head.rotation.x = clamp(head.rotation.x, -PI/2.0, PI/2.0)
+
+
 func _input(event):
 	if movement_enabled() and event is InputEventMouseMotion:
-		rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
-		head.rotate_x(deg2rad(-event.relative.y * mouse_sensitivity))
-		head.rotation.x = clamp(head.rotation.x, deg2rad(-90), deg2rad(90))
+		_rotate_camera(event.relative * mouse_sensitivity)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -50,20 +57,18 @@ func _physics_process(delta):
 		fall.y -= gravity * delta
 		
 	if movement_enabled():
+		# Gravity
 		if Input.is_action_just_pressed("jump"):
 			fall.y = jump
-			
-		if Input.is_action_pressed("move_forward"):
-			direction -= transform.basis.z
-		elif Input.is_action_pressed("move_backward"):
-			direction += transform.basis.z
-			
-		if Input.is_action_pressed("move_left"):
-			direction -= transform.basis.x
+		# Movement
+		var move_input = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+		direction = transform.basis * Vector3(move_input.x, 0, move_input.y)
+		
+		# Joystick camera
+		var rot_joystick = Input.get_vector("rotate_left", "rotate_right", "rotate_up", "rotate_down")
+		_rotate_camera(rot_joystick * joy_sensitivity)
 
-		elif Input.is_action_pressed("move_right"):
-			direction += transform.basis.x
-	
+
 	if Input.is_action_just_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -72,7 +77,6 @@ func _physics_process(delta):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			self.show_phone = false
 
-	# direction = direction.normalized()
 	velocity = velocity.linear_interpolate(direction * speed, acceleration * delta)
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
