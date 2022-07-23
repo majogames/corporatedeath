@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://assets/phone/phone.tscn" type="PackedScene" id=2]
 [ext_resource path="res://EyesRayCast.gd" type="Script" id=3]
+[ext_resource path="res://assets/circle-outline-svgrepo-com.svg" type="Texture" id=4]
 [ext_resource path="res://assets/bucket_list/bucketlist2d.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape" id=1]
@@ -102,8 +103,25 @@ autoplay = "Rotate"
 anims/RESET = SubResource( 4 )
 anims/Rotate = SubResource( 3 )
 
+[node name="HUD" type="CenterContainer" parent="head"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Aim" type="TextureRect" parent="head/HUD"]
+margin_left = 508.0
+margin_top = 296.0
+margin_right = 515.0
+margin_bottom = 303.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 4 )
+
 [node name="phone" parent="head" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12 )
 visible = false
 
 [node name="BucketList" type="MeshInstance" parent="head"]

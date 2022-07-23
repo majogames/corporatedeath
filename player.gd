@@ -52,7 +52,7 @@ func _input(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	direction = Vector3()
-
+	
 	if not is_on_floor():
 		fall.y -= gravity * delta
 		
@@ -84,6 +84,8 @@ func _physics_process(delta):
 
 func _show_phone(show):
 	show_phone = show
+	$head/HUD/Aim.visible = !show_phone
+	
 	if Dialogic.get_variable('has_bucket_list') == 'true':
 		if bucket_list != null:
 			bucket_list.visible = show_phone
